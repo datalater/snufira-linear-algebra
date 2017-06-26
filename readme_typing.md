@@ -11,11 +11,58 @@
 \- [KOCW 건국대 이향원 교수 강의](http://www.kocw.net/home/search/kemView.do?kemId=1039395)  
 \- 김종권 교수님 수업 자료
 
+**RESUME**  
+\- `3.1 12:20~`
+
 ---
 
-## 02 Solving Linear Equations (4) Transpose와 Symmetric Matrix
+## One-Sentence Summary
 
-@@@resume : 2_2, 00:44:35
+### 0. 선형방정식 Linear Equations
+
++ $Ax=b$에서 $x$를 구해야 한다.
+
+### 1. 가우스 소거법 Gaussian Elimination
+
++ 가우스 소거법은 선형방정식을 풀기 위해 사용한다.
++ $Ax=b$의 형태를 $Ux=b'$의 형태로 바꿔주는 것이 가우스 소거법이다.
+
+### 2. 첨가 행렬 Augmented Matrix
+
++ $Ax=b \Rightarrow [A \ | \ b] \Rightarrow [U \ | \ b'] \Rightarrow Ux = b''$
++ 가우스 소거법을 진행할 때 첨가행렬을 사용하면 편안하게 연산할 수 있다.
+
+### 3. 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
+
+1. $AA^{-1} = I$ ......................................... $A^{-1} = [x \ y \ z]$.
+2. $A[x \ y \ z] = I$ .................................... $I = [e_1 \ e_2 \ e_3]$
+3. $[Ax \ Ay \ Az] = [e_1 \ e_2 \ e_3]$
+4. $Ax = e_1, \ Ay = e_2, \ Az = e_3$ ........ $[A \ | \ e_1], \ [A \ | \ e_2], \ [A \ | \ e_3]$
+5. $[A \ | \ e_1 \ e_2 \ e_3]$ .....................................행렬 $A$를 가우스 소거법으로 $U$로 만든다.
+6. $[U \ | \ e_1' \ e_2' \ e_3']$ .................................... 행렬 $U$를 가우스-조던 소거법으로 $I$로 만든다.
+7. $[I \ | \ e_1'' \ e_2'' \ e_3'']$
+8. $I[x \ y \ z] = [e_1'' \ e_2'' \ e_3''] $
+9. $\therefore A^{-1} = [x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
+
+### 4. A = LU Factorization
+
++ $Ax=b \Rightarrow Ux=b''$으로 바꿔주기 위해 $E$(Elimination)를 곱해준다.
++ $E_{3}E_{2}E_{1}A = U \Rightarrow A = E_{1}^{-1}E_{2}^{-1}E_{3}^{-1}U \Rightarrow A = LU $
++ 행렬 $A$는 $LU$로 분해된다.
+
+
+
+
+---
+
+## 02 Solving Linear Equations (4) 부분공간
+
+### 부분공간과 벡터공간 Subspaces and Vector spaces
+
+`RESUME : 3.1 12:20~`
+
+
+
 
 ---
 
@@ -55,7 +102,7 @@ x_{2}
 -5
 \end{bmatrix}$$
 
-+ $(2) Ax = b$에서 $(3) ux = b'$을 만드는 과정을 행렬 간 곱셈으로 나타낼 수 있다.
++ $(2) Ax = b$에서 $(3) Ux = b'$을 만드는 과정을 행렬 간 곱셈으로 나타낼 수 있다.
 
 $$(2) \ \begin{bmatrix}
 2 & 3 \\
@@ -86,12 +133,17 @@ $$(4) \ \begin{bmatrix}
 0 & 3
 \end{bmatrix}$$
 
-+ $(4)$는 다음과 같은 형태로 나타낼 수 있다. $\ E_{21}A = u$
++ $(4)$는 다음과 같은 형태로 나타낼 수 있다. $\ E_{21}A = U$
 
 ### A = LU, LU Factorization
 
 ```
 1. 삼각행렬의 대각선이 모두 0이 아니면 역행렬이 존재한다.
+
+<이유>
+- 삼각행렬에 속하는 Elimination 행렬은 곱해진 행렬에 대해 특정 효과를 발휘한다.
+- 이 효과를 없애주는 것은 항상 존재하며 그것이 바로 역행렬이 된다.
+- 따라서 삼각행렬은 대각선이 모두 0이 아니면 항상 역행렬이 존재한다.
 ```
 
 $$(4) \ \begin{bmatrix}
@@ -108,27 +160,27 @@ $$(4) \ \begin{bmatrix}
 0 & 3
 \end{bmatrix}$$
 
-$$(5) \ E_{21}A = u$$
+$$(5) \ E_{21}A = U$$
 
 + $E_{21}$은 삼각행렬인데 대각선의 값이 모두 0이 아니므로 역행렬이 반드시 존재한다.
 
-$$(6) \ A = E_{21}^{-1}u$$
+$$(6) \ A = E_{21}^{-1}U$$
 
 + $E_{21}$의 역행렬은 $E_{21}$의 효과를 없애주는 것이다.
 + $E_{21}$의 효과는 $(row_2)' = (row_2) - 3*(row_1)$이다.
 + 효과를 없애주려면 $(row_2)''' = (row_2)' + 3*(row_1)$를 해줘야 한다.
 
-$$(7) \ A = E_{21}^{-1}u = \begin{bmatrix}
+$$(7) \ A = E_{21}^{-1}U = \begin{bmatrix}
 1 & 0 \\
 3 & 1
-\end{bmatrix}u
+\end{bmatrix}U
 $$
 
-+ $E_{21}$은 L(Lower Triangluar)이다.
++ $E_{21}$은 L(Lower TriangLUar)이다.
 
 $$(8) \ A = LU$$
 
-+ 이러한 과정을 보고, 행렬 $A$를 $L$ 곱하기 $u$로 `factorization`(분해)를 했다고 말한다.
++ 이러한 과정을 보고, 행렬 $A$를 $L$ 곱하기 $U$로 `factorization`(분해)를 했다고 말한다.
 
 > **Note:** `factorization` : 분해, 소인수분해
 
@@ -232,7 +284,7 @@ $$(10) \ I[x \ y \ z] = [e_{1}'' \ e_{2}'' \ e_{3}'']$$
 Ax = b
 [A | b]
 [u | b']
-ux = b'
+Ux = b'
 ------
 >> back substitution을 통해 칼럼 벡터 x의 각 값(unknowns)을 구한다.
 
@@ -263,11 +315,11 @@ Ix = b''
 ### 가우스 소거법 Gauss Elimination
 
 ```
-Ax = b => ux = b' (b prime)
+Ax = b => Ux = b' (b prime)
 
 1) Ax = b
 2) Gauss Elimination
-3) ux = b
+3) Ux = b
 4) back substitution
 ```
 
@@ -277,7 +329,7 @@ $$\begin{array}{lcl} x_{1}+2x_{2} & = & 5 \\ 2x_{1}+5x_{2} & = & 12 \end{array}$
 
 $$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$
 
-+ Gauss Elimination으로 행렬 $A$를 $U$(upper triangluar)로 만들어준다.
++ Gauss Elimination으로 행렬 $A$를 $U$(upper triangLUar)로 만들어준다.
 
 $$\begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}  \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}$$
 
@@ -302,7 +354,7 @@ $$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatr
 ### 첨가행렬 Augmented Matrix Form
 
 ```
-Ax = b => [A | b] => [u | b'] => ux = b'
+Ax = b => [A | b] => [u | b'] => Ux = b'
 
 행렬 A에 칼럼벡터 b를 붙여서 하나의 행렬로 나타낸 것을 첨가행렬이라 한다.
 
@@ -360,7 +412,7 @@ $$
 \end{bmatrix}
 $$
 
-+ 2번째 행과 3번째 행을 바꿔서 $ux=b$ 형태로 만들어준다.
++ 2번째 행과 3번째 행을 바꿔서 $Ux=b$ 형태로 만들어준다.
 
 **끝.**
 
