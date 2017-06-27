@@ -6,13 +6,14 @@
 \- 기계학습 기초수학, 김종권 교수님
 
 **SOURCE**  
-\- Introduction to Linear Algebra, Strang  
+\- Introduction to Linear Algebra, Strang (The most desired way to learn)  
 \- [MIT 선형대수학 Strang 교수 강의 ](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)  
 \- [KOCW 건국대 이향원 교수 강의](http://www.kocw.net/home/search/kemView.do?kemId=1039395)  
 \- 김종권 교수님 수업 자료
 
 **RESUME**  
-\- `3.1 12:20~`
+\- KOCW : `3.2 00:00~`  
+\- TEXTBOOK : `p.125`
 
 ---
 
@@ -21,6 +22,7 @@
 ### 0. 선형방정식 Linear Equations
 
 + $Ax=b$에서 $x$를 구해야 한다.
++ $Ax$란 행렬 $A$의 모든 칼럼들의 linear combination을 뜻한다.
 
 ### 1. 가우스 소거법 Gaussian Elimination
 
@@ -50,16 +52,47 @@
 + $E_{3}E_{2}E_{1}A = U \Rightarrow A = E_{1}^{-1}E_{2}^{-1}E_{3}^{-1}U \Rightarrow A = LU $
 + 행렬 $A$는 $LU$로 분해된다.
 
+### 5. Ax=b와 Subspaces
+
++ $Ax=b$에서 $x$는 존재할 수도 있고 존재하지 않을 수도 있다.
++ $Ax$를 공간으로 나타냈을 때 그 공간 안에 $b$가 포함되면 solution을 구한 것이다.
++ 만약 행렬 $A$가 만드는 공간이 3차원의 Subspace인 plane이라면, b가 그 plane에 포함될 확률은 매우 낮을 것이다.
+  + 3차원 공간에서 plane은 두께가 0이며 차지하는 비율이 매우 작다.
+
+### 6. Ax=b와 C(A)
+
++ $Ax=b$에서 $x$는 존재할 수도 있고 존재하지 않을 수도 있다.
+  + $C(A)$에 $b$가 속하면 $x$는 존재한다.
+  + $C(A)$에 $b$가 속하지 않으면 $x$는 존재하지 않는다.
+
+### . C(A)와 N(A)
+
++ $C(A)$ : 행렬 $A$의 모든 칼럼($m$차원 벡터)들의 linear combination을 모아 놓은 집합
++ $N(A)$ : $Ax=0$을 만족시키는 모든 $x$($n$차원 벡터)를 모아 놓은 집합
+
+### . Ax=b와 C(A)의 관계
+
++ 선형방정식 $Ax=b$를 푸는 것은 $b$를 행렬 $A$의 모든 칼럼들의 linear combination으로 표현하겠다는 것과 같다.
++ 행렬 $A$의 모든 칼럼들의 linear combination을 모아 놓은 것이 바로 $C(A)$이다.
++ $C(A)$로 $b$를 만들어낼 수 있다면 $x$를 구한 것이고, 그렇지 못하다면 해가 존재하지 않는 것이다.
+
+
+
+
+
+---
+
+## 03 Vector spaces and Subspaces (5) N(A) & Complete solution to Ax=b
+
+### N(A)를 표현하는 방법 Describing N(A)
+
+
+
+
 
 ---
 
 ## 03 Vector spaces and Subspaces (5) 부분공간
-
-
-
----
-
-## 03 Vector spaces and Subspaces (4) 부분공간
 
 ### 부분공간의 조건 Subspace
 
@@ -81,7 +114,7 @@ $$(2) \ cv \in S, \ \forall v \in S$$
 ### C(A) :: Column space of A (m by n)
 
 $$\begin{array}{rcl} C(A) & = & \{Ax \ | \ \forall x \in R^{n} \} \\ & = &
-\{[a_1 \ a_2 \ \cdot \cdot a_n] \begin{bmatrix}
+\{[a_1 \ a_2 \ \cdot \cdot \ a_n] \begin{bmatrix}
 x_1 \\
 x_2 \\
 \cdot \\
@@ -91,7 +124,7 @@ x_n
 | \ \forall x \in R^{n} \} \\
 & = & \{ x_1a_1 + \cdot \cdot + x_na_n, \ \forall x \in R^{n} \} \end{array}$$
 
-+ 행렬 $A$의 모든 칼럼들의 linear combination을 모아놓은 집합
++ 행렬 $A$의 모든 칼럼들의 linear combination을 모아 놓은 집합
 + 행렬 $A$의 각 칼럼은 $m$차원 벡터이므로 $C(A)$는 $R^{m}$의 Subspace이다.
   + $x_1a_1 + \cdot \cdot + x_na_n \in R^{m}$
 
@@ -103,7 +136,7 @@ x_n
 
 $$\begin{array}{rcl} N(A) & = & \{x \in R^{n} \ | \ Ax = 0 \} \end{array}$$
 
-+ 행렬 $A$에 '**오른쪽**'에 곱해졌을 때 $Ax=0$을 만드는 $n$차원 $x$ 벡터들을 모아놓은 집합
++ 행렬 $A$에 '**오른쪽**'에 곱해졌을 때 $Ax=0$을 만드는 $n$차원 $x$ 벡터들을 모아 놓은 집합
 + $x$는 $n$차원이므로 $N(A)$는 $R^{n}$의 Subspace이다.
 
 ### 실생활에서 쓰이는 C(A), N(A)
@@ -139,6 +172,71 @@ y_m
   + 그런데 **이미지에 해당하는 벡터 $x$가 특정 성질을 만족하면 방정식을 $n$보다 훨씬 더 적은 $m$개만 구해도 벡터 $x$를 정확하게 풀어낼 수 있다**.
   + 그러한 기술을 compressed sensing이라 한다.
   + 이러한 성질을 따질 때 $C(A)$와 $N(A)$를 사용하게 된다.
+
+**끝.**
+
+---
+
+## 03 Vector spaces and Subspaces (4) 벡터 공간, 부분 공간, 칼럼 스페이스
+
+### 칼럼벡터와 공간의 의미
+
++ 공간 : **모든** 벡터(all column vectors)를 모아 놓은 집합
++ $R^{n}$ : (모든) $n$차원 칼럼벡터 $v$로 구성되는 공간
++ $R^{2}$ : (모든) 2차원 칼럼벡터 $v$로 구성되는 공간 = $xy$ plane
++ $R^{1}$ : (모든) 1차원 칼럼벡터 $v$로 구성되는 공간 = Linear
+
+### 공간에 속하는 벡터
+
++ (4, $\pi$) is in $R^{2}$
++ (1, 1, 0, 1, 1) is in $R^{5}$
+
+### 벡터의 연산과 벡터 공간 Vector space
+
++ 벡터를 원소로 가지는 집합을 벡터 공간이라 한다.
++ 벡터 공간 $V$에 속하는 벡터들을 연산한 결과 벡터 또한 $V$에 속한다.
+
+### 벡터 공간 예시
+
++ $M$ : 2 by 2 행렬의 벡터 공간
+  + $M$에 속하는 요소를 연산하면 항상 $M$에 속하게 된다.
++ $Z$ : 영 벡터로 구성되는 벡터 공간
+
+### 벡터 공간과 부분 공간 Subspaces
+
++ 벡터 공간에 속하는 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
++ 즉, 벡터들의 linear combination이 부분 공간(subspace)을 만들어낸다.
++ subspace에 속하는 벡터들을 linear combination한 결과 또한 당연히 subspace에 속한다.
+
+### subspace 구분법과 OX 퀴즈
+
+#### 구분법
+
++ subspace에 속하는 벡터들을 linear combination한 결과가 subspace에 속하지 않으면 그것은 subspace가 아니다.
+
+#### OX 퀴즈
+
++ A plane in $R^{3}$ that misses the origin : (x) not a subspace
+  + plane에 속하는 $v$에 0을 곱한 결과가 plane에 속하지 않기 때문이다.
++ The quarter-plane : (x) not a subspace
+  + (2, 3)에 -1을 곱한 결과가 1사분면에 속하지 않기 때문이다.
+
+### 칼럼 스페이스 Column Space
+
++ $Ax=b$에서 $A^{-1}$이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
++ 벡터 공간의 의미로 접근하면 된다.
++ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들로 구성되는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
++ $C(A)$에 $b$가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
+
+> **Note:** $C(A)$에는 행렬 $A$의 칼럼뿐만 아니라 linear combination의 결과인 $Ax$까지 포함하고 있다.
+
+### 칼럼 스페이스의 subspace
+
++ 행렬 $A$가 m by n 행렬일 때, 행렬 $A$의 칼럼들은 $m$차원 벡터이다.
++ $m$차원 벡터칼럼은 $R^{m}$에 속한다.
++ 따라서 $C(A)$는 $R^{m}$의 subspace이다.
+
+@@@RESUME: `TEXTBOOK p.125 (To repeat, the attianable ~)`
 
 **끝.**
 

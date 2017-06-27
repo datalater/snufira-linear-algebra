@@ -6,13 +6,14 @@
 \- 기계학습 기초수학, 김종권 교수님
 
 **SOURCE**  
-\- Introduction to Linear Algebra, Strang  
+\- Introduction to Linear Algebra, Strang (The most desired way to learn)  
 \- [MIT 선형대수학 Strang 교수 강의 ](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8 )  
 \- [KOCW 건국대 이향원 교수 강의](http://www.kocw.net/home/search/kemView.do?kemId=1039395 )  
 \- 김종권 교수님 수업 자료
 
 **RESUME**  
-\- `3.1 12:20~`
+\- KOCW : `3.2 00:00~`  
+\- TEXTBOOK : `p.125`
 
 ---
 
@@ -21,6 +22,7 @@
 ### 0. 선형방정식 Linear Equations
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구해야 한다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>란 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination을 뜻한다.
 
 ### 1. 가우스 소거법 Gaussian Elimination
 
@@ -50,16 +52,47 @@
 + <img src="https://latex.codecogs.com/gif.latex?E_%7B3%7DE_%7B2%7DE_%7B1%7DA%20%3D%20U%20%5CRightarrow%20A%20%3D%20E_%7B1%7D%5E%7B-1%7DE_%7B2%7D%5E%7B-1%7DE_%7B3%7D%5E%7B-1%7DU%20%5CRightarrow%20A%20%3D%20LU%20"/>
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 <img src="https://latex.codecogs.com/gif.latex?LU"/>로 분해된다.
 
+### 5. Ax=b와 Subspaces
+
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재할 수도 있고 존재하지 않을 수도 있다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>를 공간으로 나타냈을 때 그 공간 안에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 포함되면 solution을 구한 것이다.
++ 만약 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>가 만드는 공간이 3차원의 Subspace인 plane이라면, b가 그 plane에 포함될 확률은 매우 낮을 것이다.
+  + 3차원 공간에서 plane은 두께가 0이며 차지하는 비율이 매우 작다.
+
+### 6. Ax=b와 C(A)
+
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재할 수도 있고 존재하지 않을 수도 있다.
+  + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재한다.
+  + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하지 않으면 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재하지 않는다.
+
+### . C(A)와 N(A)
+
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/> : 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼(<img src="https://latex.codecogs.com/gif.latex?m"/>차원 벡터)들의 linear combination을 모아 놓은 집합
++ <img src="https://latex.codecogs.com/gif.latex?N%28A%29"/> : <img src="https://latex.codecogs.com/gif.latex?Ax%3D0"/>을 만족시키는 모든 <img src="https://latex.codecogs.com/gif.latex?x"/>(<img src="https://latex.codecogs.com/gif.latex?n"/>차원 벡터)를 모아 놓은 집합
+
+### . Ax=b와 C(A)의 관계
+
++ 선형방정식 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 푸는 것은 <img src="https://latex.codecogs.com/gif.latex?b"/>를 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination으로 표현하겠다는 것과 같다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination을 모아 놓은 것이 바로 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>이다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>로 <img src="https://latex.codecogs.com/gif.latex?b"/>를 만들어낼 수 있다면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구한 것이고, 그렇지 못하다면 해가 존재하지 않는 것이다.
+
+
+
+
+
+---
+
+## 03 Vector spaces and Subspaces (5) N(A) & Complete solution to Ax=b
+
+### N(A)를 표현하는 방법 Describing N(A)
+
+
+
+
 
 ---
 
 ## 03 Vector spaces and Subspaces (5) 부분공간
-
-
-
----
-
-## 03 Vector spaces and Subspaces (4) 부분공간
 
 ### 부분공간의 조건 Subspace
 
@@ -80,9 +113,9 @@
 
 ### C(A) :: Column space of A (m by n)
 
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Barray%7D%7Brcl%7D%20C%28A%29%20%26%20%3D%20%26%20%5C%7BAx%20%5C%20%7C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5C%5C%20%26%20%3D%20%26%0D%5C%7B%5Ba_1%20%5C%20a_2%20%5C%20%5Ccdot%20%5Ccdot%20a_n%5D%20%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0D%5Ccdot%20%5C%5C%0D%5Ccdot%20%5C%5C%0Dx_n%0D%5Cend%7Bbmatrix%7D%0D%7C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5C%5C%0D%26%20%3D%20%26%20%5C%7B%20x_1a_1%20+%20%5Ccdot%20%5Ccdot%20+%20x_na_n%2C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5Cend%7Barray%7D"/></p>
+<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Barray%7D%7Brcl%7D%20C%28A%29%20%26%20%3D%20%26%20%5C%7BAx%20%5C%20%7C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5C%5C%20%26%20%3D%20%26%0D%5C%7B%5Ba_1%20%5C%20a_2%20%5C%20%5Ccdot%20%5Ccdot%20%5C%20a_n%5D%20%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0D%5Ccdot%20%5C%5C%0D%5Ccdot%20%5C%5C%0Dx_n%0D%5Cend%7Bbmatrix%7D%0D%7C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5C%5C%0D%26%20%3D%20%26%20%5C%7B%20x_1a_1%20+%20%5Ccdot%20%5Ccdot%20+%20x_na_n%2C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5Cend%7Barray%7D"/></p>
 
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination을 모아놓은 집합
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination을 모아 놓은 집합
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 각 칼럼은 <img src="https://latex.codecogs.com/gif.latex?m"/>차원 벡터이므로 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>의 Subspace이다.
   + <img src="https://latex.codecogs.com/gif.latex?x_1a_1%20+%20%5Ccdot%20%5Ccdot%20+%20x_na_n%20%5Cin%20R%5E%7Bm%7D"/>
 
@@ -94,7 +127,7 @@
 
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Barray%7D%7Brcl%7D%20N%28A%29%20%26%20%3D%20%26%20%5C%7Bx%20%5Cin%20R%5E%7Bn%7D%20%5C%20%7C%20%5C%20Ax%20%3D%200%20%5C%7D%20%5Cend%7Barray%7D"/></p>
 
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>에 '**오른쪽**'에 곱해졌을 때 <img src="https://latex.codecogs.com/gif.latex?Ax%3D0"/>을 만드는 <img src="https://latex.codecogs.com/gif.latex?n"/>차원 <img src="https://latex.codecogs.com/gif.latex?x"/> 벡터들을 모아놓은 집합
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>에 '**오른쪽**'에 곱해졌을 때 <img src="https://latex.codecogs.com/gif.latex?Ax%3D0"/>을 만드는 <img src="https://latex.codecogs.com/gif.latex?n"/>차원 <img src="https://latex.codecogs.com/gif.latex?x"/> 벡터들을 모아 놓은 집합
 + <img src="https://latex.codecogs.com/gif.latex?x"/>는 <img src="https://latex.codecogs.com/gif.latex?n"/>차원이므로 <img src="https://latex.codecogs.com/gif.latex?N%28A%29"/>는 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bn%7D"/>의 Subspace이다.
 
 ### 실생활에서 쓰이는 C(A), N(A)
@@ -109,6 +142,71 @@
   + 그런데 **이미지에 해당하는 벡터 <img src="https://latex.codecogs.com/gif.latex?x"/>가 특정 성질을 만족하면 방정식을 <img src="https://latex.codecogs.com/gif.latex?n"/>보다 훨씬 더 적은 <img src="https://latex.codecogs.com/gif.latex?m"/>개만 구해도 벡터 <img src="https://latex.codecogs.com/gif.latex?x"/>를 정확하게 풀어낼 수 있다**.
   + 그러한 기술을 compressed sensing이라 한다.
   + 이러한 성질을 따질 때 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>와 <img src="https://latex.codecogs.com/gif.latex?N%28A%29"/>를 사용하게 된다.
+
+**끝.**
+
+---
+
+## 03 Vector spaces and Subspaces (4) 벡터 공간, 부분 공간, 칼럼 스페이스
+
+### 칼럼벡터와 공간의 의미
+
++ 공간 : **모든** 벡터(all column vectors)를 모아 놓은 집합
++ <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bn%7D"/> : (모든) <img src="https://latex.codecogs.com/gif.latex?n"/>차원 칼럼벡터 <img src="https://latex.codecogs.com/gif.latex?v"/>로 구성되는 공간
++ <img src="https://latex.codecogs.com/gif.latex?R%5E%7B2%7D"/> : (모든) 2차원 칼럼벡터 <img src="https://latex.codecogs.com/gif.latex?v"/>로 구성되는 공간 = <img src="https://latex.codecogs.com/gif.latex?xy"/> plane
++ <img src="https://latex.codecogs.com/gif.latex?R%5E%7B1%7D"/> : (모든) 1차원 칼럼벡터 <img src="https://latex.codecogs.com/gif.latex?v"/>로 구성되는 공간 = Linear
+
+### 공간에 속하는 벡터
+
++ (4, <img src="https://latex.codecogs.com/gif.latex?%5Cpi"/>) is in <img src="https://latex.codecogs.com/gif.latex?R%5E%7B2%7D"/>
++ (1, 1, 0, 1, 1) is in <img src="https://latex.codecogs.com/gif.latex?R%5E%7B5%7D"/>
+
+### 벡터의 연산과 벡터 공간 Vector space
+
++ 벡터를 원소로 가지는 집합을 벡터 공간이라 한다.
++ 벡터 공간 <img src="https://latex.codecogs.com/gif.latex?V"/>에 속하는 벡터들을 연산한 결과 벡터 또한 <img src="https://latex.codecogs.com/gif.latex?V"/>에 속한다.
+
+### 벡터 공간 예시
+
++ <img src="https://latex.codecogs.com/gif.latex?M"/> : 2 by 2 행렬의 벡터 공간
+  + <img src="https://latex.codecogs.com/gif.latex?M"/>에 속하는 요소를 연산하면 항상 <img src="https://latex.codecogs.com/gif.latex?M"/>에 속하게 된다.
++ <img src="https://latex.codecogs.com/gif.latex?Z"/> : 영 벡터로 구성되는 벡터 공간
+
+### 벡터 공간과 부분 공간 Subspaces
+
++ 벡터 공간에 속하는 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
++ 즉, 벡터들의 linear combination이 부분 공간(subspace)을 만들어낸다.
++ subspace에 속하는 벡터들을 linear combination한 결과 또한 당연히 subspace에 속한다.
+
+### subspace 구분법과 OX 퀴즈
+
+#### 구분법
+
++ subspace에 속하는 벡터들을 linear combination한 결과가 subspace에 속하지 않으면 그것은 subspace가 아니다.
+
+#### OX 퀴즈
+
++ A plane in <img src="https://latex.codecogs.com/gif.latex?R%5E%7B3%7D"/> that misses the origin : (x) not a subspace
+  + plane에 속하는 <img src="https://latex.codecogs.com/gif.latex?v"/>에 0을 곱한 결과가 plane에 속하지 않기 때문이다.
++ The quarter-plane : (x) not a subspace
+  + (2, 3)에 -1을 곱한 결과가 1사분면에 속하지 않기 때문이다.
+
+### 칼럼 스페이스 Column Space
+
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
++ 벡터 공간의 의미로 접근하면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들로 구성되는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
+
+> **Note:** <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에는 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼뿐만 아니라 linear combination의 결과인 <img src="https://latex.codecogs.com/gif.latex?Ax"/>까지 포함하고 있다.
+
+### 칼럼 스페이스의 subspace
+
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>가 m by n 행렬일 때, 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들은 <img src="https://latex.codecogs.com/gif.latex?m"/>차원 벡터이다.
++ <img src="https://latex.codecogs.com/gif.latex?m"/>차원 벡터칼럼은 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>에 속한다.
++ 따라서 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>의 subspace이다.
+
+@@@RESUME: `TEXTBOOK p.125 (To repeat, the attianable ~)`
 
 **끝.**
 
