@@ -51,18 +51,96 @@
 + 행렬 $A$는 $LU$로 분해된다.
 
 
+---
+
+## 03 Vector spaces and Subspaces (5) 부분공간
+
 
 
 ---
 
-## 02 Solving Linear Equations (4) 부분공간
+## 03 Vector spaces and Subspaces (4) 부분공간
 
-### 부분공간과 벡터공간 Subspaces and Vector spaces
+### 부분공간의 조건 Subspace
 
-`RESUME : 3.1 12:20~`
+$$(1) \ u + v \in S, \ \forall u, v \in S$$
+$$(2) \ cv \in S, \ \forall v \in S$$
 
++ (1) $S$에 속하는 어떤 벡터들의 linear combinaion한 결과 벡터도 $S$에 속해야 한다.
++ (2) $S$에 속하는 벡터에 스칼라곱한 결과 벡터도 $S$에 속해야 한다.
++ 위 두 가지 조건을 모두 만족하면 Subspace가 된다.
++ Subspace는 항상 영 벡터를 포함하고 있다.
 
+### 행렬에 의해 정의되는 Subspace 4가지
 
+```
+1. C(A)
+2. N(A)
+```
+
+### C(A) :: Column space of A (m by n)
+
+$$\begin{array}{rcl} C(A) & = & \{Ax \ | \ \forall x \in R^{n} \} \\ & = &
+\{[a_1 \ a_2 \ \cdot \cdot a_n] \begin{bmatrix}
+x_1 \\
+x_2 \\
+\cdot \\
+\cdot \\
+x_n
+\end{bmatrix}
+| \ \forall x \in R^{n} \} \\
+& = & \{ x_1a_1 + \cdot \cdot + x_na_n, \ \forall x \in R^{n} \} \end{array}$$
+
++ 행렬 $A$의 모든 칼럼들의 linear combination을 모아놓은 집합
++ 행렬 $A$의 각 칼럼은 $m$차원 벡터이므로 $C(A)$는 $R^{m}$의 Subspace이다.
+  + $x_1a_1 + \cdot \cdot + x_na_n \in R^{m}$
+
+### 몇 차원 Subspace인지 구하는 방법
+
++ 안에 들어간 벡터가 몇 차원인지 구하면 된다.
+
+### N(A) :: Null space of A (m by n)
+
+$$\begin{array}{rcl} N(A) & = & \{x \in R^{n} \ | \ Ax = 0 \} \end{array}$$
+
++ 행렬 $A$에 '**오른쪽**'에 곱해졌을 때 $Ax=0$을 만드는 $n$차원 $x$ 벡터들을 모아놓은 집합
++ $x$는 $n$차원이므로 $N(A)$는 $R^{n}$의 Subspace이다.
+
+### 실생활에서 쓰이는 C(A), N(A)
+
+$$\begin{bmatrix}
+a_1 \\
+a_2 \\
+\cdot \\
+\cdot \\
+a_m
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\cdot \\
+\cdot \\
+x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+\cdot \\
+\cdot \\
+y_m
+\end{bmatrix}$$
+
++ MRI (자기공명영상, Magnetic Resonance Imaging)
+  + 우리 몸 속의 이미지를 보려고 한다.
+  + 우리 몸 속에 대한 이미지를 $n$차원 벡터 $x$라고 하자.
+  + 미지수가 $n$개이므로 방정식도 최대 $n$개 필요하다.
+  + 이미지의 크기가 1024*1024라면 대략 $10^6$, 백만 개의 방정식이 필요하다.
+  + 그런데 **이미지에 해당하는 벡터 $x$가 특정 성질을 만족하면 방정식을 $n$보다 훨씬 더 적은 $m$개만 구해도 벡터 $x$를 정확하게 풀어낼 수 있다**.
+  + 그러한 기술을 compressed sensing이라 한다.
+  + 이러한 성질을 따질 때 $C(A)$와 $N(A)$를 사용하게 된다.
+
+**끝.**
 
 ---
 
