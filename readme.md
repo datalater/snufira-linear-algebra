@@ -48,20 +48,21 @@
 
 ### 4. A = LU Factorization
 
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27%27"/>으로 바꿔주기 위해 <img src="https://latex.codecogs.com/gif.latex?E"/>(Elimination)를 곱해준다.
-+ <img src="https://latex.codecogs.com/gif.latex?E_%7B3%7DE_%7B2%7DE_%7B1%7DA%20%3D%20U%20%5CRightarrow%20A%20%3D%20E_%7B1%7D%5E%7B-1%7DE_%7B2%7D%5E%7B-1%7DE_%7B3%7D%5E%7B-1%7DU%20%5CRightarrow%20A%20%3D%20LU%20"/>
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>으로 바꿔주기 위해 <img src="https://latex.codecogs.com/gif.latex?E"/>(Elimination)를 곱해준다.
++ <img src="https://latex.codecogs.com/gif.latex?E_%7B3%7DE_%7B2%7DE_%7B1%7DA%20%3D%20U%20%5CRightarrow%20A%20%3D%20E_%7B1%7D%5E%7B-1%7DE_%7B2%7D%5E%7B-1%7DE_%7B3%7D%5E%7B-1%7DU%20%5CRightarrow%20A%20%3D%20LU%20"/> (<img src="https://latex.codecogs.com/gif.latex?E"/>는 항상 <img src="https://latex.codecogs.com/gif.latex?L"/> 형태를 유지하므로)
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 <img src="https://latex.codecogs.com/gif.latex?LU"/>로 분해된다.
 
 ### 5. Ax=b와 Subspaces
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재할 수도 있고 존재하지 않을 수도 있다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax"/>를 공간으로 나타냈을 때 그 공간 안에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 포함되면 solution을 구한 것이다.
-+ 만약 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>가 만드는 공간이 3차원의 Subspace인 plane이라면, b가 그 plane에 포함될 확률은 매우 낮을 것이다.
-  + 3차원 공간에서 plane은 두께가 0이며 차지하는 비율이 매우 작다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>를 공간으로 나타냈을 때 그 공간 안에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 포함되면 solution이 존재하는 것이다.
++ 만약 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>가 만드는 공간이 3차원(<img src="https://latex.codecogs.com/gif.latex?R%5E%7B3%7D"/>)의 subspace인 plane이라면, <img src="https://latex.codecogs.com/gif.latex?b"/>가 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 plane에 포함될 확률은 매우 낮을 것이다.
+  + 3차원 공간에서 plane은 두께가 0이므로 차지하는 비율이 매우 작기 때문이다.
 
 ### 6. Ax=b와 C(A)
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재할 수도 있고 존재하지 않을 수도 있다.
+  + <img src="https://latex.codecogs.com/gif.latex?Ax"/>가 만드는 공간을 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 한다.
   + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재한다.
   + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하지 않으면 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재하지 않는다.
 
@@ -147,7 +148,11 @@
 
 ---
 
-## 03 Vector spaces and Subspaces (4) 벡터 공간, 부분 공간, 칼럼 스페이스
+## 3.2 The Null space of A: Solving Ax=0
+
+---
+
+## 3.1 Space of Vectors 벡터 공간, 부분 공간, 칼럼 스페이스
 
 ### 칼럼벡터와 공간의 의미
 
@@ -174,11 +179,12 @@
 
 ### 벡터 공간과 부분 공간 Subspaces
 
-+ 벡터 공간에 속하는 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
++ 벡터 공간에 속하는 임의의 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
 + 즉, 벡터들의 linear combination이 부분 공간(subspace)을 만들어낸다.
++ 다르게 말하면 임의의 벡터들이 span한 것을 subspace라고 한다.
 + subspace에 속하는 벡터들을 linear combination한 결과 또한 당연히 subspace에 속한다.
 
-### subspace 구분법과 OX 퀴즈
+### Subspace 구분법과 OX 퀴즈
 
 #### 구분법
 
@@ -186,16 +192,16 @@
 
 #### OX 퀴즈
 
-+ A plane in <img src="https://latex.codecogs.com/gif.latex?R%5E%7B3%7D"/> that misses the origin : (x) not a subspace
++ A plane in <img src="https://latex.codecogs.com/gif.latex?R%5E%7B3%7D"/> that misses the origin : (x)
   + plane에 속하는 <img src="https://latex.codecogs.com/gif.latex?v"/>에 0을 곱한 결과가 plane에 속하지 않기 때문이다.
-+ The quarter-plane : (x) not a subspace
++ The quarter-plane : (x)
   + (2, 3)에 -1을 곱한 결과가 1사분면에 속하지 않기 때문이다.
 
 ### 칼럼 스페이스 Column Space
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
-+ 벡터 공간의 의미로 접근하면 된다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들로 구성되는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
++ 공간의 관점으로 접근하면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들이 span하여 만드는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
 
 > **Note:** <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에는 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼뿐만 아니라 linear combination의 결과인 <img src="https://latex.codecogs.com/gif.latex?Ax"/>까지 포함하고 있다.
@@ -206,13 +212,54 @@
 + <img src="https://latex.codecogs.com/gif.latex?m"/>차원 벡터칼럼은 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>에 속한다.
 + 따라서 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>의 subspace이다.
 
-@@@RESUME: `TEXTBOOK p.125 (To repeat, the attianable ~)`
+### Ax=b를 만족시키는 b 만들기
+
++ <img src="https://latex.codecogs.com/gif.latex?b_k"/>가 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 <img src="https://latex.codecogs.com/gif.latex?k"/>번째 칼럼 <img src="https://latex.codecogs.com/gif.latex?a_k"/>의 linear combination이 되도록 한다.
++ not yet
+
+### C(A)가 full vector space가 되느냐 subspace가 되느냐
+
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 <img src="https://latex.codecogs.com/gif.latex?m"/>차원 칼럼벡터가 <img src="https://latex.codecogs.com/gif.latex?m"/>차원을 가득 채우면 full vector space (<img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>)가 되고 그렇지 못하면 <img src="https://latex.codecogs.com/gif.latex?R%5E%7Bm%7D"/>의 subspace가 된다.
+
+### Example :: 칼럼 스페이스 묘사하기
+
+<img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20I%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%5C%5C%0D0%20%26%201%0D%5Cend%7Bbmatrix%7D%0D"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2차원이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2개가 independent하다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28I%29%20%5Crightarrow%20R%5E%7B2%7D"/>
+
+<img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%5C%5C%0D2%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터는 2차원이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터들은 서로 dependent하다.
++ 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29%20%5Csubset%20R%5E%7B2%7D"/>
+
+<img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%200%20%5C%5C%0D0%20%26%200%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2차원이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2개가 서로 dependent하다.
++ 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28B%29%20%5Crightarrow%20R%5E%7B2%7D"/>
+
+### Problem :: C(A)와 Ax=b
+
+<img src="https://latex.codecogs.com/gif.latex?20.%28a%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%26%202%20%5C%5C%0D2%20%26%208%20%26%204%20%5C%5C%0D-1%20%26%20-4%20%26%20-2%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0Dx_3%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간의 line이다.
++ <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?%5B1%20%5C%202%20%5C%20%7B-%7D1%5D"/>과 같은 선상에 있으면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b%20%3D%20%5Bb_1%20%5C%202b_1%20%5C%20%7B-%7Db_1%5D"/>
+
+<img src="https://latex.codecogs.com/gif.latex?20.%28b%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%5C%5C%0D2%20%26%209%20%5C%5C%0D-1%20%26%20-4%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간에서 2차원 plane이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터를 <img src="https://latex.codecogs.com/gif.latex?%5Ba_1%20%5C%20a_2%20%5C%20a_3%5D"/>라고 할 때, <img src="https://latex.codecogs.com/gif.latex?a_1"/>과 <img src="https://latex.codecogs.com/gif.latex?a_3"/>의 비율은 고정되고 <img src="https://latex.codecogs.com/gif.latex?a_2"/>만 움직인다.
++ <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?b_1"/>과 <img src="https://latex.codecogs.com/gif.latex?b_3"/>의 비율만 고정시키면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b_3%20%3D%20-b_1"/>.
 
 **끝.**
 
 ---
 
-## 02 Solving Linear Equations (3) 가우스 소거법을 행렬 간 곱셈으로 치환하는 방법
+## 2.6 Elimination = Factorization: A=LU
 
 ### 가우스 소거법을 행렬 간 곱셈으로 치환하기 Elimination as Matrix Mutliplication
 
@@ -233,7 +280,7 @@
 
 + <img src="https://latex.codecogs.com/gif.latex?%284%29"/>는 다음과 같은 형태로 나타낼 수 있다. <img src="https://latex.codecogs.com/gif.latex?%5C%20E_%7B21%7DA%20%3D%20U"/>
 
-### A = LU, LU Factorization
+### A = LU (LU Factorization)
 
 ```
 1. 삼각행렬의 대각선이 모두 0이 아니면 역행렬이 존재한다.
@@ -293,7 +340,7 @@ Ax = b를 풀기 위해 굳이 LU Factorization을 사용할 필요는 없다.
 
 ---
 
-## 02 Solving Linear Equations (2) 가우스 소거법으로 역행렬을 구하는 방법
+## 2.5 Inverse Matrices 가우스-조던 소거법
 
 ### 역행렬을 어떻게 구할까 Inverse Matrix
 
@@ -375,7 +422,7 @@ Ix = b''
 
 ---
 
-## 02 Solving Linear Equations (1) 가우스 소거법
+## 2.2 The Idea of Elimination
 
 ### 선형 방정식을 어떻게 풀까 Solving Linear Equations
 

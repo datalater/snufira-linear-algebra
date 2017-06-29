@@ -48,20 +48,21 @@
 
 ### 4. A = LU Factorization
 
-+ $Ax=b \Rightarrow Ux=b''$으로 바꿔주기 위해 $E$(Elimination)를 곱해준다.
-+ $E_{3}E_{2}E_{1}A = U \Rightarrow A = E_{1}^{-1}E_{2}^{-1}E_{3}^{-1}U \Rightarrow A = LU $
++ $Ax=b \Rightarrow Ux=b'$으로 바꿔주기 위해 $E$(Elimination)를 곱해준다.
++ $E_{3}E_{2}E_{1}A = U \Rightarrow A = E_{1}^{-1}E_{2}^{-1}E_{3}^{-1}U \Rightarrow A = LU $ ($E$는 항상 $L$ 형태를 유지하므로)
 + 행렬 $A$는 $LU$로 분해된다.
 
 ### 5. Ax=b와 Subspaces
 
 + $Ax=b$에서 $x$는 존재할 수도 있고 존재하지 않을 수도 있다.
-+ $Ax$를 공간으로 나타냈을 때 그 공간 안에 $b$가 포함되면 solution을 구한 것이다.
-+ 만약 행렬 $A$가 만드는 공간이 3차원의 Subspace인 plane이라면, b가 그 plane에 포함될 확률은 매우 낮을 것이다.
-  + 3차원 공간에서 plane은 두께가 0이며 차지하는 비율이 매우 작다.
++ $Ax$를 공간으로 나타냈을 때 그 공간 안에 $b$가 포함되면 solution이 존재하는 것이다.
++ 만약 행렬 $A$가 만드는 공간이 3차원($R^{3}$)의 subspace인 plane이라면, $b$가 행렬 $A$의 plane에 포함될 확률은 매우 낮을 것이다.
+  + 3차원 공간에서 plane은 두께가 0이므로 차지하는 비율이 매우 작기 때문이다.
 
 ### 6. Ax=b와 C(A)
 
 + $Ax=b$에서 $x$는 존재할 수도 있고 존재하지 않을 수도 있다.
+  + $Ax$가 만드는 공간을 $C(A)$라고 한다.
   + $C(A)$에 $b$가 속하면 $x$는 존재한다.
   + $C(A)$에 $b$가 속하지 않으면 $x$는 존재하지 않는다.
 
@@ -177,7 +178,11 @@ y_m
 
 ---
 
-## 03 Vector spaces and Subspaces (4) 벡터 공간, 부분 공간, 칼럼 스페이스
+## 3.2 The Null space of A: Solving Ax=0
+
+---
+
+## 3.1 Space of Vectors 벡터 공간, 부분 공간, 칼럼 스페이스
 
 ### 칼럼벡터와 공간의 의미
 
@@ -204,11 +209,12 @@ y_m
 
 ### 벡터 공간과 부분 공간 Subspaces
 
-+ 벡터 공간에 속하는 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
++ 벡터 공간에 속하는 임의의 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
 + 즉, 벡터들의 linear combination이 부분 공간(subspace)을 만들어낸다.
++ 다르게 말하면 임의의 벡터들이 span한 것을 subspace라고 한다.
 + subspace에 속하는 벡터들을 linear combination한 결과 또한 당연히 subspace에 속한다.
 
-### subspace 구분법과 OX 퀴즈
+### Subspace 구분법과 OX 퀴즈
 
 #### 구분법
 
@@ -216,16 +222,16 @@ y_m
 
 #### OX 퀴즈
 
-+ A plane in $R^{3}$ that misses the origin : (x) not a subspace
++ A plane in $R^{3}$ that misses the origin : (x)
   + plane에 속하는 $v$에 0을 곱한 결과가 plane에 속하지 않기 때문이다.
-+ The quarter-plane : (x) not a subspace
++ The quarter-plane : (x)
   + (2, 3)에 -1을 곱한 결과가 1사분면에 속하지 않기 때문이다.
 
 ### 칼럼 스페이스 Column Space
 
 + $Ax=b$에서 $A^{-1}$이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
-+ 벡터 공간의 의미로 접근하면 된다.
-+ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들로 구성되는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
++ 공간의 관점으로 접근하면 된다.
++ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들이 span하여 만드는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
 + $C(A)$에 $b$가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
 
 > **Note:** $C(A)$에는 행렬 $A$의 칼럼뿐만 아니라 linear combination의 결과인 $Ax$까지 포함하고 있다.
@@ -236,13 +242,100 @@ y_m
 + $m$차원 벡터칼럼은 $R^{m}$에 속한다.
 + 따라서 $C(A)$는 $R^{m}$의 subspace이다.
 
-@@@RESUME: `TEXTBOOK p.125 (To repeat, the attianable ~)`
+### Ax=b를 만족시키는 b 만들기
+
++ $b_k$가 행렬 $A$의 $k$번째 칼럼 $a_k$의 linear combination이 되도록 한다.
++ not yet
+
+### C(A)가 full vector space가 되느냐 subspace가 되느냐
+
++ 행렬 $A$의 $m$차원 칼럼벡터가 $m$차원을 가득 채우면 full vector space ($R^{m}$)가 되고 그렇지 못하면 $R^{m}$의 subspace가 된다.
+
+### Example :: 칼럼 스페이스 묘사하기
+
+$(1) \ I =
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+$
++ 행렬 $I$의 칼럼벡터는 2차원이다.
++ 행렬 $I$의 칼럼벡터는 2개가 independent하다.
++ 행렬 $I$의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
++ $C(I) \rightarrow R^{2}$
+
+$(2) \ A =
+\begin{bmatrix}
+1 & 2\\
+2 & 4
+\end{bmatrix}
+$
++ 행렬 $A$의 칼럼벡터는 2차원이다.
++ 행렬 $A$의 칼럼벡터들은 서로 dependent하다.
++ 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
++ $C(A) \subset R^{2}$
+
+$(3) \ B =
+\begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 4
+\end{bmatrix}
+$
++ 행렬 $B$의 칼럼벡터는 2차원이다.
++ 행렬 $B$의 칼럼벡터는 2개가 서로 dependent하다.
++ 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
++ $C(B) \rightarrow R^{2}$
+
+### Problem :: C(A)와 Ax=b
+
+$20.(a) \ \begin{bmatrix}
+1 & 4 & 2 \\
+2 & 8 & 4 \\
+-1 & -4 & -2
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{bmatrix}
+$
+
++ $C(A)$는 3차원 공간의 line이다.
++ $b$는 반드시 $C(A)$에 속해야 하므로 $[1 \ 2 \ {-}1]$과 같은 선상에 있으면 된다.
++ $\therefore b = [b_1 \ 2b_1 \ {-}b_1]$
+
+$20.(b) \ \begin{bmatrix}
+1 & 4 \\
+2 & 9 \\
+-1 & -4
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{bmatrix}
+$
++ $C(A)$는 3차원 공간에서 2차원 plane이다.
++ 행렬 $A$의 칼럼벡터를 $[a_1 \ a_2 \ a_3]$라고 할 때, $a_1$과 $a_3$의 비율은 고정되고 $a_2$만 움직인다.
++ $b$는 반드시 $C(A)$에 속해야 하므로 $b_1$과 $b_3$의 비율만 고정시키면 된다.
++ $\therefore b_3 = -b_1$.
 
 **끝.**
 
 ---
 
-## 02 Solving Linear Equations (3) 가우스 소거법을 행렬 간 곱셈으로 치환하는 방법
+## 2.6 Elimination = Factorization: A=LU
 
 ### 가우스 소거법을 행렬 간 곱셈으로 치환하기 Elimination as Matrix Mutliplication
 
@@ -311,7 +404,7 @@ $$(4) \ \begin{bmatrix}
 
 + $(4)$는 다음과 같은 형태로 나타낼 수 있다. $\ E_{21}A = U$
 
-### A = LU, LU Factorization
+### A = LU (LU Factorization)
 
 ```
 1. 삼각행렬의 대각선이 모두 0이 아니면 역행렬이 존재한다.
@@ -387,7 +480,7 @@ Ax = b를 풀기 위해 굳이 LU Factorization을 사용할 필요는 없다.
 
 ---
 
-## 02 Solving Linear Equations (2) 가우스 소거법으로 역행렬을 구하는 방법
+## 2.5 Inverse Matrices 가우스-조던 소거법
 
 ### 역행렬을 어떻게 구할까 Inverse Matrix
 
@@ -480,7 +573,7 @@ Ix = b''
 
 ---
 
-## 02 Solving Linear Equations (1) 가우스 소거법
+## 2.2 The Idea of Elimination
 
 ### 선형 방정식을 어떻게 풀까 Solving Linear Equations
 
