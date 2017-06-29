@@ -70,18 +70,21 @@
 ### 09 Example :: 칼럼 스페이스 묘사하기
 
 <img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20I%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%5C%5C%0D0%20%26%201%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2차원이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2개가 independent하다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28I%29%20%5Crightarrow%20R%5E%7B2%7D"/>
 
 <img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%5C%5C%0D2%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터는 2차원이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터들은 서로 dependent하다.
 + 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29%20%5Csubset%20R%5E%7B2%7D"/>
 
 <img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%200%20%5C%5C%0D0%20%26%200%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2차원이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
@@ -96,6 +99,7 @@
 + <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b%20%3D%20%5Bb_1%20%5C%202b_1%20%5C%20%7B-%7Db_1%5D"/>
 
 <img src="https://latex.codecogs.com/gif.latex?20.%28b%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%5C%5C%0D2%20%26%209%20%5C%5C%0D-1%20%26%20-4%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간에서 2차원 plane이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터를 <img src="https://latex.codecogs.com/gif.latex?%5Ba_1%20%5C%20a_2%20%5C%20a_3%5D"/>라고 할 때, <img src="https://latex.codecogs.com/gif.latex?a_1"/>과 <img src="https://latex.codecogs.com/gif.latex?a_3"/>의 비율은 고정되고 <img src="https://latex.codecogs.com/gif.latex?a_2"/>만 움직인다.
 + <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?b_1"/>과 <img src="https://latex.codecogs.com/gif.latex?b_3"/>의 비율만 고정시키면 된다.
@@ -257,18 +261,21 @@
 ### Example :: 칼럼 스페이스 묘사하기
 
 <img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20I%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%5C%5C%0D0%20%26%201%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2차원이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2개가 independent하다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28I%29%20%5Crightarrow%20R%5E%7B2%7D"/>
 
 <img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%5C%5C%0D2%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터는 2차원이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터들은 서로 dependent하다.
 + 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29%20%5Csubset%20R%5E%7B2%7D"/>
 
 <img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%200%20%5C%5C%0D0%20%26%200%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
+
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2차원이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
@@ -282,327 +289,7 @@
 + <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?%5B1%20%5C%202%20%5C%20%7B-%7D1%5D"/>과 같은 선상에 있으면 된다.
 + <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b%20%3D%20%5Bb_1%20%5C%202b_1%20%5C%20%7B-%7Db_1%5D"/>
 
-<img src="https://latex.codecogs.com/gif.latex?20.%28b%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%5C%5C%0D2%20%26%209%20%5C%5C%0D-1%20%26%20-4%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
-+ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간에서 2차원 plane이다.
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터를 <img src="https://latex.codecogs.com/gif.latex?%5Ba_1%20%5C%20a_2%20%5C%20a_3%5D"/>라고 할 때, <img src="https://latex.codecogs.com/gif.latex?a_1"/>과 <img src="https://latex.codecogs.com/gif.latex?a_3"/>의 비율은 고정되고 <img src="https://latex.codecogs.com/gif.latex?a_2"/>만 움직인다.
-+ <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?b_1"/>과 <img src="https://latex.codecogs.com/gif.latex?b_3"/>의 비율만 고정시키면 된다.
-+ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b_3%20%3D%20-b_1"/>
-
-**끝.**
-
----
-
-## 08 Ax=b를 푸는 방법 (3) 칼럼 스페이스
-
-### 1) 가우스 소거법
-
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substituion을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
-
-### 2) 가우스-조던 소거법
-
-+ '**역행렬을 구하는 방법**'이다.
-+ <img src="https://latex.codecogs.com/gif.latex?AA%5E%7B-1%7D%3DI%20%5CRightarrow%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%20%5C%20e_2%20%5C%20e_3%5D%20%5CRightarrow%20U%5Bx%20%5C%20y%5C%20z%5D%20%3D%20%5Be_1%27%20%5C%20e_2%27%20%5C%20e_3%27%5D%20%5CRightarrow%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D"/>
-+ 역행렬을 구했으니 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 양변에 역행렬을 곱하면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 한꺼번에 구할 수 있다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20A%5E%7B-1%7DAx%3DA%5E%7B-1%7Db%20%5CRightarrow%20x%20%3D%20A%5E%7B-1%7Db"/>
-
-### 3) 칼럼 스페이스
-
-+ '**해가 존재하는지 존재하지 않는지 판별할 수 있는 방법**'이다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
-+ 공간의 관점으로 접근하면 된다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들이 <img src="https://latex.codecogs.com/gif.latex?span"/>하여 만드는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
-+ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
-
-**끝.**
-
----
-
-## 07 A = LU Factorization
-
-### 가우스 소거법을 행렬 간 곱셈으로 치환하기 Elimination as Matrix Mutliplication
-
-```
-1. pivot과 multiplier의 연산을 행렬 간 곱셈으로 나타낸다.
-```
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20%5Cbegin%7Barray%7D%7Blcr%7D%202x_%7B1%7D+3x_%7B2%7D%20%26%20%3D%20%26%205%20%5C%5C%206x_%7B1%7D+12x_%7B2%7D%20%26%20%3D%20%26%2010%20%5Cend%7Barray%7D"/></p>
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D"/></p>
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D0%20%26%203%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D-5%0D%5Cend%7Bbmatrix%7D"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?%282%29%20Ax%20%3D%20b"/>에서 <img src="https://latex.codecogs.com/gif.latex?%283%29%20Ux%20%3D%20b%27"/>을 만드는 과정을 행렬 간 곱셈으로 나타낼 수 있다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D"/></p>
-
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%284%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D-3%20%26%201%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D0%20%26%203%0D%5Cend%7Bbmatrix%7D"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?%284%29"/>는 다음과 같은 형태로 나타낼 수 있다. <img src="https://latex.codecogs.com/gif.latex?%5C%20E_%7B21%7DA%20%3D%20U"/>
-
-### A = LU (LU Factorization)
-
-```
-1. 삼각행렬의 대각선이 모두 0이 아니면 역행렬이 존재한다.
-
-<이유>
-- 삼각행렬에 속하는 Elimination 행렬은 곱해진 행렬에 대해 특정 효과를 발휘한다.
-- 이 효과를 없애주는 것은 항상 존재하며 그것이 바로 역행렬이 된다.
-- 따라서 삼각행렬은 대각선이 모두 0이 아니면 항상 역행렬이 존재한다.
-```
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%284%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D-3%20%26%201%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D0%20%26%203%0D%5Cend%7Bbmatrix%7D"/></p>
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%285%29%20%5C%20E_%7B21%7DA%20%3D%20U"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?E_%7B21%7D"/>은 삼각행렬인데 대각선의 값이 모두 0이 아니므로 역행렬이 반드시 존재한다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%286%29%20%5C%20A%20%3D%20E_%7B21%7D%5E%7B-1%7DU"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?E_%7B21%7D"/>의 역행렬은 <img src="https://latex.codecogs.com/gif.latex?E_%7B21%7D"/>의 효과를 없애주는 것이다.
-+ <img src="https://latex.codecogs.com/gif.latex?E_%7B21%7D"/>의 효과는 <img src="https://latex.codecogs.com/gif.latex?%28row_2%29%27%20%3D%20%28row_2%29%20-%203*%28row_1%29"/>이다.
-+ 효과를 없애주려면 <img src="https://latex.codecogs.com/gif.latex?%28row_2%29%27%27%27%20%3D%20%28row_2%29%27%20+%203*%28row_1%29"/>를 해줘야 한다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%287%29%20%5C%20A%20%3D%20E_%7B21%7D%5E%7B-1%7DU%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D3%20%26%201%0D%5Cend%7Bbmatrix%7DU%0D"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?E_%7B21%7D"/>은 L(Lower TriangLUar)이다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%288%29%20%5C%20A%20%3D%20LU"/></p>
-
-+ 이러한 과정을 보고, 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?L"/> 곱하기 <img src="https://latex.codecogs.com/gif.latex?U"/>로 `factorization`(분해)를 했다고 말한다.
-
-> **Note:** `factorization` : 분해, 소인수분해
-
-### LU Factorization을 하는 이유
-
-```
-1. Ax = b         # 우리의 목적은 x를 구하는 것
-2. A = LU         # 1번 식에 대한 LU factorization
-3. LUx = b        # 1번 식에 A=LU 대입
-4. Ux = y         # 임의로 정의
-5. Ly = b         # 3번 식에 Ux=y 치환
----------------------------------------------------------------------------
-Ax = b
-Ux = y            # x를 구하려면 y를 알아야 한다
-Ly = b            # Ly=b에서 L은 삼각행렬이므로 y를 쉽게 구할 수 있다
-                  # Ly=b에서 구한 y를 Ux=y에 적용하면 x 또한 쉽게 구할 수 있다.
-----------------------------------------------------------------------------
-Ax = b를 풀기 위해 굳이 LU Factorization을 사용할 필요는 없다.
-방정식이 하나일 때는 단순히 가우스 소거법을 사용하는 것이 빠를 것이다.
-
-그러나 만약 b의 값이 계속 변경되는 상황에서 x를 구하려면 LU Factorization을 사용하는 것이 효율적이다.
-가우스 소거를 1번 하는 것보다 LU Factorization이 훨씬 더 간단하기 때문이다.
-
-그래서 실제로 컴퓨터 소프트웨어인 Matlab에서는 Ax=b를 LU Factorization으로 푼다고 알려져 있다.
-```
-
-**끝.**
-
----
-
-## 06 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
-
-### 역행렬을 어떻게 구할까 Inverse Matrix
-
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구하는 방법은 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 역행렬인 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>을 각 항의 왼쪽에 곱하는 것이다.
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 역행렬을 구하는 방법은 가우스-조던 소거법을 적용하는 것이다.
-+ 가우스 소거법은 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 <img src="https://latex.codecogs.com/gif.latex?Ux%3Db%27"/>의 형태로 만들지만
-+ 가우스-조던 소거법은 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 <img src="https://latex.codecogs.com/gif.latex?Ix%3Db%27%27"/>의 형태로 만든다.
-+ 여기서 <img src="https://latex.codecogs.com/gif.latex?b%27%27"/>은 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7Db"/>를 뜻한다.
-
-
-### 가우스-조던 소거법 Gauss-Jordan Elimination
-
-```
-1. AA^{-1} = I                          # 역행렬의 성질 활용
-2. A^{-1} = [x y z]                     # 역행렬을 칼럼 벡터로 변환
-3. A[x y z] = I                         # Ax=b 형태로 전환
-4. [Ax Ay Az] = [e1 e2 e3]              # 단위행렬을 칼럼 벡터로 변환
-5. Ax = e1, Ay = e2, Az = e3            # Ax=b 형태로 전환
-6. [A | e1], [A | e2], [A | e3]         # 첨가행렬 형태로 전환
-7. [A | e1 e2 e3]                       # 첨가행렬 형태로 전환
-8. [U | e1' e2' e3']                    # 가우스 소거법 적용
-9. [I | e1'' e2'' e3'']                 # 가우스-조던 소거법 적용
-10. I[x y z] = [e1'' e2'' e3'']         # 첨가행렬 형태를 원래 상태로 복귀
-11. A^{-1} = [x y z] = [e1'' e2'' e3'']
-```
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20AA%5E%7B-1%7D%3DI"/></p>
-
-+ 어떤 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 역행렬을 곱하면 단위행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>가 나온다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20A%3DR%5E%7B3*3%7D%2C%20%5C%20A%5E%7B-1%7D%20%3D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%26%20y_1%20%26%20z_1%20%5C%5C%0Dx_2%20%26%20y_2%20%26%20z_2%20%5C%5C%0Dx_3%20%26%20y_3%20%26%20z_3%0D%5Cend%7Bbmatrix%7D%0D%3D%20%5Bx%20%5C%20y%20%5C%20z%5D"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?x%2C%20y%2C%20z"/>를 구하는 것이 곧 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>을 구하는 것이다.
-+ <img src="https://latex.codecogs.com/gif.latex?%282%29"/>를 <img src="https://latex.codecogs.com/gif.latex?%281%29"/>에 적용시키면 다음과 같다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20AA%5E%7B-1%7D%20%3D%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%26%200%20%5C%5C%0D0%20%26%201%20%26%200%20%5C%5C%0D0%20%26%200%20%26%201%0D%5Cend%7Bbmatrix%7D"/></p>
-
-+ 단위행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 각 칼럼을 <img src="https://latex.codecogs.com/gif.latex?e_%7B1%7D%2C%20e_%7B2%7D%2C%20e_%7B3%7D"/>이라고 해보자.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%284%29%20%5C%20%5BAx%20%5C%20Ay%20%5C%20Az%5D%20%3D%20%5Be_%7B1%7D%20%5C%20e_%7B2%7D%20%5C%20e_%7B3%7D%5D%20"/></p>
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%285%29%20%5C%20Ax%3De_%7B1%7D%2C%20%5C%20Ay%3De_%7B2%7D%2C%20%5C%20Az%3De_%7B3%7D"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?%285%29"/> 같은 경우 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 형태이므로 가우스 소거법을 활용할 수 있다.
-+ 그런데 <img src="https://latex.codecogs.com/gif.latex?%285%29"/>에 있는 3가지 식 모두 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>에 대한 가우스 소거법이므로 똑같이 진행하게 된다.
-+ 가우스 소거법의 결과를 결정짓는 것은 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>이므로 한꺼번에 첨가행렬(augmented matrix form)을 활용할 수 있다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%286%29%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B1%7D%5D%2C%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B2%7D%5D%2C%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B3%7D%5D%20"/></p>
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%287%29%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B1%7D%20%5C%20e_%7B2%7D%20%5C%20e_%7B3%7D%5D"/></p>
-
-+ <img src="https://latex.codecogs.com/gif.latex?%287%29"/> 식에 가우스 소거법을 적용하면, <img src="https://latex.codecogs.com/gif.latex?x%2C%20y%2C%20z"/>를 구할 수 있다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%288%29%20%5C%20%5Bu%20%5C%20%7C%20%5C%20e_%7B1%7D%27%20%5C%20e_%7B2%7D%27%20%5C%20e_%7B3%7D%27%5D%20"/></p>
-
-+ 가우스 소거법에서는 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 행렬 <img src="https://latex.codecogs.com/gif.latex?U"/>로 만들었다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%289%29%20%5C%20%5BI%20%5C%20%7C%20%5C%20e_%7B1%7D%27%27%20%5C%20e_%7B2%7D%27%27%20%5C%20e_%7B3%7D%27%27%5D"/></p>
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%2810%29%20%5C%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_%7B1%7D%27%27%20%5C%20e_%7B2%7D%27%27%20%5C%20e_%7B3%7D%27%27%5D"/></p>
-
-+ 그러나 가우스-조던 소거법에서는 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 단위행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>로 만들어준다.
-
-### 가우스 소거법 vs. 가우스-조던 소거법 Gauss Elimination vs. Gauss-Jordan Elimination
-
-```
-1. 가우스 소거법
-
-Ax = b
-[A | b]
-[u | b']
-Ux = b'
-------
->> back substitution을 통해 칼럼 벡터 x의 각 값(unknowns)을 구한다.
-
-
-2. 가우스-조던 소거법
-
-Ax = b
-[A | b]
-[u | b']
-[I | b'']
-Ix = b''
--------
->> 행렬 A의 역행렬 A^{-1}을 구한다.
-```
-
-**끝.**
-
----
-
-## 05 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
-
-### 1) 가우스 소거법
-
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substituion을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
-
-### 2) 가우스-조던 소거법
-
-+ 역행렬을 구하는 방법이다.
-+ <img src="https://latex.codecogs.com/gif.latex?AA%5E%7B-1%7D%3DI%20%5CRightarrow%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%20%5C%20e_2%20%5C%20e_3%5D%20%5CRightarrow%20U%5Bx%20%5C%20y%5C%20z%5D%20%3D%20%5Be_1%27%20%5C%20e_2%27%20%5C%20e_3%27%5D%20%5CRightarrow%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D"/>
-+ 역행렬을 구했으니 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 양변에 역행렬을 곱하면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 한꺼번에 구할 수 있다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20A%5E%7B-1%7DAx%3DA%5E%7B-1%7Db%20%5CRightarrow%20x%20%3D%20A%5E%7B-1%7Db"/>
-
-**끝.**
-
----
-
-## 04 첨가 행렬 Augmented Matrix Form
-
-### 첨가 행렬 Augmented Matrix Form
-
-```
-Ax = b => [A | b] => [u | b'] => Ux = b'
-
-행렬 A에 칼럼벡터 b를 붙여서 하나의 행렬로 나타낸 것을 첨가행렬이라 한다.
-
-가우스 소거법을 적용하면 A의 row와 b의 row가 같은 연산을 적용 받는다.
-어차피 같은 연산을 적용 받으니 행렬 A에 b를 추가하여 첨가행렬로 만들 수 있다.
-```
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%5C%5C%0D2%20%26%202%20%26%204%20%5C%5C%0D3%20%26%207%20%26%209%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%20%5C%5C%0Dx_%7B3%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D7%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D"/></p>
-
-+ 위 행렬의 형태를 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>라고 할 때
-+ 가우스 소거에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 아무런 관여를 하지 않는다.
-+ 가우스 소거의 결과를 결정하는 것은 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>이다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%26%20%7C%20%26%205%20%5C%5C%0D2%20%26%202%20%26%204%20%26%20%7C%20%26%207%20%5C%5C%0D3%20%26%207%20%26%209%20%26%20%7C%20%26%2010%0D%5Cend%7Bbmatrix%7D%0D"/></p>
-
-+ 따라서 가우스 소거에서 필요 없는 것을 제외하면 하나의 행렬로 나타낼 수 있다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%0D%5Cend%7Bbmatrix%7D%0D"/></p>
-
-+ 가우스 소거를 통해 위와 같은 형태가 만들어진다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%0D%5Cend%7Bbmatrix%7D%0D"/></p>
-
-+ 2번째 행과 3번째 행을 바꿔서 <img src="https://latex.codecogs.com/gif.latex?Ux%3Db%27"/> 형태로 만들어준다.
-
-**끝.**
-
----
-
-## 03 가우스 소거법 Gaussian Elimination
-
-### 가우스 소거법 Gauss Elimination
-
-```
-Ax = b => Ux = b' (b prime)
-
-1) Ax = b
-2) Gauss Elimination
-3) Ux = b
-4) back substitution
-```
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Barray%7D%7Blcl%7D%20x_%7B1%7D+2x_%7B2%7D%20%26%20%3D%20%26%205%20%5C%5C%202x_%7B1%7D+5x_%7B2%7D%20%26%20%3D%20%26%2012%20%5Cend%7Barray%7D"/></p>
-
-+ 방정식을 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>로 표현한다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%202%20%26%205%20%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%5C%5C%202%20%5Cend%7Bbmatrix%7D"/></p>
-
-+ Gauss Elimination으로 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>(upper triangLUar)로 만들어준다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%200%20%26%201%20%5Cend%7Bbmatrix%7D%20%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%205%20%5C%5C%202%20%5Cend%7Bbmatrix%7D"/></p>
-
-+ 다시 방정식으로 나타낸다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Barray%7D%7Brcl%7D%20x_%7B1%7D+2x_%7B2%7D%20%26%20%3D%20%26%205%20%5C%5C%20x_%7B2%7D%20%26%20%3D%20%26%2012%20%5Cend%7Barray%7D"/></p>
-
-+ back substitution을 통해 아래에서부터 미지수의 값을 차례대로 대입하면 쉽게 해를 구할 수 있다.
-
-### 피봇과 멀티플라이어 Pivot and Multiplier
-
-```
-Pivot : 소거되지 않는 row의 첫 번째 값
-Multiplier : 소거될 row의 첫 번째 값을 Pivot으로 나눈 값
-```
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%202%20%26%205%20%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%5C%5C%202%20%5Cend%7Bbmatrix%7D"/></p>
-
-+ Pivot = 1
-+ Multiplier = 2
-
-**끝.**
-
----
-
-## 02 Ax=b를 푸는 방법 (1) 가우스 소거법
-
-### 1) 가우스 소거법
-
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substituion을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
-
-**끝.**
-
----
-
-## 01 선형 방정식 Linear Equations
-
-### 선형 방정식을 어떻게 풀까 Solving Linear Equations
-
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 선형 방정식이라고 한다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 만족시키는 <img src="https://latex.codecogs.com/gif.latex?x"/>를 찾는 것이 선형 방정식을 푸는 것이다.
+<img src="https://latex.codecogs.com/gif.latex?20.%28b%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%5C%5C%0D2%20%26%209%20%5C%5C%0D-1%20%26%20-4%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524C%2528A%2529%2524%25uB294%25203%25uCC28%25uC6D0%2520%25uACF5%25uAC04%25uC5D0%25uC11C%25202%25uCC28%25uC6D0%2520plane%25uC774%25uB2E4.%250D+%2520%25uD589%25uB82C%2520%2524A%2524%25uC758%2520%25uCE7C%25uB7FC%25uBCA1%25uD130%25uB97C%2520%2524%255Ba_1%2520%255C%2520a_2%2520%255C%2520a_3%255D%2524%25uB77C%25uACE0%2520%25uD560%2520%25uB54C%252C%2520%2524a_1%2524%25uACFC%2520%2524a_3%2524%25uC758%2520%25uBE44%25uC728%25uC740%2520%25uACE0%25uC815%25uB418%25uACE0%2520%2524a_2%2524%25uB9CC%2520%25uC6C0%25uC9C1%25uC778%25uB2E4.%250D+%2520%2524b%2524%25uB294%2520%25uBC18%25uB4DC%25uC2DC%2520%2524C%2528A%2529%2524%25uC5D0%2520%25uC18D%25uD574%25uC57C%2520%25uD558%25uBBC0%25uB85C%2520%2524b_1%2524%25uACFC%2520%2524b_3%2524%25uC758%2520%25uBE44%25uC728%25uB9CC%2520%25uACE0%25uC815%25uC2DC%25uD0A4%25uBA74%2520%25uB41C%25uB2E4.%250D+%2520%2524%255Ctherefore%2520b_3%2520%253D%2520-b_1%2524%250D%250D**%25uB05D.**%250D%250D---%250D%250D%2523%2523%252008%2520Ax%253Db%25uB97C%2520%25uD478%25uB294%2520%25uBC29%25uBC95%2520%25283%2529%2520%25uCE7C%25uB7FC%2520%25uC2A4%25uD398%25uC774%25uC2A4%250D%250D%2523%2523%2523%25201%2529%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%250D%250D+%2520%2524Ax%253Db%2520%255CRightarrow%2520Ux%253Db%2527%2524%250D+%2520%25uD589%25uB82C%2520%2524A%2524%25uB97C%2520%2524U%2524%25uD615%25uD0DC%25uB85C%2520%25uBC14%25uAFBC%2520%25uD6C4%2520back%2520substituion%25uC744%2520%25uC801%25uC6A9%25uD558%25uC5EC%2520%2524x%2524%25uB97C%2520%25uD558%25uB098%25uC529%2520%25uAD6C%25uD55C%25uB2E4.%250D%250D%2523%2523%2523%25202%2529%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%250D%250D+%2520%2527**%25uC5ED%25uD589%25uB82C%25uC744%2520%25uAD6C%25uD558%25uB294%2520%25uBC29%25uBC95**%2527%25uC774%25uB2E4.%250D+%2520%2524AA%255E%257B-1%257D%253DI%2520%255CRightarrow%2520A%255Bx%2520%255C%2520y%2520%255C%2520z%255D%2520%253D%2520%255Be_1%2520%255C%2520e_2%2520%255C%2520e_3%255D%2520%255CRightarrow%2520U%255Bx%2520%255C%2520y%255C%2520z%255D%2520%253D%2520%255Be_1%2527%2520%255C%2520e_2%2527%2520%255C%2520e_3%2527%255D%2520%255CRightarrow%2520I%255Bx%2520%255C%2520y%2520%255C%2520z%255D%2520%253D%2520%255Be_1%2527%2527%2520%255C%2520e_2%2527%2527%2520%255C%2520e_3%2527%2527%255D%2524%250D+%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uAD6C%25uD588%25uC73C%25uB2C8%2520%2524Ax%253Db%2524%25uC758%2520%25uC591%25uBCC0%25uC5D0%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uACF1%25uD558%25uBA74%2520%2524x%2524%25uB97C%2520%25uD55C%25uAEBC%25uBC88%25uC5D0%2520%25uAD6C%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D+%2520%2524Ax%253Db%2520%255CRightarrow%2520A%255E%257B-1%257DAx%253DA%255E%257B-1%257Db%2520%255CRightarrow%2520x%2520%253D%2520A%255E%257B-1%257Db%2524%250D%250D%2523%2523%2523%25203%2529%2520%25uCE7C%25uB7FC%2520%25uC2A4%25uD398%25uC774%25uC2A4%250D%250D+%2520%2527**%25uD574%25uAC00%2520%25uC874%25uC7AC%25uD558%25uB294%25uC9C0%2520%25uC874%25uC7AC%25uD558%25uC9C0%2520%25uC54A%25uB294%25uC9C0%2520%25uD310%25uBCC4%25uD560%2520%25uC218%2520%25uC788%25uB294%2520%25uBC29%25uBC95**%2527%25uC774%25uB2E4.%250D+%2520%2524Ax%253Db%2524%25uC5D0%25uC11C%2520%2524A%255E%257B-1%257D%2524%25uC774%2520%25uC874%25uC7AC%25uD558%25uC9C0%2520%25uC54A%25uC744%2520%25uB54C%252C%2520%25uD574%25uAC00%2520%25uC788%25uB294%25uC9C0%2520%25uC5C6%25uB294%25uC9C0%2520%25uC5B4%25uB5BB%25uAC8C%2520%25uC54C%2520%25uC218%2520%25uC788%25uC744%25uAE4C.%250D+%2520%25uACF5%25uAC04%25uC758%2520%25uAD00%25uC810%25uC73C%25uB85C%2520%25uC811%25uADFC%25uD558%25uBA74%2520%25uB41C%25uB2E4.%250D+%2520%2524Ax%2524%25uB294%2520%25uD558%25uB098%25uC758%2520%25uBCA1%25uD130%2520%25uACF5%25uAC04%25uC778%25uB370%2520%25uD589%25uB82C%2520%2524A%2524%25uC758%2520%25uCE7C%25uB7FC%25uB4E4%25uC774%2520%2524span%2524%25uD558%25uC5EC%2520%25uB9CC%25uB4DC%25uB294%2520%25uACF5%25uAC04%25uC774%25uBBC0%25uB85C%2520%25uCE7C%25uB7FC%2520%25uC2A4%25uD398%25uC774%25uC2A4%2520%2524C%2528A%2529%2524%25uB77C%25uACE0%2520%25uBD80%25uB978%25uB2E4.%250D+%2520%2524C%2528A%2529%2524%25uC5D0%2520%2524b%2524%25uAC00%2520%25uC18D%25uD558%25uBA74%2520%25uD574%25uAC00%2520%25uC788%25uB294%2520%25uAC83%25uC774%25uACE0%252C%2520%25uC18D%25uD558%25uC9C0%2520%25uC54A%25uC73C%25uBA74%2520%25uD574%25uAC00%2520%25uC5C6%25uB294%2520%25uAC83%25uC774%25uB2E4.%250D%250D**%25uB05D.**%250D%250D---%250D%250D%2523%2523%252007%2520A%2520%253D%2520LU%2520Factorization%250D%250D%2523%2523%2523%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC744%2520%25uD589%25uB82C%2520%25uAC04%2520%25uACF1%25uC148%25uC73C%25uB85C%2520%25uCE58%25uD658%25uD558%25uAE30%2520Elimination%2520as%2520Matrix%2520Mutliplication%250D%250D%2560%2560%2560%250D1.%2520pivot%25uACFC%2520multiplier%25uC758%2520%25uC5F0%25uC0B0%25uC744%2520%25uD589%25uB82C%2520%25uAC04%2520%25uACF1%25uC148%25uC73C%25uB85C%2520%25uB098%25uD0C0%25uB0B8%25uB2E4.%250D%2560%2560%2560%250D%250D%22/%3E%3C/p%3E%281%29%20%5C%20%5Cbegin%7Barray%7D%7Blcr%7D%202x_%7B1%7D+3x_%7B2%7D%20%26%20%3D%20%26%205%20%5C%5C%206x_%7B1%7D+12x_%7B2%7D%20%26%20%3D%20%26%2010%20%5Cend%7Barray%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%22/%3E%3C/p%3E%282%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%22/%3E%3C/p%3E%283%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D0%20%26%203%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D-5%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524%25282%2529%2520Ax%2520%253D%2520b%2524%25uC5D0%25uC11C%2520%2524%25283%2529%2520Ux%2520%253D%2520b%2527%2524%25uC744%2520%25uB9CC%25uB4DC%25uB294%2520%25uACFC%25uC815%25uC744%2520%25uD589%25uB82C%2520%25uAC04%2520%25uACF1%25uC148%25uC73C%25uB85C%2520%25uB098%25uD0C0%25uB0BC%2520%25uC218%2520%25uC788%25uB2E4.%250D%250D%22/%3E%3C/p%3E%282%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D%250D%22/%3E%3C/p%3E%284%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D-3%20%26%201%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D0%20%26%203%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524%25284%2529%2524%25uB294%2520%25uB2E4%25uC74C%25uACFC%2520%25uAC19%25uC740%2520%25uD615%25uD0DC%25uB85C%2520%25uB098%25uD0C0%25uB0BC%2520%25uC218%2520%25uC788%25uB2E4.%2520%2524%255C%2520E_%257B21%257DA%2520%253D%2520U%2524%250D%250D%2523%2523%2523%2520A%2520%253D%2520LU%2520%2528LU%2520Factorization%2529%250D%250D%2560%2560%2560%250D1.%2520%25uC0BC%25uAC01%25uD589%25uB82C%25uC758%2520%25uB300%25uAC01%25uC120%25uC774%2520%25uBAA8%25uB450%25200%25uC774%2520%25uC544%25uB2C8%25uBA74%2520%25uC5ED%25uD589%25uB82C%25uC774%2520%25uC874%25uC7AC%25uD55C%25uB2E4.%250D%250D%253C%25uC774%25uC720%253E%250D-%2520%25uC0BC%25uAC01%25uD589%25uB82C%25uC5D0%2520%25uC18D%25uD558%25uB294%2520Elimination%2520%25uD589%25uB82C%25uC740%2520%25uACF1%25uD574%25uC9C4%2520%25uD589%25uB82C%25uC5D0%2520%25uB300%25uD574%2520%25uD2B9%25uC815%2520%25uD6A8%25uACFC%25uB97C%2520%25uBC1C%25uD718%25uD55C%25uB2E4.%250D-%2520%25uC774%2520%25uD6A8%25uACFC%25uB97C%2520%25uC5C6%25uC560%25uC8FC%25uB294%2520%25uAC83%25uC740%2520%25uD56D%25uC0C1%2520%25uC874%25uC7AC%25uD558%25uBA70%2520%25uADF8%25uAC83%25uC774%2520%25uBC14%25uB85C%2520%25uC5ED%25uD589%25uB82C%25uC774%2520%25uB41C%25uB2E4.%250D-%2520%25uB530%25uB77C%25uC11C%2520%25uC0BC%25uAC01%25uD589%25uB82C%25uC740%2520%25uB300%25uAC01%25uC120%25uC774%2520%25uBAA8%25uB450%25200%25uC774%2520%25uC544%25uB2C8%25uBA74%2520%25uD56D%25uC0C1%2520%25uC5ED%25uD589%25uB82C%25uC774%2520%25uC874%25uC7AC%25uD55C%25uB2E4.%250D%2560%2560%2560%250D%250D%22/%3E%3C/p%3E%284%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D-3%20%26%201%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D6%20%26%2012%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D2%20%26%203%20%5C%5C%0D0%20%26%203%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D%22/%3E%3C/p%3E%285%29%20%5C%20E_%7B21%7DA%20%3D%20U%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524E_%257B21%257D%2524%25uC740%2520%25uC0BC%25uAC01%25uD589%25uB82C%25uC778%25uB370%2520%25uB300%25uAC01%25uC120%25uC758%2520%25uAC12%25uC774%2520%25uBAA8%25uB450%25200%25uC774%2520%25uC544%25uB2C8%25uBBC0%25uB85C%2520%25uC5ED%25uD589%25uB82C%25uC774%2520%25uBC18%25uB4DC%25uC2DC%2520%25uC874%25uC7AC%25uD55C%25uB2E4.%250D%250D%22/%3E%3C/p%3E%286%29%20%5C%20A%20%3D%20E_%7B21%7D%5E%7B-1%7DU%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524E_%257B21%257D%2524%25uC758%2520%25uC5ED%25uD589%25uB82C%25uC740%2520%2524E_%257B21%257D%2524%25uC758%2520%25uD6A8%25uACFC%25uB97C%2520%25uC5C6%25uC560%25uC8FC%25uB294%2520%25uAC83%25uC774%25uB2E4.%250D+%2520%2524E_%257B21%257D%2524%25uC758%2520%25uD6A8%25uACFC%25uB294%2520%2524%2528row_2%2529%2527%2520%253D%2520%2528row_2%2529%2520-%25203*%2528row_1%2529%2524%25uC774%25uB2E4.%250D+%2520%25uD6A8%25uACFC%25uB97C%2520%25uC5C6%25uC560%25uC8FC%25uB824%25uBA74%2520%2524%2528row_2%2529%2527%2527%2527%2520%253D%2520%2528row_2%2529%2527%2520+%25203*%2528row_1%2529%2524%25uB97C%2520%25uD574%25uC918%25uC57C%2520%25uD55C%25uB2E4.%250D%250D%22/%3E%3C/p%3E%287%29%20%5C%20A%20%3D%20E_%7B21%7D%5E%7B-1%7DU%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D3%20%26%201%0D%5Cend%7Bbmatrix%7DU%0D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524E_%257B21%257D%2524%25uC740%2520L%2528Lower%2520TriangLUar%2529%25uC774%25uB2E4.%250D%250D%22/%3E%3C/p%3E%288%29%20%5C%20A%20%3D%20LU%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uC774%25uB7EC%25uD55C%2520%25uACFC%25uC815%25uC744%2520%25uBCF4%25uACE0%252C%2520%25uD589%25uB82C%2520%2524A%2524%25uB97C%2520%2524L%2524%2520%25uACF1%25uD558%25uAE30%2520%2524U%2524%25uB85C%2520%2560factorization%2560%2528%25uBD84%25uD574%2529%25uB97C%2520%25uD588%25uB2E4%25uACE0%2520%25uB9D0%25uD55C%25uB2E4.%250D%250D%253E%2520**Note%253A**%2520%2560factorization%2560%2520%253A%2520%25uBD84%25uD574%252C%2520%25uC18C%25uC778%25uC218%25uBD84%25uD574%250D%250D%2523%2523%2523%2520LU%2520Factorization%25uC744%2520%25uD558%25uB294%2520%25uC774%25uC720%250D%250D%2560%2560%2560%250D1.%2520Ax%2520%253D%2520b%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uC6B0%25uB9AC%25uC758%2520%25uBAA9%25uC801%25uC740%2520x%25uB97C%2520%25uAD6C%25uD558%25uB294%2520%25uAC83%250D2.%2520A%2520%253D%2520LU%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%25201%25uBC88%2520%25uC2DD%25uC5D0%2520%25uB300%25uD55C%2520LU%2520factorization%250D3.%2520LUx%2520%253D%2520b%2520%2520%2520%2520%2520%2520%2520%2520%2523%25201%25uBC88%2520%25uC2DD%25uC5D0%2520A%253DLU%2520%25uB300%25uC785%250D4.%2520Ux%2520%253D%2520y%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uC784%25uC758%25uB85C%2520%25uC815%25uC758%250D5.%2520Ly%2520%253D%2520b%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%25203%25uBC88%2520%25uC2DD%25uC5D0%2520Ux%253Dy%2520%25uCE58%25uD658%250D---------------------------------------------------------------------------%250DAx%2520%253D%2520b%250DUx%2520%253D%2520y%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520x%25uB97C%2520%25uAD6C%25uD558%25uB824%25uBA74%2520y%25uB97C%2520%25uC54C%25uC544%25uC57C%2520%25uD55C%25uB2E4%250DLy%2520%253D%2520b%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520Ly%253Db%25uC5D0%25uC11C%2520L%25uC740%2520%25uC0BC%25uAC01%25uD589%25uB82C%25uC774%25uBBC0%25uB85C%2520y%25uB97C%2520%25uC27D%25uAC8C%2520%25uAD6C%25uD560%2520%25uC218%2520%25uC788%25uB2E4%250D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520Ly%253Db%25uC5D0%25uC11C%2520%25uAD6C%25uD55C%2520y%25uB97C%2520Ux%253Dy%25uC5D0%2520%25uC801%25uC6A9%25uD558%25uBA74%2520x%2520%25uB610%25uD55C%2520%25uC27D%25uAC8C%2520%25uAD6C%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D----------------------------------------------------------------------------%250DAx%2520%253D%2520b%25uB97C%2520%25uD480%25uAE30%2520%25uC704%25uD574%2520%25uAD73%25uC774%2520LU%2520Factorization%25uC744%2520%25uC0AC%25uC6A9%25uD560%2520%25uD544%25uC694%25uB294%2520%25uC5C6%25uB2E4.%250D%25uBC29%25uC815%25uC2DD%25uC774%2520%25uD558%25uB098%25uC77C%2520%25uB54C%25uB294%2520%25uB2E8%25uC21C%25uD788%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC744%2520%25uC0AC%25uC6A9%25uD558%25uB294%2520%25uAC83%25uC774%2520%25uBE60%25uB97C%2520%25uAC83%25uC774%25uB2E4.%250D%250D%25uADF8%25uB7EC%25uB098%2520%25uB9CC%25uC57D%2520b%25uC758%2520%25uAC12%25uC774%2520%25uACC4%25uC18D%2520%25uBCC0%25uACBD%25uB418%25uB294%2520%25uC0C1%25uD669%25uC5D0%25uC11C%2520x%25uB97C%2520%25uAD6C%25uD558%25uB824%25uBA74%2520LU%2520Factorization%25uC744%2520%25uC0AC%25uC6A9%25uD558%25uB294%2520%25uAC83%25uC774%2520%25uD6A8%25uC728%25uC801%25uC774%25uB2E4.%250D%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uB97C%25201%25uBC88%2520%25uD558%25uB294%2520%25uAC83%25uBCF4%25uB2E4%2520LU%2520Factorization%25uC774%2520%25uD6E8%25uC52C%2520%25uB354%2520%25uAC04%25uB2E8%25uD558%25uAE30%2520%25uB54C%25uBB38%25uC774%25uB2E4.%250D%250D%25uADF8%25uB798%25uC11C%2520%25uC2E4%25uC81C%25uB85C%2520%25uCEF4%25uD4E8%25uD130%2520%25uC18C%25uD504%25uD2B8%25uC6E8%25uC5B4%25uC778%2520Matlab%25uC5D0%25uC11C%25uB294%2520Ax%253Db%25uB97C%2520LU%2520Factorization%25uC73C%25uB85C%2520%25uD47C%25uB2E4%25uACE0%2520%25uC54C%25uB824%25uC838%2520%25uC788%25uB2E4.%250D%2560%2560%2560%250D%250D**%25uB05D.**%250D%250D---%250D%250D%2523%2523%252006%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%25uC73C%25uB85C%2520%25uC5ED%25uD589%25uB82C%2520%25uAD6C%25uD558%25uAE30%2520Inverse%2520Matrix%2520Using%2520Gauss-Jordan%2520Elimination%250D%250D%2523%2523%2523%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uC5B4%25uB5BB%25uAC8C%2520%25uAD6C%25uD560%25uAE4C%2520Inverse%2520Matrix%250D%250D+%2520%2524Ax%253Db%2524%25uC5D0%25uC11C%2520%2524x%2524%25uB97C%2520%25uAD6C%25uD558%25uB294%2520%25uBC29%25uBC95%25uC740%2520%25uD589%25uB82C%2520%2524A%2524%25uC758%2520%25uC5ED%25uD589%25uB82C%25uC778%2520%2524A%255E%257B-1%257D%2524%25uC744%2520%25uAC01%2520%25uD56D%25uC758%2520%25uC67C%25uCABD%25uC5D0%2520%25uACF1%25uD558%25uB294%2520%25uAC83%25uC774%25uB2E4.%250D+%2520%25uD589%25uB82C%2520%2524A%2524%25uC758%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uAD6C%25uD558%25uB294%2520%25uBC29%25uBC95%25uC740%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%25uC744%2520%25uC801%25uC6A9%25uD558%25uB294%2520%25uAC83%25uC774%25uB2E4.%250D+%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC740%2520%2524Ax%253Db%2524%25uB97C%2520%2524Ux%253Db%2527%2524%25uC758%2520%25uD615%25uD0DC%25uB85C%2520%25uB9CC%25uB4E4%25uC9C0%25uB9CC%250D+%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%25uC740%2520%2524Ax%253Db%2524%25uB97C%2520%2524Ix%253Db%2527%2527%2524%25uC758%2520%25uD615%25uD0DC%25uB85C%2520%25uB9CC%25uB4E0%25uB2E4.%250D+%2520%25uC5EC%25uAE30%25uC11C%2520%2524b%2527%2527%2524%25uC740%2520%2524A%255E%257B-1%257Db%2524%25uB97C%2520%25uB73B%25uD55C%25uB2E4.%250D%250D%250D%2523%2523%2523%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%2520Gauss-Jordan%2520Elimination%250D%250D%2560%2560%2560%250D1.%2520AA%255E%257B-1%257D%2520%253D%2520I%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uC5ED%25uD589%25uB82C%25uC758%2520%25uC131%25uC9C8%2520%25uD65C%25uC6A9%250D2.%2520A%255E%257B-1%257D%2520%253D%2520%255Bx%2520y%2520z%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uCE7C%25uB7FC%2520%25uBCA1%25uD130%25uB85C%2520%25uBCC0%25uD658%250D3.%2520A%255Bx%2520y%2520z%255D%2520%253D%2520I%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520Ax%253Db%2520%25uD615%25uD0DC%25uB85C%2520%25uC804%25uD658%250D4.%2520%255BAx%2520Ay%2520Az%255D%2520%253D%2520%255Be1%2520e2%2520e3%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uB2E8%25uC704%25uD589%25uB82C%25uC744%2520%25uCE7C%25uB7FC%2520%25uBCA1%25uD130%25uB85C%2520%25uBCC0%25uD658%250D5.%2520Ax%2520%253D%2520e1%252C%2520Ay%2520%253D%2520e2%252C%2520Az%2520%253D%2520e3%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520Ax%253Db%2520%25uD615%25uD0DC%25uB85C%2520%25uC804%25uD658%250D6.%2520%255BA%2520%257C%2520e1%255D%252C%2520%255BA%2520%257C%2520e2%255D%252C%2520%255BA%2520%257C%2520e3%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uCCA8%25uAC00%25uD589%25uB82C%2520%25uD615%25uD0DC%25uB85C%2520%25uC804%25uD658%250D7.%2520%255BA%2520%257C%2520e1%2520e2%2520e3%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uCCA8%25uAC00%25uD589%25uB82C%2520%25uD615%25uD0DC%25uB85C%2520%25uC804%25uD658%250D8.%2520%255BU%2520%257C%2520e1%2527%2520e2%2527%2520e3%2527%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%2520%25uC801%25uC6A9%250D9.%2520%255BI%2520%257C%2520e1%2527%2527%2520e2%2527%2527%2520e3%2527%2527%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%2520%25uC801%25uC6A9%250D10.%2520I%255Bx%2520y%2520z%255D%2520%253D%2520%255Be1%2527%2527%2520e2%2527%2527%2520e3%2527%2527%255D%2520%2520%2520%2520%2520%2520%2520%2520%2520%2523%2520%25uCCA8%25uAC00%25uD589%25uB82C%2520%25uD615%25uD0DC%25uB97C%2520%25uC6D0%25uB798%2520%25uC0C1%25uD0DC%25uB85C%2520%25uBCF5%25uADC0%250D11.%2520A%255E%257B-1%257D%2520%253D%2520%255Bx%2520y%2520z%255D%2520%253D%2520%255Be1%2527%2527%2520e2%2527%2527%2520e3%2527%2527%255D%250D%2560%2560%2560%250D%250D%22/%3E%3C/p%3E%281%29%20%5C%20AA%5E%7B-1%7D%3DI%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uC5B4%25uB5A4%2520%25uD589%25uB82C%2520%2524A%2524%25uC758%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uACF1%25uD558%25uBA74%2520%25uB2E8%25uC704%25uD589%25uB82C%2520%2524I%2524%25uAC00%2520%25uB098%25uC628%25uB2E4.%250D%250D%22/%3E%3C/p%3E%282%29%20%5C%20A%3DR%5E%7B3*3%7D%2C%20%5C%20A%5E%7B-1%7D%20%3D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%26%20y_1%20%26%20z_1%20%5C%5C%0Dx_2%20%26%20y_2%20%26%20z_2%20%5C%5C%0Dx_3%20%26%20y_3%20%26%20z_3%0D%5Cend%7Bbmatrix%7D%0D%3D%20%5Bx%20%5C%20y%20%5C%20z%5D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524x%252C%2520y%252C%2520z%2524%25uB97C%2520%25uAD6C%25uD558%25uB294%2520%25uAC83%25uC774%2520%25uACE7%2520%2524A%255E%257B-1%257D%2524%25uC744%2520%25uAD6C%25uD558%25uB294%2520%25uAC83%25uC774%25uB2E4.%250D+%2520%2524%25282%2529%2524%25uB97C%2520%2524%25281%2529%2524%25uC5D0%2520%25uC801%25uC6A9%25uC2DC%25uD0A4%25uBA74%2520%25uB2E4%25uC74C%25uACFC%2520%25uAC19%25uB2E4.%250D%250D%22/%3E%3C/p%3E%283%29%20%5C%20AA%5E%7B-1%7D%20%3D%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%26%200%20%5C%5C%0D0%20%26%201%20%26%200%20%5C%5C%0D0%20%26%200%20%26%201%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uB2E8%25uC704%25uD589%25uB82C%2520%2524I%2524%25uC758%2520%25uAC01%2520%25uCE7C%25uB7FC%25uC744%2520%2524e_%257B1%257D%252C%2520e_%257B2%257D%252C%2520e_%257B3%257D%2524%25uC774%25uB77C%25uACE0%2520%25uD574%25uBCF4%25uC790.%250D%250D%22/%3E%3C/p%3E%284%29%20%5C%20%5BAx%20%5C%20Ay%20%5C%20Az%5D%20%3D%20%5Be_%7B1%7D%20%5C%20e_%7B2%7D%20%5C%20e_%7B3%7D%5D%20%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%22/%3E%3C/p%3E%285%29%20%5C%20Ax%3De_%7B1%7D%2C%20%5C%20Ay%3De_%7B2%7D%2C%20%5C%20Az%3De_%7B3%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524%25285%2529%2524%2520%25uAC19%25uC740%2520%25uACBD%25uC6B0%2520%2524Ax%253Db%2524%25uC758%2520%25uD615%25uD0DC%25uC774%25uBBC0%25uB85C%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC744%2520%25uD65C%25uC6A9%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D+%2520%25uADF8%25uB7F0%25uB370%2520%2524%25285%2529%2524%25uC5D0%2520%25uC788%25uB294%25203%25uAC00%25uC9C0%2520%25uC2DD%2520%25uBAA8%25uB450%2520%25uD589%25uB82C%2520%2524A%2524%25uC5D0%2520%25uB300%25uD55C%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC774%25uBBC0%25uB85C%2520%25uB611%25uAC19%25uC774%2520%25uC9C4%25uD589%25uD558%25uAC8C%2520%25uB41C%25uB2E4.%250D+%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC758%2520%25uACB0%25uACFC%25uB97C%2520%25uACB0%25uC815%25uC9D3%25uB294%2520%25uAC83%25uC740%2520%25uD589%25uB82C%2520%2524A%2524%25uC774%25uBBC0%25uB85C%2520%25uD55C%25uAEBC%25uBC88%25uC5D0%2520%25uCCA8%25uAC00%25uD589%25uB82C%2528augmented%2520matrix%2520form%2529%25uC744%2520%25uD65C%25uC6A9%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D%250D%22/%3E%3C/p%3E%286%29%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B1%7D%5D%2C%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B2%7D%5D%2C%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B3%7D%5D%20%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%22/%3E%3C/p%3E%287%29%20%5C%20%5BA%20%5C%20%7C%20%5C%20e_%7B1%7D%20%5C%20e_%7B2%7D%20%5C%20e_%7B3%7D%5D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%2524%25287%2529%2524%2520%25uC2DD%25uC5D0%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC744%2520%25uC801%25uC6A9%25uD558%25uBA74%252C%2520%2524x%252C%2520y%252C%2520z%2524%25uB97C%2520%25uAD6C%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D%250D%22/%3E%3C/p%3E%288%29%20%5C%20%5Bu%20%5C%20%7C%20%5C%20e_%7B1%7D%27%20%5C%20e_%7B2%7D%27%20%5C%20e_%7B3%7D%27%5D%20%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC5D0%25uC11C%25uB294%2520%25uD589%25uB82C%2520%2524A%2524%25uB97C%2520%25uD589%25uB82C%2520%2524U%2524%25uB85C%2520%25uB9CC%25uB4E4%25uC5C8%25uB2E4.%250D%250D%22/%3E%3C/p%3E%289%29%20%5C%20%5BI%20%5C%20%7C%20%5C%20e_%7B1%7D%27%27%20%5C%20e_%7B2%7D%27%27%20%5C%20e_%7B3%7D%27%27%5D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%22/%3E%3C/p%3E%2810%29%20%5C%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_%7B1%7D%27%27%20%5C%20e_%7B2%7D%27%27%20%5C%20e_%7B3%7D%27%27%5D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uADF8%25uB7EC%25uB098%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%25uC5D0%25uC11C%25uB294%2520%25uD589%25uB82C%2520%2524A%2524%25uB97C%2520%25uB2E8%25uC704%25uD589%25uB82C%2520%2524I%2524%25uB85C%2520%25uB9CC%25uB4E4%25uC5B4%25uC900%25uB2E4.%250D%250D%2523%2523%2523%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%2520vs.%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%2520Gauss%2520Elimination%2520vs.%2520Gauss-Jordan%2520Elimination%250D%250D%2560%2560%2560%250D1.%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%250D%250DAx%2520%253D%2520b%250D%255BA%2520%257C%2520b%255D%250D%255Bu%2520%257C%2520b%2527%255D%250DUx%2520%253D%2520b%2527%250D------%250D%253E%253E%2520back%2520substitution%25uC744%2520%25uD1B5%25uD574%2520%25uCE7C%25uB7FC%2520%25uBCA1%25uD130%2520x%25uC758%2520%25uAC01%2520%25uAC12%2528unknowns%2529%25uC744%2520%25uAD6C%25uD55C%25uB2E4.%250D%250D%250D2.%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%250D%250DAx%2520%253D%2520b%250D%255BA%2520%257C%2520b%255D%250D%255Bu%2520%257C%2520b%2527%255D%250D%255BI%2520%257C%2520b%2527%2527%255D%250DIx%2520%253D%2520b%2527%2527%250D-------%250D%253E%253E%2520%25uD589%25uB82C%2520A%25uC758%2520%25uC5ED%25uD589%25uB82C%2520A%255E%257B-1%257D%25uC744%2520%25uAD6C%25uD55C%25uB2E4.%250D%2560%2560%2560%250D%250D**%25uB05D.**%250D%250D---%250D%250D%2523%2523%252005%2520Ax%253Db%25uB97C%2520%25uD478%25uB294%2520%25uBC29%25uBC95%2520%25282%2529%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%250D%250D%2523%2523%2523%25201%2529%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%250D%250D+%2520%2524Ax%253Db%2520%255CRightarrow%2520Ux%253Db%2527%2524%250D+%2520%25uD589%25uB82C%2520%2524A%2524%25uB97C%2520%2524U%2524%25uD615%25uD0DC%25uB85C%2520%25uBC14%25uAFBC%2520%25uD6C4%2520back%2520substituion%25uC744%2520%25uC801%25uC6A9%25uD558%25uC5EC%2520%2524x%2524%25uB97C%2520%25uD558%25uB098%25uC529%2520%25uAD6C%25uD55C%25uB2E4.%250D%250D%2523%2523%2523%25202%2529%2520%25uAC00%25uC6B0%25uC2A4-%25uC870%25uB358%2520%25uC18C%25uAC70%25uBC95%250D%250D+%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uAD6C%25uD558%25uB294%2520%25uBC29%25uBC95%25uC774%25uB2E4.%250D+%2520%2524AA%255E%257B-1%257D%253DI%2520%255CRightarrow%2520A%255Bx%2520%255C%2520y%2520%255C%2520z%255D%2520%253D%2520%255Be_1%2520%255C%2520e_2%2520%255C%2520e_3%255D%2520%255CRightarrow%2520U%255Bx%2520%255C%2520y%255C%2520z%255D%2520%253D%2520%255Be_1%2527%2520%255C%2520e_2%2527%2520%255C%2520e_3%2527%255D%2520%255CRightarrow%2520I%255Bx%2520%255C%2520y%2520%255C%2520z%255D%2520%253D%2520%255Be_1%2527%2527%2520%255C%2520e_2%2527%2527%2520%255C%2520e_3%2527%2527%255D%2524%250D+%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uAD6C%25uD588%25uC73C%25uB2C8%2520%2524Ax%253Db%2524%25uC758%2520%25uC591%25uBCC0%25uC5D0%2520%25uC5ED%25uD589%25uB82C%25uC744%2520%25uACF1%25uD558%25uBA74%2520%2524x%2524%25uB97C%2520%25uD55C%25uAEBC%25uBC88%25uC5D0%2520%25uAD6C%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D+%2520%2524Ax%253Db%2520%255CRightarrow%2520A%255E%257B-1%257DAx%253DA%255E%257B-1%257Db%2520%255CRightarrow%2520x%2520%253D%2520A%255E%257B-1%257Db%2524%250D%250D**%25uB05D.**%250D%250D---%250D%250D%2523%2523%252004%2520%25uCCA8%25uAC00%2520%25uD589%25uB82C%2520Augmented%2520Matrix%2520Form%250D%250D%2523%2523%2523%2520%25uCCA8%25uAC00%2520%25uD589%25uB82C%2520Augmented%2520Matrix%2520Form%250D%250D%2560%2560%2560%250DAx%2520%253D%2520b%2520%253D%253E%2520%255BA%2520%257C%2520b%255D%2520%253D%253E%2520%255Bu%2520%257C%2520b%2527%255D%2520%253D%253E%2520Ux%2520%253D%2520b%2527%250D%250D%25uD589%25uB82C%2520A%25uC5D0%2520%25uCE7C%25uB7FC%25uBCA1%25uD130%2520b%25uB97C%2520%25uBD99%25uC5EC%25uC11C%2520%25uD558%25uB098%25uC758%2520%25uD589%25uB82C%25uB85C%2520%25uB098%25uD0C0%25uB0B8%2520%25uAC83%25uC744%2520%25uCCA8%25uAC00%25uD589%25uB82C%25uC774%25uB77C%2520%25uD55C%25uB2E4.%250D%250D%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%25uC744%2520%25uC801%25uC6A9%25uD558%25uBA74%2520A%25uC758%2520row%25uC640%2520b%25uC758%2520row%25uAC00%2520%25uAC19%25uC740%2520%25uC5F0%25uC0B0%25uC744%2520%25uC801%25uC6A9%2520%25uBC1B%25uB294%25uB2E4.%250D%25uC5B4%25uCC28%25uD53C%2520%25uAC19%25uC740%2520%25uC5F0%25uC0B0%25uC744%2520%25uC801%25uC6A9%2520%25uBC1B%25uC73C%25uB2C8%2520%25uD589%25uB82C%2520A%25uC5D0%2520b%25uB97C%2520%25uCD94%25uAC00%25uD558%25uC5EC%2520%25uCCA8%25uAC00%25uD589%25uB82C%25uB85C%2520%25uB9CC%25uB4E4%2520%25uC218%2520%25uC788%25uB2E4.%250D%2560%2560%2560%250D%250D%22/%3E%3C/p%3E%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%5C%5C%0D2%20%26%202%20%26%204%20%5C%5C%0D3%20%26%207%20%26%209%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%20%5C%5C%0Dx_%7B3%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D7%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uC704%2520%25uD589%25uB82C%25uC758%2520%25uD615%25uD0DC%25uB97C%2520%2524Ax%253Db%2524%25uB77C%25uACE0%2520%25uD560%2520%25uB54C%250D+%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uC5D0%25uC11C%2520%2524x%2524%25uB294%2520%25uC544%25uBB34%25uB7F0%2520%25uAD00%25uC5EC%25uB97C%2520%25uD558%25uC9C0%2520%25uC54A%25uB294%25uB2E4.%250D+%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uC758%2520%25uACB0%25uACFC%25uB97C%2520%25uACB0%25uC815%25uD558%25uB294%2520%25uAC83%25uC740%2520%25uD589%25uB82C%2520%2524A%2524%25uC774%25uB2E4.%250D%250D%22/%3E%3C/p%3E%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%26%20%7C%20%26%205%20%5C%5C%0D2%20%26%202%20%26%204%20%26%20%7C%20%26%207%20%5C%5C%0D3%20%26%207%20%26%209%20%26%20%7C%20%26%2010%0D%5Cend%7Bbmatrix%7D%0D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uB530%25uB77C%25uC11C%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uC5D0%25uC11C%2520%25uD544%25uC694%2520%25uC5C6%25uB294%2520%25uAC83%25uC744%2520%25uC81C%25uC678%25uD558%25uBA74%2520%25uD558%25uB098%25uC758%2520%25uD589%25uB82C%25uB85C%2520%25uB098%25uD0C0%25uB0BC%2520%25uC218%2520%25uC788%25uB2E4.%250D%250D%22/%3E%3C/p%3E%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%0D%5Cend%7Bbmatrix%7D%0D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uB97C%2520%25uD1B5%25uD574%2520%25uC704%25uC640%2520%25uAC19%25uC740%2520%25uD615%25uD0DC%25uAC00%2520%25uB9CC%25uB4E4%25uC5B4%25uC9C4%25uB2E4.%250D%250D%22/%3E%3C/p%3E%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%0D%5Cend%7Bbmatrix%7D%0D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%25202%25uBC88%25uC9F8%2520%25uD589%25uACFC%25203%25uBC88%25uC9F8%2520%25uD589%25uC744%2520%25uBC14%25uAFD4%25uC11C%2520%2524Ux%253Db%2527%2524%2520%25uD615%25uD0DC%25uB85C%2520%25uB9CC%25uB4E4%25uC5B4%25uC900%25uB2E4.%250D%250D**%25uB05D.**%250D%250D---%250D%250D%2523%2523%252003%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%2520Gaussian%2520Elimination%250D%250D%2523%2523%2523%2520%25uAC00%25uC6B0%25uC2A4%2520%25uC18C%25uAC70%25uBC95%2520Gauss%2520Elimination%250D%250D%2560%2560%2560%250DAx%2520%253D%2520b%2520%253D%253E%2520Ux%2520%253D%2520b%2527%2520%2528b%2520prime%2529%250D%250D1%2529%2520Ax%2520%253D%2520b%250D2%2529%2520Gauss%2520Elimination%250D3%2529%2520Ux%2520%253D%2520b%250D4%2529%2520back%2520substitution%250D%2560%2560%2560%250D%250D%22/%3E%3C/p%3E%5Cbegin%7Barray%7D%7Blcl%7D%20x_%7B1%7D+2x_%7B2%7D%20%26%20%3D%20%26%205%20%5C%5C%202x_%7B1%7D+5x_%7B2%7D%20%26%20%3D%20%26%2012%20%5Cend%7Barray%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uBC29%25uC815%25uC2DD%25uC744%2520%2524Ax%253Db%2524%25uB85C%2520%25uD45C%25uD604%25uD55C%25uB2E4.%250D%250D%22/%3E%3C/p%3E%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%202%20%26%205%20%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%5C%5C%202%20%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520Gauss%2520Elimination%25uC73C%25uB85C%2520%25uD589%25uB82C%2520%2524A%2524%25uB97C%2520%2524U%2524%2528upper%2520triangLUar%2529%25uB85C%2520%25uB9CC%25uB4E4%25uC5B4%25uC900%25uB2E4.%250D%250D%22/%3E%3C/p%3E%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%200%20%26%201%20%5Cend%7Bbmatrix%7D%20%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%205%20%5C%5C%202%20%5Cend%7Bbmatrix%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520%25uB2E4%25uC2DC%2520%25uBC29%25uC815%25uC2DD%25uC73C%25uB85C%2520%25uB098%25uD0C0%25uB0B8%25uB2E4.%250D%250D%22/%3E%3C/p%3E%5Cbegin%7Barray%7D%7Brcl%7D%20x_%7B1%7D+2x_%7B2%7D%20%26%20%3D%20%26%205%20%5C%5C%20x_%7B2%7D%20%26%20%3D%20%26%2012%20%5Cend%7Barray%7D%3Cp%20align%3D%22center%22%3E%3Cimg%20src%3D%22https%3A//latex.codecogs.com/gif.latex%3F%250D%250D+%2520back%2520substitution%25uC744%2520%25uD1B5%25uD574%2520%25uC544%25uB798%25uC5D0%25uC11C%25uBD80%25uD130%2520%25uBBF8%25uC9C0%25uC218%25uC758%2520%25uAC12%25uC744%2520%25uCC28%25uB840%25uB300%25uB85C%2520%25uB300%25uC785%25uD558%25uBA74%2520%25uC27D%25uAC8C%2520%25uD574%25uB97C%2520%25uAD6C%25uD560%2520%25uC218%2520%25uC788%25uB2E4.%250D%250D%2523%2523%2523%2520%25uD53C%25uBD07%25uACFC%2520%25uBA40%25uD2F0%25uD50C%25uB77C%25uC774%25uC5B4%2520Pivot%2520and%2520Multiplier%250D%250D%2560%2560%2560%250DPivot%2520%253A%2520%25uC18C%25uAC70%25uB418%25uC9C0%2520%25uC54A%25uB294%2520row%25uC758%2520%25uCCAB%2520%25uBC88%25uC9F8%2520%25uAC12%250DMultiplier%2520%253A%2520%25uC18C%25uAC70%25uB420%2520row%25uC758%2520%25uCCAB%2520%25uBC88%25uC9F8%2520%25uAC12%25uC744%2520Pivot%25uC73C%25uB85C%2520%25uB098%25uB208%2520%25uAC12%250D%2560%2560%2560%250D%250D%22/%3E%3C/p%3E%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%202%20%26%205%20%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%5C%5C%202%20%5Cend%7Bbmatrix%7D"/><img src="https://latex.codecogs.com/gif.latex?%0D%0D+%20Pivot%20%3D%201%0D+%20Multiplier%20%3D%202%0D%0D**%uB05D.**%0D%0D---%0D%0D%23%23%2002%20Ax%3Db%uB97C%20%uD478%uB294%20%uBC29%uBC95%20%281%29%20%uAC00%uC6B0%uC2A4%20%uC18C%uAC70%uBC95%0D%0D%23%23%23%201%29%20%uAC00%uC6B0%uC2A4%20%uC18C%uAC70%uBC95%0D%0D+%20"/>Ax=b \Rightarrow Ux=b'<img src="https://latex.codecogs.com/gif.latex?%0D+%20%uD589%uB82C%20"/>A<img src="https://latex.codecogs.com/gif.latex?%uB97C%20"/>U<img src="https://latex.codecogs.com/gif.latex?%uD615%uD0DC%uB85C%20%uBC14%uAFBC%20%uD6C4%20back%20substituion%uC744%20%uC801%uC6A9%uD558%uC5EC%20"/>x<img src="https://latex.codecogs.com/gif.latex?%uB97C%20%uD558%uB098%uC529%20%uAD6C%uD55C%uB2E4.%0D%0D**%uB05D.**%0D%0D---%0D%0D%23%23%2001%20%uC120%uD615%20%uBC29%uC815%uC2DD%20Linear%20Equations%0D%0D%23%23%23%20%uC120%uD615%20%uBC29%uC815%uC2DD%uC744%20%uC5B4%uB5BB%uAC8C%20%uD480%uAE4C%20Solving%20Linear%20Equations%0D%0D+%20"/>Ax=b<img src="https://latex.codecogs.com/gif.latex?%uB97C%20%uC120%uD615%20%uBC29%uC815%uC2DD%uC774%uB77C%uACE0%20%uD55C%uB2E4.%0D+%20"/>Ax=b<img src="https://latex.codecogs.com/gif.latex?%uB97C%20%uB9CC%uC871%uC2DC%uD0A4%uB294%20"/>x$를 찾는 것이 선형 방정식을 푸는 것이다.
 
 **끝.**
 
