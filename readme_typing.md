@@ -19,22 +19,29 @@
 
 ## One-Sentence Summary
 
-### 0. 선형방정식 Linear Equations
+### 01 선형방정식 Linear Equations
 
 + $Ax=b$에서 $x$를 구해야 한다.
 + $Ax$란 행렬 $A$의 모든 칼럼들의 linear combination을 뜻한다.
 
-### 1. 가우스 소거법 Gaussian Elimination
+### 02~03 Ax=b를 푸는 방법 (1) 가우스 소거법
 
-+ 가우스 소거법은 선형방정식을 풀기 위해 사용한다.
-+ $Ax=b$의 형태를 $Ux=b'$의 형태로 바꿔주는 것이 가우스 소거법이다.
++ $Ax=b \Rightarrow Ux=b'$
++ 행렬 $A$를 $U$형태로 바꾼 후 back substitution을 적용하여 $x$를 하나씩 구한다.
 
-### 2. 첨가 행렬 Augmented Matrix
+### 04 첨가 행렬 Augmented Matrix
 
-+ $Ax=b \Rightarrow [A \ | \ b] \Rightarrow [U \ | \ b'] \Rightarrow Ux = b''$
-+ 가우스 소거법을 진행할 때 첨가행렬을 사용하면 편안하게 연산할 수 있다.
++ $Ax=b \Rightarrow [A \ | \ b] \Rightarrow [U \ | \ b'] \Rightarrow Ux = b'$
++ 가우스 소거법을 진행할 때 첨가행렬을 사용하면 간편하게 연산할 수 있다.
 
-### 3. 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
+### 05 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
+
++ 역행렬을 구하는 방법이다.
++ $AA^{-1}=I \Rightarrow A[x \ y \ z] = [e_1 \ e_2 \ e_3] \Rightarrow U[x \ y\ z] = [e_1' \ e_2' \ e_3'] \Rightarrow I[x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
++ 역행렬을 구했으니 $Ax=b$의 양변에 역행렬을 곱하면 $x$를 한꺼번에 구할 수 있다.
++ $Ax=b \Rightarrow A^{-1}Ax=A^{-1}b \Rightarrow x = A^{-1}b$
+
+### 06 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
 
 1. $AA^{-1} = I$ ......................................... $A^{-1} = [x \ y \ z]$.
 2. $A[x \ y \ z] = I$ .................................... $I = [e_1 \ e_2 \ e_3]$
@@ -46,38 +53,108 @@
 8. $I[x \ y \ z] = [e_1'' \ e_2'' \ e_3''] $
 9. $\therefore A^{-1} = [x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
 
-### 4. A = LU Factorization
+### 07 A = LU Factorization
 
 + $Ax=b \Rightarrow Ux=b'$으로 바꿔주기 위해 $E$(Elimination)를 곱해준다.
 + $E_{3}E_{2}E_{1}A = U \Rightarrow A = E_{1}^{-1}E_{2}^{-1}E_{3}^{-1}U \Rightarrow A = LU $ ($E$는 항상 $L$ 형태를 유지하므로)
 + 행렬 $A$는 $LU$로 분해된다.
 
-### 5. Ax=b와 Subspaces
+### 08 Ax=b를 푸는 방법 (3) 칼럼 스페이스
 
-+ $Ax=b$에서 $x$는 존재할 수도 있고 존재하지 않을 수도 있다.
-+ $Ax$를 공간으로 나타냈을 때 그 공간 안에 $b$가 포함되면 solution이 존재하는 것이다.
-+ 만약 행렬 $A$가 만드는 공간이 3차원($R^{3}$)의 subspace인 plane이라면, $b$가 행렬 $A$의 plane에 포함될 확률은 매우 낮을 것이다.
-  + 3차원 공간에서 plane은 두께가 0이므로 차지하는 비율이 매우 작기 때문이다.
++ '**해가 존재하는지 존재하지 않는지 판별할 수 있는 방법**'이다.
++ $Ax=b$에서 $A^{-1}$이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
++ 공간의 관점으로 접근하면 된다.
++ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들이 $span$하여 만드는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
++ $C(A)$에 $b$가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
 
-### 6. Ax=b와 C(A)
+### 09 Example :: 칼럼 스페이스 묘사하기
 
-+ $Ax=b$에서 $x$는 존재할 수도 있고 존재하지 않을 수도 있다.
-  + $Ax$가 만드는 공간을 $C(A)$라고 한다.
-  + $C(A)$에 $b$가 속하면 $x$는 존재한다.
-  + $C(A)$에 $b$가 속하지 않으면 $x$는 존재하지 않는다.
+$(1) \ I =
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+$
++ 행렬 $I$의 칼럼벡터는 2차원이다.
++ 행렬 $I$의 칼럼벡터는 2개가 independent하다.
++ 행렬 $I$의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
++ $C(I) \rightarrow R^{2}$
 
-### . C(A)와 N(A)
+$(2) \ A =
+\begin{bmatrix}
+1 & 2\\
+2 & 4
+\end{bmatrix}
+$
++ 행렬 $A$의 칼럼벡터는 2차원이다.
++ 행렬 $A$의 칼럼벡터들은 서로 dependent하다.
++ 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
++ $C(A) \subset R^{2}$
+
+$(3) \ B =
+\begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 4
+\end{bmatrix}
+$
++ 행렬 $B$의 칼럼벡터는 2차원이다.
++ 행렬 $B$의 칼럼벡터는 2개가 서로 dependent하다.
++ 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
++ $C(B) \rightarrow R^{2}$
+
+### 09 Problem :: C(A)를 고려하여 Ax=b를 만족시키는 적절한 b 만들기
+
+$20.(a) \ \begin{bmatrix}
+1 & 4 & 2 \\
+2 & 8 & 4 \\
+-1 & -4 & -2
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{bmatrix}
+$
+
++ $C(A)$는 3차원 공간의 line이다.
++ $b$는 반드시 $C(A)$에 속해야 하므로 $[1 \ 2 \ {-}1]$과 같은 선상에 있으면 된다.
++ $\therefore b = [b_1 \ 2b_1 \ {-}b_1]$
+
+$20.(b) \ \begin{bmatrix}
+1 & 4 \\
+2 & 9 \\
+-1 & -4
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{bmatrix}
+$
++ $C(A)$는 3차원 공간에서 2차원 plane이다.
++ 행렬 $A$의 칼럼벡터를 $[a_1 \ a_2 \ a_3]$라고 할 때, $a_1$과 $a_3$의 비율은 고정되고 $a_2$만 움직인다.
++ $b$는 반드시 $C(A)$에 속해야 하므로 $b_1$과 $b_3$의 비율만 고정시키면 된다.
++ $\therefore b_3 = -b_1$
+
+### 10 널스페이스
+
++ not yet
+
+### ?? C(A)와 N(A)
 
 + $C(A)$ : 행렬 $A$의 모든 칼럼($m$차원 벡터)들의 linear combination을 모아 놓은 집합
 + $N(A)$ : $Ax=0$을 만족시키는 모든 $x$($n$차원 벡터)를 모아 놓은 집합
-
-### . Ax=b와 C(A)의 관계
-
-+ 선형방정식 $Ax=b$를 푸는 것은 $b$를 행렬 $A$의 모든 칼럼들의 linear combination으로 표현하겠다는 것과 같다.
-+ 행렬 $A$의 모든 칼럼들의 linear combination을 모아 놓은 것이 바로 $C(A)$이다.
-+ $C(A)$로 $b$를 만들어낼 수 있다면 $x$를 구한 것이고, 그렇지 못하다면 해가 존재하지 않는 것이다.
-
-
 
 
 
@@ -178,11 +255,13 @@ y_m
 
 ---
 
-## 3.2 The Null space of A: Solving Ax=0
+## 10 널스페이스
+
+
 
 ---
 
-## 3.1 Space of Vectors 벡터 공간, 부분 공간, 칼럼 스페이스
+## 09 Ax=b와 공간, 칼럼 스페이스
 
 ### 칼럼벡터와 공간의 의미
 
@@ -211,7 +290,7 @@ y_m
 
 + 벡터 공간에 속하는 임의의 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
 + 즉, 벡터들의 linear combination이 부분 공간(subspace)을 만들어낸다.
-+ 다르게 말하면 임의의 벡터들이 span한 것을 subspace라고 한다.
++ 다르게 말하면 임의의 벡터들이 $span$한 것을 subspace라고 한다.
 + subspace에 속하는 벡터들을 linear combination한 결과 또한 당연히 subspace에 속한다.
 
 ### Subspace 구분법과 OX 퀴즈
@@ -231,7 +310,7 @@ y_m
 
 + $Ax=b$에서 $A^{-1}$이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
 + 공간의 관점으로 접근하면 된다.
-+ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들이 span하여 만드는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
++ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들이 $span$하여 만드는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
 + $C(A)$에 $b$가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
 
 > **Note:** $C(A)$에는 행렬 $A$의 칼럼뿐만 아니라 linear combination의 결과인 $Ax$까지 포함하고 있다.
@@ -286,7 +365,7 @@ $
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
 + $C(B) \rightarrow R^{2}$
 
-### Problem :: C(A)와 Ax=b
+### Problem :: C(A)를 고려하여 Ax=b를 만족시키는 적절한 b 만들기
 
 $20.(a) \ \begin{bmatrix}
 1 & 4 & 2 \\
@@ -329,13 +408,39 @@ $
 + $C(A)$는 3차원 공간에서 2차원 plane이다.
 + 행렬 $A$의 칼럼벡터를 $[a_1 \ a_2 \ a_3]$라고 할 때, $a_1$과 $a_3$의 비율은 고정되고 $a_2$만 움직인다.
 + $b$는 반드시 $C(A)$에 속해야 하므로 $b_1$과 $b_3$의 비율만 고정시키면 된다.
-+ $\therefore b_3 = -b_1$.
++ $\therefore b_3 = -b_1$
 
 **끝.**
 
 ---
 
-## 2.6 Elimination = Factorization: A=LU
+## 08 Ax=b를 푸는 방법 (3) 칼럼 스페이스
+
+### 1) 가우스 소거법
+
++ $Ax=b \Rightarrow Ux=b'$
++ 행렬 $A$를 $U$형태로 바꾼 후 back substituion을 적용하여 $x$를 하나씩 구한다.
+
+### 2) 가우스-조던 소거법
+
++ '**역행렬을 구하는 방법**'이다.
++ $AA^{-1}=I \Rightarrow A[x \ y \ z] = [e_1 \ e_2 \ e_3] \Rightarrow U[x \ y\ z] = [e_1' \ e_2' \ e_3'] \Rightarrow I[x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
++ 역행렬을 구했으니 $Ax=b$의 양변에 역행렬을 곱하면 $x$를 한꺼번에 구할 수 있다.
++ $Ax=b \Rightarrow A^{-1}Ax=A^{-1}b \Rightarrow x = A^{-1}b$
+
+### 3) 칼럼 스페이스
+
++ '**해가 존재하는지 존재하지 않는지 판별할 수 있는 방법**'이다.
++ $Ax=b$에서 $A^{-1}$이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
++ 공간의 관점으로 접근하면 된다.
++ $Ax$는 하나의 벡터 공간인데 행렬 $A$의 칼럼들이 $span$하여 만드는 공간이므로 칼럼 스페이스 $C(A)$라고 부른다.
++ $C(A)$에 $b$가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
+
+**끝.**
+
+---
+
+## 07 A = LU Factorization
 
 ### 가우스 소거법을 행렬 간 곱셈으로 치환하기 Elimination as Matrix Mutliplication
 
@@ -480,24 +585,31 @@ Ax = b를 풀기 위해 굳이 LU Factorization을 사용할 필요는 없다.
 
 ---
 
-## 2.5 Inverse Matrices 가우스-조던 소거법
+## 06 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
 
 ### 역행렬을 어떻게 구할까 Inverse Matrix
 
-```
-1. 가우스-조던 소거법 적용
-```
++ $Ax=b$에서 $x$를 구하는 방법은 행렬 $A$의 역행렬인 $A^{-1}$을 각 항의 왼쪽에 곱하는 것이다.
++ 행렬 $A$의 역행렬을 구하는 방법은 가우스-조던 소거법을 적용하는 것이다.
++ 가우스 소거법은 $Ax=b$를 $Ux=b'$의 형태로 만들지만
++ 가우스-조던 소거법은 $Ax=b$를 $Ix=b''$의 형태로 만든다.
++ 여기서 $b''$은 $A^{-1}b$를 뜻한다.
+
 
 ### 가우스-조던 소거법 Gauss-Jordan Elimination
 
 ```
-1. AA^{-1} = I                     # 역행렬의 성질 활용
-2. A^{-1} = [x y z]                # 역행렬을 칼럼 벡터로 변환
-3. A[x y z] = I                    # Ax=b 형태로 전환
-4. [Ax Ay Az] = [e1 e2 e3]         # 단위행렬을 칼럼 벡터로 변환
-5. Ax = e1, Ay = e2, Az = e3       # Ax=b 형태로 전환
-6. [A | e1], [A | e2], [A | e3]    # 첨가행렬 형태로 전환
-7. [A | e1 e2 e3]                  # 첨가행렬 형태로 전환
+1. AA^{-1} = I                          # 역행렬의 성질 활용
+2. A^{-1} = [x y z]                     # 역행렬을 칼럼 벡터로 변환
+3. A[x y z] = I                         # Ax=b 형태로 전환
+4. [Ax Ay Az] = [e1 e2 e3]              # 단위행렬을 칼럼 벡터로 변환
+5. Ax = e1, Ay = e2, Az = e3            # Ax=b 형태로 전환
+6. [A | e1], [A | e2], [A | e3]         # 첨가행렬 형태로 전환
+7. [A | e1 e2 e3]                       # 첨가행렬 형태로 전환
+8. [U | e1' e2' e3']                    # 가우스 소거법 적용
+9. [I | e1'' e2'' e3'']                 # 가우스-조던 소거법 적용
+10. I[x y z] = [e1'' e2'' e3'']         # 첨가행렬 형태를 원래 상태로 복귀
+11. A^{-1} = [x y z] = [e1'' e2'' e3'']
 ```
 
 $$(1) \ AA^{-1}=I$$
@@ -573,54 +685,27 @@ Ix = b''
 
 ---
 
-## 2.2 The Idea of Elimination
+## 05 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
 
-### 선형 방정식을 어떻게 풀까 Solving Linear Equations
+### 1) 가우스 소거법
 
-```
-1. 가우스 소거법 적용
-```
++ $Ax=b \Rightarrow Ux=b'$
++ 행렬 $A$를 $U$형태로 바꾼 후 back substituion을 적용하여 $x$를 하나씩 구한다.
 
-### 가우스 소거법 Gauss Elimination
+### 2) 가우스-조던 소거법
 
-```
-Ax = b => Ux = b' (b prime)
++ 역행렬을 구하는 방법이다.
++ $AA^{-1}=I \Rightarrow A[x \ y \ z] = [e_1 \ e_2 \ e_3] \Rightarrow U[x \ y\ z] = [e_1' \ e_2' \ e_3'] \Rightarrow I[x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
++ 역행렬을 구했으니 $Ax=b$의 양변에 역행렬을 곱하면 $x$를 한꺼번에 구할 수 있다.
++ $Ax=b \Rightarrow A^{-1}Ax=A^{-1}b \Rightarrow x = A^{-1}b$
 
-1) Ax = b
-2) Gauss Elimination
-3) Ux = b
-4) back substitution
-```
+**끝.**
 
-$$\begin{array}{lcl} x_{1}+2x_{2} & = & 5 \\ 2x_{1}+5x_{2} & = & 12 \end{array}$$
+---
 
-+ 방정식을 $Ax=b$로 표현한다.
+## 04 첨가 행렬 Augmented Matrix Form
 
-$$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$
-
-+ Gauss Elimination으로 행렬 $A$를 $U$(upper triangLUar)로 만들어준다.
-
-$$\begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}  \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}$$
-
-+ 다시 방정식으로 나타낸다.
-
-$$\begin{array}{rcl} x_{1}+2x_{2} & = & 5 \\ x_{2} & = & 12 \end{array}$$
-
-+ back substitution을 통해 아래에서부터 미지수의 값을 차례대로 대입하면 쉽게 해를 구할 수 있다.
-
-### 피봇과 멀티플라이어 Pivot and Multiplier
-
-```
-Pivot : 소거되지 않는 row의 첫 번째 값
-Multiplier : 소거될 row의 첫 번째 값을 Pivot으로 나눈 값
-```
-
-$$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$
-
-+ Pivot = 1
-+ Multiplier = 2
-
-### 첨가행렬 Augmented Matrix Form
+### 첨가 행렬 Augmented Matrix Form
 
 ```
 Ax = b => [A | b] => [u | b'] => Ux = b'
@@ -681,7 +766,74 @@ $$
 \end{bmatrix}
 $$
 
-+ 2번째 행과 3번째 행을 바꿔서 $Ux=b$ 형태로 만들어준다.
++ 2번째 행과 3번째 행을 바꿔서 $Ux=b'$ 형태로 만들어준다.
+
+**끝.**
+
+---
+
+## 03 가우스 소거법 Gaussian Elimination
+
+### 가우스 소거법 Gauss Elimination
+
+```
+Ax = b => Ux = b' (b prime)
+
+1) Ax = b
+2) Gauss Elimination
+3) Ux = b
+4) back substitution
+```
+
+$$\begin{array}{lcl} x_{1}+2x_{2} & = & 5 \\ 2x_{1}+5x_{2} & = & 12 \end{array}$$
+
++ 방정식을 $Ax=b$로 표현한다.
+
+$$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$
+
++ Gauss Elimination으로 행렬 $A$를 $U$(upper triangLUar)로 만들어준다.
+
+$$\begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}  \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}$$
+
++ 다시 방정식으로 나타낸다.
+
+$$\begin{array}{rcl} x_{1}+2x_{2} & = & 5 \\ x_{2} & = & 12 \end{array}$$
+
++ back substitution을 통해 아래에서부터 미지수의 값을 차례대로 대입하면 쉽게 해를 구할 수 있다.
+
+### 피봇과 멀티플라이어 Pivot and Multiplier
+
+```
+Pivot : 소거되지 않는 row의 첫 번째 값
+Multiplier : 소거될 row의 첫 번째 값을 Pivot으로 나눈 값
+```
+
+$$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$
+
++ Pivot = 1
++ Multiplier = 2
+
+**끝.**
+
+---
+
+## 02 Ax=b를 푸는 방법 (1) 가우스 소거법
+
+### 1) 가우스 소거법
+
++ $Ax=b \Rightarrow Ux=b'$
++ 행렬 $A$를 $U$형태로 바꾼 후 back substituion을 적용하여 $x$를 하나씩 구한다.
+
+**끝.**
+
+---
+
+## 01 선형 방정식 Linear Equations
+
+### 선형 방정식을 어떻게 풀까 Solving Linear Equations
+
++ $Ax=b$를 선형 방정식이라고 한다.
++ $Ax=b$를 만족시키는 $x$를 찾는 것이 선형 방정식을 푸는 것이다.
 
 **끝.**
 

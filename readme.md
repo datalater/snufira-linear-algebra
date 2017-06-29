@@ -19,22 +19,29 @@
 
 ## One-Sentence Summary
 
-### 0. 선형방정식 Linear Equations
+### 01 선형방정식 Linear Equations
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구해야 한다.
 + <img src="https://latex.codecogs.com/gif.latex?Ax"/>란 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination을 뜻한다.
 
-### 1. 가우스 소거법 Gaussian Elimination
+### 02~03 Ax=b를 푸는 방법 (1) 가우스 소거법
 
-+ 가우스 소거법은 선형방정식을 풀기 위해 사용한다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 형태를 <img src="https://latex.codecogs.com/gif.latex?Ux%3Db%27"/>의 형태로 바꿔주는 것이 가우스 소거법이다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substitution을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
 
-### 2. 첨가 행렬 Augmented Matrix
+### 04 첨가 행렬 Augmented Matrix
 
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20%5BA%20%5C%20%7C%20%5C%20b%5D%20%5CRightarrow%20%5BU%20%5C%20%7C%20%5C%20b%27%5D%20%5CRightarrow%20Ux%20%3D%20b%27%27"/>
-+ 가우스 소거법을 진행할 때 첨가행렬을 사용하면 편안하게 연산할 수 있다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20%5BA%20%5C%20%7C%20%5C%20b%5D%20%5CRightarrow%20%5BU%20%5C%20%7C%20%5C%20b%27%5D%20%5CRightarrow%20Ux%20%3D%20b%27"/>
++ 가우스 소거법을 진행할 때 첨가행렬을 사용하면 간편하게 연산할 수 있다.
 
-### 3. 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
+### 05 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
+
++ 역행렬을 구하는 방법이다.
++ <img src="https://latex.codecogs.com/gif.latex?AA%5E%7B-1%7D%3DI%20%5CRightarrow%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%20%5C%20e_2%20%5C%20e_3%5D%20%5CRightarrow%20U%5Bx%20%5C%20y%5C%20z%5D%20%3D%20%5Be_1%27%20%5C%20e_2%27%20%5C%20e_3%27%5D%20%5CRightarrow%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D"/>
++ 역행렬을 구했으니 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 양변에 역행렬을 곱하면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 한꺼번에 구할 수 있다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20A%5E%7B-1%7DAx%3DA%5E%7B-1%7Db%20%5CRightarrow%20x%20%3D%20A%5E%7B-1%7Db"/>
+
+### 06 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
 
 1. <img src="https://latex.codecogs.com/gif.latex?AA%5E%7B-1%7D%20%3D%20I"/> ......................................... <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D%20%3D%20%5Bx%20%5C%20y%20%5C%20z%5D"/>.
 2. <img src="https://latex.codecogs.com/gif.latex?A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20I"/> .................................... <img src="https://latex.codecogs.com/gif.latex?I%20%3D%20%5Be_1%20%5C%20e_2%20%5C%20e_3%5D"/>
@@ -46,38 +53,62 @@
 8. <img src="https://latex.codecogs.com/gif.latex?I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D%20"/>
 9. <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20A%5E%7B-1%7D%20%3D%20%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D"/>
 
-### 4. A = LU Factorization
+### 07 A = LU Factorization
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>으로 바꿔주기 위해 <img src="https://latex.codecogs.com/gif.latex?E"/>(Elimination)를 곱해준다.
 + <img src="https://latex.codecogs.com/gif.latex?E_%7B3%7DE_%7B2%7DE_%7B1%7DA%20%3D%20U%20%5CRightarrow%20A%20%3D%20E_%7B1%7D%5E%7B-1%7DE_%7B2%7D%5E%7B-1%7DE_%7B3%7D%5E%7B-1%7DU%20%5CRightarrow%20A%20%3D%20LU%20"/> (<img src="https://latex.codecogs.com/gif.latex?E"/>는 항상 <img src="https://latex.codecogs.com/gif.latex?L"/> 형태를 유지하므로)
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 <img src="https://latex.codecogs.com/gif.latex?LU"/>로 분해된다.
 
-### 5. Ax=b와 Subspaces
+### 08 Ax=b를 푸는 방법 (3) 칼럼 스페이스
 
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재할 수도 있고 존재하지 않을 수도 있다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax"/>를 공간으로 나타냈을 때 그 공간 안에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 포함되면 solution이 존재하는 것이다.
-+ 만약 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>가 만드는 공간이 3차원(<img src="https://latex.codecogs.com/gif.latex?R%5E%7B3%7D"/>)의 subspace인 plane이라면, <img src="https://latex.codecogs.com/gif.latex?b"/>가 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 plane에 포함될 확률은 매우 낮을 것이다.
-  + 3차원 공간에서 plane은 두께가 0이므로 차지하는 비율이 매우 작기 때문이다.
++ '**해가 존재하는지 존재하지 않는지 판별할 수 있는 방법**'이다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
++ 공간의 관점으로 접근하면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들이 <img src="https://latex.codecogs.com/gif.latex?span"/>하여 만드는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
 
-### 6. Ax=b와 C(A)
+### 09 Example :: 칼럼 스페이스 묘사하기
 
-+ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재할 수도 있고 존재하지 않을 수도 있다.
-  + <img src="https://latex.codecogs.com/gif.latex?Ax"/>가 만드는 공간을 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 한다.
-  + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재한다.
-  + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하지 않으면 <img src="https://latex.codecogs.com/gif.latex?x"/>는 존재하지 않는다.
+<img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20I%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%5C%5C%0D0%20%26%201%0D%5Cend%7Bbmatrix%7D%0D"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2차원이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터는 2개가 independent하다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28I%29%20%5Crightarrow%20R%5E%7B2%7D"/>
 
-### . C(A)와 N(A)
+<img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%5C%5C%0D2%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터는 2차원이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터들은 서로 dependent하다.
++ 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29%20%5Csubset%20R%5E%7B2%7D"/>
+
+<img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%200%20%5C%5C%0D0%20%26%200%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2차원이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?B"/>의 칼럼벡터는 2개가 서로 dependent하다.
++ 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28B%29%20%5Crightarrow%20R%5E%7B2%7D"/>
+
+### 09 Problem :: C(A)를 고려하여 Ax=b를 만족시키는 적절한 b 만들기
+
+<img src="https://latex.codecogs.com/gif.latex?20.%28a%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%26%202%20%5C%5C%0D2%20%26%208%20%26%204%20%5C%5C%0D-1%20%26%20-4%20%26%20-2%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0Dx_3%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간의 line이다.
++ <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?%5B1%20%5C%202%20%5C%20%7B-%7D1%5D"/>과 같은 선상에 있으면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b%20%3D%20%5Bb_1%20%5C%202b_1%20%5C%20%7B-%7Db_1%5D"/>
+
+<img src="https://latex.codecogs.com/gif.latex?20.%28b%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%5C%5C%0D2%20%26%209%20%5C%5C%0D-1%20%26%20-4%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간에서 2차원 plane이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터를 <img src="https://latex.codecogs.com/gif.latex?%5Ba_1%20%5C%20a_2%20%5C%20a_3%5D"/>라고 할 때, <img src="https://latex.codecogs.com/gif.latex?a_1"/>과 <img src="https://latex.codecogs.com/gif.latex?a_3"/>의 비율은 고정되고 <img src="https://latex.codecogs.com/gif.latex?a_2"/>만 움직인다.
++ <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?b_1"/>과 <img src="https://latex.codecogs.com/gif.latex?b_3"/>의 비율만 고정시키면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b_3%20%3D%20-b_1"/>
+
+### 10 널스페이스
+
++ not yet
+
+### ?? C(A)와 N(A)
 
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/> : 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼(<img src="https://latex.codecogs.com/gif.latex?m"/>차원 벡터)들의 linear combination을 모아 놓은 집합
 + <img src="https://latex.codecogs.com/gif.latex?N%28A%29"/> : <img src="https://latex.codecogs.com/gif.latex?Ax%3D0"/>을 만족시키는 모든 <img src="https://latex.codecogs.com/gif.latex?x"/>(<img src="https://latex.codecogs.com/gif.latex?n"/>차원 벡터)를 모아 놓은 집합
-
-### . Ax=b와 C(A)의 관계
-
-+ 선형방정식 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 푸는 것은 <img src="https://latex.codecogs.com/gif.latex?b"/>를 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination으로 표현하겠다는 것과 같다.
-+ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 모든 칼럼들의 linear combination을 모아 놓은 것이 바로 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>이다.
-+ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>로 <img src="https://latex.codecogs.com/gif.latex?b"/>를 만들어낼 수 있다면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구한 것이고, 그렇지 못하다면 해가 존재하지 않는 것이다.
-
-
 
 
 
@@ -148,11 +179,13 @@
 
 ---
 
-## 3.2 The Null space of A: Solving Ax=0
+## 10 널스페이스
+
+
 
 ---
 
-## 3.1 Space of Vectors 벡터 공간, 부분 공간, 칼럼 스페이스
+## 09 Ax=b와 공간, 칼럼 스페이스
 
 ### 칼럼벡터와 공간의 의미
 
@@ -181,7 +214,7 @@
 
 + 벡터 공간에 속하는 임의의 벡터들로 만들어내는 공간을 부분 공간(subspace)이라고 한다.
 + 즉, 벡터들의 linear combination이 부분 공간(subspace)을 만들어낸다.
-+ 다르게 말하면 임의의 벡터들이 span한 것을 subspace라고 한다.
++ 다르게 말하면 임의의 벡터들이 <img src="https://latex.codecogs.com/gif.latex?span"/>한 것을 subspace라고 한다.
 + subspace에 속하는 벡터들을 linear combination한 결과 또한 당연히 subspace에 속한다.
 
 ### Subspace 구분법과 OX 퀴즈
@@ -201,7 +234,7 @@
 
 + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
 + 공간의 관점으로 접근하면 된다.
-+ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들이 span하여 만드는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들이 <img src="https://latex.codecogs.com/gif.latex?span"/>하여 만드는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
 
 > **Note:** <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에는 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼뿐만 아니라 linear combination의 결과인 <img src="https://latex.codecogs.com/gif.latex?Ax"/>까지 포함하고 있다.
@@ -241,7 +274,7 @@
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28B%29%20%5Crightarrow%20R%5E%7B2%7D"/>
 
-### Problem :: C(A)와 Ax=b
+### Problem :: C(A)를 고려하여 Ax=b를 만족시키는 적절한 b 만들기
 
 <img src="https://latex.codecogs.com/gif.latex?20.%28a%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%26%202%20%5C%5C%0D2%20%26%208%20%26%204%20%5C%5C%0D-1%20%26%20-4%20%26%20-2%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0Dx_3%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
 
@@ -253,13 +286,39 @@
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 3차원 공간에서 2차원 plane이다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼벡터를 <img src="https://latex.codecogs.com/gif.latex?%5Ba_1%20%5C%20a_2%20%5C%20a_3%5D"/>라고 할 때, <img src="https://latex.codecogs.com/gif.latex?a_1"/>과 <img src="https://latex.codecogs.com/gif.latex?a_3"/>의 비율은 고정되고 <img src="https://latex.codecogs.com/gif.latex?a_2"/>만 움직인다.
 + <img src="https://latex.codecogs.com/gif.latex?b"/>는 반드시 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 속해야 하므로 <img src="https://latex.codecogs.com/gif.latex?b_1"/>과 <img src="https://latex.codecogs.com/gif.latex?b_3"/>의 비율만 고정시키면 된다.
-+ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b_3%20%3D%20-b_1"/>.
++ <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20b_3%20%3D%20-b_1"/>
 
 **끝.**
 
 ---
 
-## 2.6 Elimination = Factorization: A=LU
+## 08 Ax=b를 푸는 방법 (3) 칼럼 스페이스
+
+### 1) 가우스 소거법
+
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substituion을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
+
+### 2) 가우스-조던 소거법
+
++ '**역행렬을 구하는 방법**'이다.
++ <img src="https://latex.codecogs.com/gif.latex?AA%5E%7B-1%7D%3DI%20%5CRightarrow%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%20%5C%20e_2%20%5C%20e_3%5D%20%5CRightarrow%20U%5Bx%20%5C%20y%5C%20z%5D%20%3D%20%5Be_1%27%20%5C%20e_2%27%20%5C%20e_3%27%5D%20%5CRightarrow%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D"/>
++ 역행렬을 구했으니 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 양변에 역행렬을 곱하면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 한꺼번에 구할 수 있다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20A%5E%7B-1%7DAx%3DA%5E%7B-1%7Db%20%5CRightarrow%20x%20%3D%20A%5E%7B-1%7Db"/>
+
+### 3) 칼럼 스페이스
+
++ '**해가 존재하는지 존재하지 않는지 판별할 수 있는 방법**'이다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>이 존재하지 않을 때, 해가 있는지 없는지 어떻게 알 수 있을까.
++ 공간의 관점으로 접근하면 된다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax"/>는 하나의 벡터 공간인데 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼들이 <img src="https://latex.codecogs.com/gif.latex?span"/>하여 만드는 공간이므로 칼럼 스페이스 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>라고 부른다.
++ <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>에 <img src="https://latex.codecogs.com/gif.latex?b"/>가 속하면 해가 있는 것이고, 속하지 않으면 해가 없는 것이다.
+
+**끝.**
+
+---
+
+## 07 A = LU Factorization
 
 ### 가우스 소거법을 행렬 간 곱셈으로 치환하기 Elimination as Matrix Mutliplication
 
@@ -340,24 +399,31 @@ Ax = b를 풀기 위해 굳이 LU Factorization을 사용할 필요는 없다.
 
 ---
 
-## 2.5 Inverse Matrices 가우스-조던 소거법
+## 06 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
 
 ### 역행렬을 어떻게 구할까 Inverse Matrix
 
-```
-1. 가우스-조던 소거법 적용
-```
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에서 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구하는 방법은 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 역행렬인 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7D"/>을 각 항의 왼쪽에 곱하는 것이다.
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 역행렬을 구하는 방법은 가우스-조던 소거법을 적용하는 것이다.
++ 가우스 소거법은 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 <img src="https://latex.codecogs.com/gif.latex?Ux%3Db%27"/>의 형태로 만들지만
++ 가우스-조던 소거법은 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 <img src="https://latex.codecogs.com/gif.latex?Ix%3Db%27%27"/>의 형태로 만든다.
++ 여기서 <img src="https://latex.codecogs.com/gif.latex?b%27%27"/>은 <img src="https://latex.codecogs.com/gif.latex?A%5E%7B-1%7Db"/>를 뜻한다.
+
 
 ### 가우스-조던 소거법 Gauss-Jordan Elimination
 
 ```
-1. AA^{-1} = I                     # 역행렬의 성질 활용
-2. A^{-1} = [x y z]                # 역행렬을 칼럼 벡터로 변환
-3. A[x y z] = I                    # Ax=b 형태로 전환
-4. [Ax Ay Az] = [e1 e2 e3]         # 단위행렬을 칼럼 벡터로 변환
-5. Ax = e1, Ay = e2, Az = e3       # Ax=b 형태로 전환
-6. [A | e1], [A | e2], [A | e3]    # 첨가행렬 형태로 전환
-7. [A | e1 e2 e3]                  # 첨가행렬 형태로 전환
+1. AA^{-1} = I                          # 역행렬의 성질 활용
+2. A^{-1} = [x y z]                     # 역행렬을 칼럼 벡터로 변환
+3. A[x y z] = I                         # Ax=b 형태로 전환
+4. [Ax Ay Az] = [e1 e2 e3]              # 단위행렬을 칼럼 벡터로 변환
+5. Ax = e1, Ay = e2, Az = e3            # Ax=b 형태로 전환
+6. [A | e1], [A | e2], [A | e3]         # 첨가행렬 형태로 전환
+7. [A | e1 e2 e3]                       # 첨가행렬 형태로 전환
+8. [U | e1' e2' e3']                    # 가우스 소거법 적용
+9. [I | e1'' e2'' e3'']                 # 가우스-조던 소거법 적용
+10. I[x y z] = [e1'' e2'' e3'']         # 첨가행렬 형태를 원래 상태로 복귀
+11. A^{-1} = [x y z] = [e1'' e2'' e3'']
 ```
 
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20AA%5E%7B-1%7D%3DI"/></p>
@@ -422,13 +488,60 @@ Ix = b''
 
 ---
 
-## 2.2 The Idea of Elimination
+## 05 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
 
-### 선형 방정식을 어떻게 풀까 Solving Linear Equations
+### 1) 가우스 소거법
+
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substituion을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
+
+### 2) 가우스-조던 소거법
+
++ 역행렬을 구하는 방법이다.
++ <img src="https://latex.codecogs.com/gif.latex?AA%5E%7B-1%7D%3DI%20%5CRightarrow%20A%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%20%5C%20e_2%20%5C%20e_3%5D%20%5CRightarrow%20U%5Bx%20%5C%20y%5C%20z%5D%20%3D%20%5Be_1%27%20%5C%20e_2%27%20%5C%20e_3%27%5D%20%5CRightarrow%20I%5Bx%20%5C%20y%20%5C%20z%5D%20%3D%20%5Be_1%27%27%20%5C%20e_2%27%27%20%5C%20e_3%27%27%5D"/>
++ 역행렬을 구했으니 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>의 양변에 역행렬을 곱하면 <img src="https://latex.codecogs.com/gif.latex?x"/>를 한꺼번에 구할 수 있다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20A%5E%7B-1%7DAx%3DA%5E%7B-1%7Db%20%5CRightarrow%20x%20%3D%20A%5E%7B-1%7Db"/>
+
+**끝.**
+
+---
+
+## 04 첨가 행렬 Augmented Matrix Form
+
+### 첨가 행렬 Augmented Matrix Form
 
 ```
-1. 가우스 소거법 적용
+Ax = b => [A | b] => [u | b'] => Ux = b'
+
+행렬 A에 칼럼벡터 b를 붙여서 하나의 행렬로 나타낸 것을 첨가행렬이라 한다.
+
+가우스 소거법을 적용하면 A의 row와 b의 row가 같은 연산을 적용 받는다.
+어차피 같은 연산을 적용 받으니 행렬 A에 b를 추가하여 첨가행렬로 만들 수 있다.
 ```
+
+<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%5C%5C%0D2%20%26%202%20%26%204%20%5C%5C%0D3%20%26%207%20%26%209%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%20%5C%5C%0Dx_%7B3%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D7%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D"/></p>
+
++ 위 행렬의 형태를 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>라고 할 때
++ 가우스 소거에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 아무런 관여를 하지 않는다.
++ 가우스 소거의 결과를 결정하는 것은 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>이다.
+
+<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%26%20%7C%20%26%205%20%5C%5C%0D2%20%26%202%20%26%204%20%26%20%7C%20%26%207%20%5C%5C%0D3%20%26%207%20%26%209%20%26%20%7C%20%26%2010%0D%5Cend%7Bbmatrix%7D%0D"/></p>
+
++ 따라서 가우스 소거에서 필요 없는 것을 제외하면 하나의 행렬로 나타낼 수 있다.
+
+<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%0D%5Cend%7Bbmatrix%7D%0D"/></p>
+
++ 가우스 소거를 통해 위와 같은 형태가 만들어진다.
+
+<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%0D%5Cend%7Bbmatrix%7D%0D"/></p>
+
++ 2번째 행과 3번째 행을 바꿔서 <img src="https://latex.codecogs.com/gif.latex?Ux%3Db%27"/> 형태로 만들어준다.
+
+**끝.**
+
+---
+
+## 03 가우스 소거법 Gaussian Elimination
 
 ### 가우스 소거법 Gauss Elimination
 
@@ -469,34 +582,27 @@ Multiplier : 소거될 row의 첫 번째 값을 Pivot으로 나눈 값
 + Pivot = 1
 + Multiplier = 2
 
-### 첨가행렬 Augmented Matrix Form
+**끝.**
 
-```
-Ax = b => [A | b] => [u | b'] => Ux = b'
+---
 
-행렬 A에 칼럼벡터 b를 붙여서 하나의 행렬로 나타낸 것을 첨가행렬이라 한다.
+## 02 Ax=b를 푸는 방법 (1) 가우스 소거법
 
-가우스 소거법을 적용하면 A의 row와 b의 row가 같은 연산을 적용 받는다.
-어차피 같은 연산을 적용 받으니 행렬 A에 b를 추가하여 첨가행렬로 만들 수 있다.
-```
+### 1) 가우스 소거법
 
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%5C%5C%0D2%20%26%202%20%26%204%20%5C%5C%0D3%20%26%207%20%26%209%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_%7B1%7D%20%5C%5C%0Dx_%7B2%7D%20%5C%5C%0Dx_%7B3%7D%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0D5%20%5C%5C%0D7%20%5C%5C%0D10%0D%5Cend%7Bbmatrix%7D"/></p>
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db%20%5CRightarrow%20Ux%3Db%27"/>
++ 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 <img src="https://latex.codecogs.com/gif.latex?U"/>형태로 바꾼 후 back substituion을 적용하여 <img src="https://latex.codecogs.com/gif.latex?x"/>를 하나씩 구한다.
 
-+ 위 행렬의 형태를 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>라고 할 때
-+ 가우스 소거에서 <img src="https://latex.codecogs.com/gif.latex?x"/>는 아무런 관여를 하지 않는다.
-+ 가우스 소거의 결과를 결정하는 것은 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>이다.
+**끝.**
 
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%203%20%26%20%7C%20%26%205%20%5C%5C%0D2%20%26%202%20%26%204%20%26%20%7C%20%26%207%20%5C%5C%0D3%20%26%207%20%26%209%20%26%20%7C%20%26%2010%0D%5Cend%7Bbmatrix%7D%0D"/></p>
+---
 
-+ 따라서 가우스 소거에서 필요 없는 것을 제외하면 하나의 행렬로 나타낼 수 있다.
+## 01 선형 방정식 Linear Equations
 
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%0D%5Cend%7Bbmatrix%7D%0D"/></p>
+### 선형 방정식을 어떻게 풀까 Solving Linear Equations
 
-+ 가우스 소거를 통해 위와 같은 형태가 만들어진다.
-
-<p align="center"><img src="https://latex.codecogs.com/gif.latex?%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%201%20%26%20%7C%20%26%205%20%5C%5C%0D0%20%26%204%20%26%206%20%26%20%7C%20%26%20-5%20%5C%5C%0D0%20%26%200%20%26%202%20%26%20%7C%20%26%20-3%0D%5Cend%7Bbmatrix%7D%0D"/></p>
-
-+ 2번째 행과 3번째 행을 바꿔서 <img src="https://latex.codecogs.com/gif.latex?Ux%3Db"/> 형태로 만들어준다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 선형 방정식이라고 한다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 만족시키는 <img src="https://latex.codecogs.com/gif.latex?x"/>를 찾는 것이 선형 방정식을 푸는 것이다.
 
 **끝.**
 
