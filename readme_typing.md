@@ -34,24 +34,12 @@
 + $Ax=b \Rightarrow [A \ | \ b] \Rightarrow [U \ | \ b'] \Rightarrow Ux = b'$
 + 가우스 소거법을 진행할 때 첨가행렬을 사용하면 간편하게 연산할 수 있다.
 
-### 05 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
+### 05~06 Ax=b를 푸는 방법 (2) 가우스-조던 소거법
 
 + 역행렬을 구하는 방법이다.
 + $AA^{-1}=I \Rightarrow A[x \ y \ z] = [e_1 \ e_2 \ e_3] \Rightarrow U[x \ y\ z] = [e_1' \ e_2' \ e_3'] \Rightarrow I[x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
 + 역행렬을 구했으니 $Ax=b$의 양변에 역행렬을 곱하면 $x$를 한꺼번에 구할 수 있다.
 + $Ax=b \Rightarrow A^{-1}Ax=A^{-1}b \Rightarrow x = A^{-1}b$
-
-### 06 가우스-조던 소거법으로 역행렬 구하기 Inverse Matrix Using Gauss-Jordan Elimination
-
-1. $AA^{-1} = I$ ......................................... $A^{-1} = [x \ y \ z]$.
-2. $A[x \ y \ z] = I$ .................................... $I = [e_1 \ e_2 \ e_3]$
-3. $[Ax \ Ay \ Az] = [e_1 \ e_2 \ e_3]$
-4. $Ax = e_1, \ Ay = e_2, \ Az = e_3$ ........ $[A \ | \ e_1], \ [A \ | \ e_2], \ [A \ | \ e_3]$
-5. $[A \ | \ e_1 \ e_2 \ e_3]$ .....................................행렬 $A$를 가우스 소거법으로 $U$로 만든다.
-6. $[U \ | \ e_1' \ e_2' \ e_3']$ .................................... 행렬 $U$를 가우스-조던 소거법으로 $I$로 만든다.
-7. $[I \ | \ e_1'' \ e_2'' \ e_3'']$
-8. $I[x \ y \ z] = [e_1'' \ e_2'' \ e_3''] $
-9. $\therefore A^{-1} = [x \ y \ z] = [e_1'' \ e_2'' \ e_3'']$
 
 ### 07 A = LU Factorization
 
@@ -77,7 +65,7 @@ $(1) \ I =
 $
 
 + 행렬 $I$의 칼럼벡터는 2차원이다.
-+ 행렬 $I$의 칼럼벡터는 2개가 independent하다.
++ 2차원 칼럼벡터 2개가 independent하다.
 + 행렬 $I$의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
 + $C(I) \rightarrow R^{2}$
 
@@ -89,7 +77,7 @@ $(2) \ A =
 $
 
 + 행렬 $A$의 칼럼벡터는 2차원이다.
-+ 행렬 $A$의 칼럼벡터들은 서로 dependent하다.
++ 2차원 칼럼벡터 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
 + $C(A) \subset R^{2}$
 
@@ -101,7 +89,7 @@ $(3) \ B =
 $
 
 + 행렬 $B$의 칼럼벡터는 2차원이다.
-+ 행렬 $B$의 칼럼벡터는 2개가 서로 dependent하다.
++ 2차원 칼럼벡터 3개 중 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
 + $C(B) \rightarrow R^{2}$
 
@@ -125,6 +113,7 @@ b_3
 \end{bmatrix}
 $
 
++ $C(A)$는 3차원 벡터 3개가 모두 dependent하다.
 + $C(A)$는 3차원 공간의 line이다.
 + $b$는 반드시 $C(A)$에 속해야 하므로 $[1 \ 2 \ {-}1]$과 같은 선상에 있으면 된다.
 + $\therefore b = [b_1 \ 2b_1 \ {-}b_1]$
@@ -146,80 +135,72 @@ b_3
 \end{bmatrix}
 $
 
++ $C(A)$는 3차원 벡터 2개가 서로 independent하다.
 + $C(A)$는 3차원 공간에서 2차원 plane이다.
 + 행렬 $A$의 칼럼벡터를 $[a_1 \ a_2 \ a_3]$라고 할 때, $a_1$과 $a_3$의 비율은 고정되고 $a_2$만 움직인다.
 + $b$는 반드시 $C(A)$에 속해야 하므로 $b_1$과 $b_3$의 비율만 고정시키면 된다.
 + $\therefore b_3 = -b_1$
 
-### 10 널스페이스
+### 10 널스페이스의 정의
 
-+ not yet
++ $N(A)$: $Ax=0$을 만족시키는 모든 벡터 $x$의 집합을 공간으로 표현한 것
++ $N(A) \subseteq R^{n}$: 벡터 $x$는 $n$차원이므로 널스페이스는 $R^{n}$의 subspace가 된다.
++ 행렬 $A$의 역행렬(invertible matrix)이 존재하면 $Ax=0$의 유일한 해는 $x=0$이므로 free variable은 존재하지 않고 $N(A)=Z$가 된다.
 
-### ?? C(A)와 N(A)
+### 10 Example :: 널스페이스와 Complete solution 구하는 방법
 
-+ $C(A)$ : 행렬 $A$의 모든 칼럼($m$차원 벡터)들의 linear combination을 모아 놓은 집합
-+ $N(A)$ : $Ax=0$을 만족시키는 모든 $x$($n$차원 벡터)를 모아 놓은 집합
+$(3) \ U =
+\begin{bmatrix}
+1 & 2 & 2 & 3 \\
+0 & 0 & 4 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix}$
 
-
-
----
-
-## 03 Vector spaces and Subspaces (5) N(A) & Complete solution to Ax=b
-
-### N(A)를 표현하는 방법 Describing N(A)
-
-
-
-
-
----
-
-## 03 Vector spaces and Subspaces (5) 부분공간
-
-### 부분공간의 조건 Subspace
-
-$$(1) \ u + v \in S, \ \forall u, v \in S$$
-$$(2) \ cv \in S, \ \forall v \in S$$
-
-+ (1) $S$에 속하는 어떤 벡터들의 linear combinaion한 결과 벡터도 $S$에 속해야 한다.
-+ (2) $S$에 속하는 벡터에 스칼라곱한 결과 벡터도 $S$에 속해야 한다.
-+ 위 두 가지 조건을 모두 만족하면 Subspace가 된다.
-+ Subspace는 항상 영 벡터를 포함하고 있다.
-
-### 행렬에 의해 정의되는 Subspace 4가지
-
-```
-1. C(A)
-2. N(A)
-```
-
-### C(A) :: Column space of A (m by n)
-
-$$\begin{array}{rcl} C(A) & = & \{Ax \ | \ \forall x \in R^{n} \} \\ & = &
-\{[a_1 \ a_2 \ \cdot \cdot \ a_n] \begin{bmatrix}
-x_1 \\
++ pivot 칼럼은 1번째와 3번째이다.
++ free variable이 2개이므로 speicla solution도 2개 존재한다.
++ free variable에 1과 0을 대입해서 special solution을 만들 수 있다.
++ $x_2, x_4$에 $(1,0)$을 대입하면 $x_3=0, x_1=-1$이 나온다. $s_1 = (-1,1,0,0)$
++ $x_2, x_4$에 $(0,1)$을 대입하면 $x_3=-1, x_1=-1$이 나온다. $s_2 = (-1,0,-1,1)$
++ $N(U)$는 $s_1$과 $s_2$의 linear combination이다.
++ free 칼럼인 $x_2, x_4$에는 어떤 값을 넣어도 상관 없으므로 다음과 같다.
++ $\therefore x = x_2 \begin{bmatrix}
+-1 \\
+1 \\
+0 \\
+0
+\end{bmatrix} + x_4 \begin{bmatrix}
+-1 \\
+0 \\
+-1 \\
+1
+\end{bmatrix} = \begin{bmatrix}
+-x_2-x_4 \\
 x_2 \\
-\cdot \\
-\cdot \\
-x_n
+-x_4\\
+x_4
+\end{bmatrix}$
+
+### 10 Reduced Row Echelon Matrix
+
+$(1) \ U =
+\begin{bmatrix}
+1 & 1 & 2 & 3 \\
+0 & 0 & 4 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix} \Rightarrow E = \begin{bmatrix}
+1 & 1 & 0 & 1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
 \end{bmatrix}
-| \ \forall x \in R^{n} \} \\
-& = & \{ x_1a_1 + \cdot \cdot + x_na_n, \ \forall x \in R^{n} \} \end{array}$$
+$
 
-+ 행렬 $A$의 모든 칼럼들의 linear combination을 모아 놓은 집합
-+ 행렬 $A$의 각 칼럼은 $m$차원 벡터이므로 $C(A)$는 $R^{m}$의 Subspace이다.
-  + $x_1a_1 + \cdot \cdot + x_na_n \in R^{m}$
++ 행렬 $U$는 pviot 아래에만 0을 가지면 된다.
++ 행렬 $E$는 **pivot 위에도 0을 가져야 한다**.
++ 행렬 $E$의 pivot 칼럼($(1,0,0), \ (0,1,0)$)을 붙여 놓으면 단위행렬 $I$가 된다.
 
-### 몇 차원 Subspace인지 구하는 방법
-
-+ 안에 들어간 벡터가 몇 차원인지 구하면 된다.
-
-### N(A) :: Null space of A (m by n)
-
-$$\begin{array}{rcl} N(A) & = & \{x \in R^{n} \ | \ Ax = 0 \} \end{array}$$
-
-+ 행렬 $A$에 '**오른쪽**'에 곱해졌을 때 $Ax=0$을 만드는 $n$차원 $x$ 벡터들을 모아 놓은 집합
-+ $x$는 $n$차원이므로 $N(A)$는 $R^{n}$의 Subspace이다.
+---
+---
+---
 
 ### 실생활에서 쓰이는 C(A), N(A)
 
@@ -259,9 +240,244 @@ y_m
 
 ---
 
+## 11 랭크와 Row Reduced Form
+
++ not yet
+
+---
+
 ## 10 널스페이스
 
+### 널스페이스의 정의
 
++ $N(A)$: $Ax=0$을 만족시키는 모든 벡터 $x$의 집합을 그려낸 공간
++ $N(A) \subseteq R^{n}$: 벡터 $x$는 $n$차원이므로 널스페이스는 $R^{n}$의 subspace가 된다.
+
+### Special solution
+
++ $Ax=0$을 만족시키는 구체적인 벡터 $x$의 값
++ free variable에 1 또는 0을 대입하여 pivot variable의 값을 구하면 전체 special solution을 구할 수 있다.
+
+### Example :: 널스페이스 묘사하기
+
+$(1) \ A =
+\begin{bmatrix}
+1 & 2 \\
+3 & 8
+\end{bmatrix}
+$
+
++ 행렬 $A$를 Elimination하면 각 칼럼은 $(1, 2)$와 $(0, 2)$이다.
++ 행렬 $A$의 모든 칼럼이 pivot 칼럼이므로 special solution은 존재하지 않는다.
++ $Ax=0$을 만족시키는 것은 $x=0$뿐이다.
++ $\therefore N(A) = Z$
+
+
+$(2) \ B =
+\begin{bmatrix}
+1 & 2 \\
+3 & 8 \\
+2 & 4 \\
+6 & 16
+\end{bmatrix}
+$
+
++ 행렬 $B$를 Elimination하면 각 칼럼은 $(1,0,0,0), \ (2,2,0,4)$이다.
++ 행렬 $B$의 모든 칼럼이 pivot 칼럼이므로 special solution은 존재하지 않는다.
++ $Bx=0$을 만족시키는 것은 $x=0$뿐이다.
++ $\therefore N(B) = Z$
+
+$(3) \ C =
+\begin{bmatrix}
+1 & 2 & 2 & 4 \\
+3 & 8 & 6 & 16
+\end{bmatrix}
+$
+
++ 행렬 $C$를 Elimiation하면 $ \ U =
+\begin{bmatrix}
+1 & 2 & 2 & 4 \\
+0 & 2 & 0 & 4
+\end{bmatrix}
+$가 된다.
+
++ 행렬 $C$의 3번째, 4번째는 free 칼럼이므로 special soution이 2개 존재한다.
++ $x_3$과 $x_4$에 각각 $(1, 0)$과 $(0, 1)$을 대입한다.
++ $N(C)$를 구성하는 $ \ s_1 =
+\begin{bmatrix}
+-2 \\
+0 \\
+1 \\
+0
+\end{bmatrix}
+$과 $ \ s_2 =
+\begin{bmatrix}
+0 \\
+-2 \\
+0 \\
+1
+\end{bmatrix}
+$를 구할 수 있다.
+
++ $N(C)$는 $s_1$과 $s_2$의 linear combination이 된다.
+
+### R.R.E.F (Reduced Row Echelon Form)
+
+$$ \ U =
+\begin{bmatrix}
+1 & 2 & 2 & 4 \\
+0 & 2 & 0 & 4
+\end{bmatrix} \ \Rightarrow \ R =
+\begin{bmatrix}
+1 & 0 & 2 & 0 \\
+0 & 1 & 0 & 2
+\end{bmatrix}
+$$
+
++ RREF 형태에서는 단위행렬 $I$의 형태가 나온다.
++ $Rx=0$의 형태를 만들어 놓으면 special solution을 찾는 것이 훨씬 쉬워진다.
++ $R$의 각 칼럼에 $x_1, x_2, x_3, x_4$를 곱하고 각 행의 합이 0이 나오도록 만든다.
++ $x_1 + 2x_3 = 0, \ x_2 + 2x_4 =0$
++ $N(R)$를 구성하는 $ \ s_1 =
+\begin{bmatrix}
+-2 \\
+0 \\
+1 \\
+0
+\end{bmatrix}
+$과 $ \ s_2 =
+\begin{bmatrix}
+0 \\
+-2 \\
+0 \\
+1
+\end{bmatrix}
+$를 구할 수 있다.
+
+### N(A) = Z의 아주 중요한 의미
+
++ 행렬 $A$의 모든 칼럼들이 independent하다는 것을 뜻한다.
++ independent에 대한 아이디어는 추후 논의한다.
+
+### Example :: Ax=0에 대한 Complete solution을 구하는 방법
+
+$(1) \ A =
+\begin{bmatrix}
+1 & 2 & 2 & 3 \\
+2 & 2 & 8 & 10 \\
+3 & 3 & 10 & 13
+\end{bmatrix}$
+
++ 1번째 pivot은 1번째 칼럼의 $a_{11}$이다.
++ pivot 아래에 있는 값들을 모두 0으로 소거해준다.
+
+$(2) \ A =
+\begin{bmatrix}
+1 & 2 & 2 & 3 \\
+0 & 0 & 4 & 4 \\
+0 & 0 & 4 & 4
+\end{bmatrix}$
+
++ 2번째 pivot은 3번째 칼럼의 $a_{23}$이다.
++ pivot 아래에 있는 값을 0으로 소거해준다.
+
+$(3) \ U =
+\begin{bmatrix}
+1 & 2 & 2 & 3 \\
+0 & 0 & 4 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix}$
+
++ pivot 칼럼은 1번째와 3번째이다.
++ 칼럼은 4개인데 pivot 칼럼은 2개이므로 solution은 여러 개이다.
++ free 칼럼인 2번째와 4번째에 곱해질 free variable에 0과 1을 대입해서 special solution을 만들 수 있다.
++ $x_2, x_4$에 $(1,0)$을 대입하면 $x_3=0, x_1=-1$이 나온다. $s_1 = (-1,1,0,0)$
++ $x_2, x_4$에 $(0,1)$을 대입하면 $x_3=-1, x_1=-1$이 나온다. $s_2 = (-1,0,-1,1)$
++ free 칼럼인 $x_2, x_4$에는 어떤 값을 넣어도 상관 없으므로 다음과 같다.
++ $\therefore x = x_2 \begin{bmatrix}
+-1 \\
+1 \\
+0 \\
+0
+\end{bmatrix} + x_4 \begin{bmatrix}
+-1 \\
+0 \\
+-1 \\
+1
+\end{bmatrix} = \begin{bmatrix}
+-x_2-x_4 \\
+x_2 \\
+-x_4\\
+x_4
+\end{bmatrix}$
+
+### Reduced Row Echelon Matrix
+
+$(1) \ U =
+\begin{bmatrix}
+1 & 1 & 2 & 3 \\
+0 & 0 & 4 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix} \Rightarrow E = \begin{bmatrix}
+1 & 1 & 0 & 1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$
+
++ 행렬 $U$는 pviot 아래에만 0을 가지면 된다.
++ 행렬 $E$는 **pivot 위에도 0을 가져야 한다**.
++ 행렬 $E$의 pivot 칼럼($(1,0,0), \ (0,1,0)$)을 붙여 놓으면 단위행렬 $I$가 된다.
+
+### Example :: 널스페이스 묘사하기 :: R vs E
+
+$(1) \ U =
+\begin{bmatrix}
+1 & 5 & 7\\
+0 & 0 & 9
+\end{bmatrix}
+$
+
++ 2번째 칼럼이 free 칼럼이므로 $x_2$가 free variable이다.
++ $x_2$에 1을 대입해본다.
++ $s_1 = (-5, 1, 0)$이 나온다.
++ $N(A)$는 $R^{3}$의 line이 된다.
+
+$(2) \ U =
+\begin{bmatrix}
+1 & 5 & 7\\
+0 & 0 & 9
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+1 & 5 & 7\\
+0 & 0 & 7
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+1 & 5 & 0\\
+0 & 0 & 7
+\end{bmatrix} \Rightarrow R = \begin{bmatrix}
+1 & 5 & 0\\
+0 & 0 & 1
+\end{bmatrix} = rref(U)
+$
+
++ 2번째 칼럼에서 pivot을 발견할 수 없으니 3번째 칼럼으로 간다.
++ 3번째 칼럼의 pivot 위치의 값 9를 1로 만든다.
++ $x_2$에 1을 대입해본다.
++ 더 쉽게 $s_1 = (-5, 1, 0)$이 나온다.
++ $N(A)$는 $R^{3}$의 line이 된다.
+
+### Ax=0 (m<n)에 대한 통찰
+
++ 와이드 스크린처럼 가로가 세로보다 훨씬 긴 직사각형 행렬 $A$를 상상해본다.
++ pivot의 개수는 행의 개수나 열의 개수를 초과할 수 없다. (대각선이므로)
++ pivot은 최대 $m$개이고 free variable은 $n-m$개이므로 special solution이 최소 1개 이상 존재한다.
++ 따라서 $x=0$이 아닌 해가 반드시 존재한다.
+
+### invertible matrix와 free variables
+
++ 역행렬이 존재한다면 $Ax=0$의 유일한 해는 $x=0$이다.
++ $x=0$이면 $N(A)=Z$이므로 free variables가 없다는 뜻이다.
+
+**끝.**
 
 ---
 
@@ -558,7 +774,7 @@ $$(7) \ A = E_{21}^{-1}U = \begin{bmatrix}
 \end{bmatrix}U
 $$
 
-+ $E_{21}$은 L(Lower TriangLUar)이다.
++ $E_{21}$은 L(Lower triangular)이다.
 
 $$(8) \ A = LU$$
 
@@ -799,7 +1015,7 @@ $$\begin{array}{lcl} x_{1}+2x_{2} & = & 5 \\ 2x_{1}+5x_{2} & = & 12 \end{array}$
 
 $$\begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$
 
-+ Gauss Elimination으로 행렬 $A$를 $U$(upper triangLUar)로 만들어준다.
++ Gauss Elimination으로 행렬 $A$를 $U$(upper triangular)로 만들어준다.
 
 $$\begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}  \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}$$
 
