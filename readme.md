@@ -60,21 +60,21 @@
 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20I%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%5C%5C%0D0%20%26%201%0D%5Cend%7Bbmatrix%7D%0D"/>
 
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>의 칼럼벡터는 2차원이다.
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>의 칼럼벡터는 2개가 independent하다.
++ 2차원 칼럼벡터 2개가 independent하다.
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?C%28I%29%20%5Crightarrow%20R%5E%7B2%7D"/>
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%5C%5C%0D2%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
 
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 칼럼벡터는 2차원이다.
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 칼럼벡터들은 서로 dependent하다.
++ 2차원 칼럼벡터 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29%20%5Csubset%20R%5E%7B2%7D"/>
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?%283%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%200%20%5C%5C%0D0%20%26%200%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
 
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?B"/>의 칼럼벡터는 2차원이다.
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?B"/>의 칼럼벡터는 2개가 서로 dependent하다.
++ 2차원 칼럼벡터 3개 중 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?C%28B%29%20%5Crightarrow%20R%5E%7B2%7D"/>
 
@@ -82,77 +82,49 @@
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?20.%28a%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%26%202%20%5C%5C%0D2%20%26%208%20%26%204%20%5C%5C%0D-1%20%26%20-4%20%26%20-2%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0Dx_3%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
 
++ <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>는 3차원 벡터 3개가 모두 dependent하다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>는 3차원 공간의 line이다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?b"/>는 반드시 <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>에 속해야 하므로 <img src="http://api.gmath.guru/cgi-bin/gmath?%5B1%20%5C%202%20%5C%20%7B-%7D1%5D"/>과 같은 선상에 있으면 된다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ctherefore%20b%20%3D%20%5Bb_1%20%5C%202b_1%20%5C%20%7B-%7Db_1%5D"/>
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?20.%28b%29%20%5C%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%204%20%5C%5C%0D2%20%26%209%20%5C%5C%0D-1%20%26%20-4%0D%5Cend%7Bbmatrix%7D%0D%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%0D%5Cend%7Bbmatrix%7D%0D%3D%0D%5Cbegin%7Bbmatrix%7D%0Db_1%20%5C%5C%0Db_2%20%5C%5C%0Db_3%0D%5Cend%7Bbmatrix%7D%0D"/>
 
++ <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>는 3차원 벡터 2개가 서로 independent하다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>는 3차원 공간에서 2차원 plane이다.
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 칼럼벡터를 <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ba_1%20%5C%20a_2%20%5C%20a_3%5D"/>라고 할 때, <img src="http://api.gmath.guru/cgi-bin/gmath?a_1"/>과 <img src="http://api.gmath.guru/cgi-bin/gmath?a_3"/>의 비율은 고정되고 <img src="http://api.gmath.guru/cgi-bin/gmath?a_2"/>만 움직인다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?b"/>는 반드시 <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>에 속해야 하므로 <img src="http://api.gmath.guru/cgi-bin/gmath?b_1"/>과 <img src="http://api.gmath.guru/cgi-bin/gmath?b_3"/>의 비율만 고정시키면 된다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ctherefore%20b_3%20%3D%20-b_1"/>
 
-### 10 널스페이스
+### 10 널스페이스의 정의
 
-+ not yet
++ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>: <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 모든 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>의 집합을 공간으로 표현한 것
++ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29%20%5Csubseteq%20R%5E%7Bn%7D"/>: 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원이므로 널스페이스는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7Bn%7D"/>의 subspace가 된다.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 역행렬(invertible matrix)이 존재하면 <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>의 유일한 해는 <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>이므로 free variable은 존재하지 않고 <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29%3DZ"/>가 된다.
 
-### ?? C(A)와 N(A)
+### 10 Example :: 널스페이스와 Complete solution 구하는 방법
 
-+ <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/> : 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 모든 칼럼(<img src="http://api.gmath.guru/cgi-bin/gmath?m"/>차원 벡터)들의 linear combination을 모아 놓은 집합
-+ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/> : <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 모든 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>(<img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원 벡터)를 모아 놓은 집합
+<img src="http://api.gmath.guru/cgi-bin/gmath?%283%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%202%20%26%203%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D"/>
 
++ pivot 칼럼은 1번째와 3번째이다.
++ free variable이 2개이므로 speicla solution도 2개 존재한다.
++ free variable에 1과 0을 대입해서 special solution을 만들 수 있다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4"/>에 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C0%29"/>을 대입하면 <img src="http://api.gmath.guru/cgi-bin/gmath?x_3%3D0%2C%20x_1%3D-1"/>이 나온다. <img src="http://api.gmath.guru/cgi-bin/gmath?s_1%20%3D%20%28-1%2C1%2C0%2C0%29"/>
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4"/>에 <img src="http://api.gmath.guru/cgi-bin/gmath?%280%2C1%29"/>을 대입하면 <img src="http://api.gmath.guru/cgi-bin/gmath?x_3%3D-1%2C%20x_1%3D-1"/>이 나온다. <img src="http://api.gmath.guru/cgi-bin/gmath?s_2%20%3D%20%28-1%2C0%2C-1%2C1%29"/>
++ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28U%29"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?s_1"/>과 <img src="http://api.gmath.guru/cgi-bin/gmath?s_2"/>의 linear combination이다.
++ free 칼럼인 <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4"/>에는 어떤 값을 넣어도 상관 없으므로 다음과 같다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ctherefore%20x%20%3D%20x_2%20%5Cbegin%7Bbmatrix%7D%0D-1%20%5C%5C%0D1%20%5C%5C%0D0%20%5C%5C%0D0%0D%5Cend%7Bbmatrix%7D%20+%20x_4%20%5Cbegin%7Bbmatrix%7D%0D-1%20%5C%5C%0D0%20%5C%5C%0D-1%20%5C%5C%0D1%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-x_2-x_4%20%5C%5C%0Dx_2%20%5C%5C%0D-x_4%5C%5C%0Dx_4%0D%5Cend%7Bbmatrix%7D"/>
 
+### 10 Reduced Row Echelon Matrix
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%202%20%26%203%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%20%5CRightarrow%20E%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%200%20%26%201%20%5C%5C%0D0%20%26%200%20%26%201%20%26%201%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?U"/>는 pviot 아래에만 0을 가지면 된다.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?E"/>는 **pivot 위에도 0을 가져야 한다**.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?E"/>의 pivot 칼럼(<img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C0%2C0%29%2C%20%5C%20%280%2C1%2C0%29"/>)을 붙여 놓으면 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>가 된다.
 
 ---
-
-## 03 Vector spaces and Subspaces (5) N(A) & Complete solution to Ax=b
-
-### N(A)를 표현하는 방법 Describing N(A)
-
-
-
-
-
 ---
-
-## 03 Vector spaces and Subspaces (5) 부분공간
-
-### 부분공간의 조건 Subspace
-
-<p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20u%20+%20v%20%5Cin%20S%2C%20%5C%20%5Cforall%20u%2C%20v%20%5Cin%20S"/></p>
-<p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%282%29%20%5C%20cv%20%5Cin%20S%2C%20%5C%20%5Cforall%20v%20%5Cin%20S"/></p>
-
-+ (1) <img src="http://api.gmath.guru/cgi-bin/gmath?S"/>에 속하는 어떤 벡터들의 linear combinaion한 결과 벡터도 <img src="http://api.gmath.guru/cgi-bin/gmath?S"/>에 속해야 한다.
-+ (2) <img src="http://api.gmath.guru/cgi-bin/gmath?S"/>에 속하는 벡터에 스칼라곱한 결과 벡터도 <img src="http://api.gmath.guru/cgi-bin/gmath?S"/>에 속해야 한다.
-+ 위 두 가지 조건을 모두 만족하면 Subspace가 된다.
-+ Subspace는 항상 영 벡터를 포함하고 있다.
-
-### 행렬에 의해 정의되는 Subspace 4가지
-
-```
-1. C(A)
-2. N(A)
-```
-
-### C(A) :: Column space of A (m by n)
-
-<p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%5Cbegin%7Barray%7D%7Brcl%7D%20C%28A%29%20%26%20%3D%20%26%20%5C%7BAx%20%5C%20%7C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5C%5C%20%26%20%3D%20%26%0D%5C%7B%5Ba_1%20%5C%20a_2%20%5C%20%5Ccdot%20%5Ccdot%20%5C%20a_n%5D%20%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0D%5Ccdot%20%5C%5C%0D%5Ccdot%20%5C%5C%0Dx_n%0D%5Cend%7Bbmatrix%7D%0D%7C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5C%5C%0D%26%20%3D%20%26%20%5C%7B%20x_1a_1%20+%20%5Ccdot%20%5Ccdot%20+%20x_na_n%2C%20%5C%20%5Cforall%20x%20%5Cin%20R%5E%7Bn%7D%20%5C%7D%20%5Cend%7Barray%7D"/></p>
-
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 모든 칼럼들의 linear combination을 모아 놓은 집합
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 각 칼럼은 <img src="http://api.gmath.guru/cgi-bin/gmath?m"/>차원 벡터이므로 <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7Bm%7D"/>의 Subspace이다.
-  + <img src="http://api.gmath.guru/cgi-bin/gmath?x_1a_1%20+%20%5Ccdot%20%5Ccdot%20+%20x_na_n%20%5Cin%20R%5E%7Bm%7D"/>
-
-### 몇 차원 Subspace인지 구하는 방법
-
-+ 안에 들어간 벡터가 몇 차원인지 구하면 된다.
-
-### N(A) :: Null space of A (m by n)
-
-<p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%5Cbegin%7Barray%7D%7Brcl%7D%20N%28A%29%20%26%20%3D%20%26%20%5C%7Bx%20%5Cin%20R%5E%7Bn%7D%20%5C%20%7C%20%5C%20Ax%20%3D%200%20%5C%7D%20%5Cend%7Barray%7D"/></p>
-
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>에 '**오른쪽**'에 곱해졌을 때 <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만드는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/> 벡터들을 모아 놓은 집합
-+ <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원이므로 <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7Bn%7D"/>의 Subspace이다.
+---
 
 ### 실생활에서 쓰이는 C(A), N(A)
 
@@ -171,23 +143,29 @@
 
 ---
 
+## 11 랭크와 Row Reduced Form
+
++ not yet
+
+---
+
 ## 10 널스페이스
 
 ### 널스페이스의 정의
 
-+ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>: 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 역행렬이 존재하지 않을 때 <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 모든 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>가 <img src="http://api.gmath.guru/cgi-bin/gmath?span"/>하여 만드는 공간 (=모든 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>의 집합)
++ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>: <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 모든 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>의 집합을 그려낸 공간
 + <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29%20%5Csubseteq%20R%5E%7Bn%7D"/>: 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원이므로 널스페이스는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7Bn%7D"/>의 subspace가 된다.
 
 ### Special solution
 
-+ <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 대표적인 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 free column에 곱해지는 free variable의 특정 값
++ <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 구체적인 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>의 값
++ free variable에 1 또는 0을 대입하여 pivot variable의 값을 구하면 전체 special solution을 구할 수 있다.
 
 ### Example :: 널스페이스 묘사하기
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%5C%5C%0D3%20%26%208%0D%5Cend%7Bbmatrix%7D%0D"/>
 
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 Elimination하면 <img src="http://api.gmath.guru/cgi-bin/gmath?%5B1%20%5C%202%20%5C%20%3B%20%5C%200%20%5C%202%5D"/>이다.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 Elimination하면 각 칼럼은 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C%202%29"/>와 <img src="http://api.gmath.guru/cgi-bin/gmath?%280%2C%202%29"/>이다.
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 모든 칼럼이 pivot 칼럼이므로 special solution은 존재하지 않는다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>을 만족시키는 것은 <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>뿐이다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ctherefore%20N%28A%29%20%3D%20Z"/>
@@ -195,7 +173,7 @@
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?%282%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%5C%5C%0D3%20%26%208%20%5C%5C%0D2%20%26%204%20%5C%5C%0D6%20%26%2016%0D%5Cend%7Bbmatrix%7D%0D"/>
 
-+ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?B"/>를 Elimination하면 <img src="http://api.gmath.guru/cgi-bin/gmath?%5B1%20%5C%202%20%5C%20%3B%20%5C%200%20%5C%202%20%5C%20%3B%20%5C%200%20%5C%200%20%5C%20%3B%20%5C%200%20%5C%204%5D"/>이다.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?B"/>를 Elimination하면 각 칼럼은 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C0%2C0%2C0%29%2C%20%5C%20%282%2C2%2C0%2C4%29"/>이다.
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?B"/>의 모든 칼럼이 pivot 칼럼이므로 special solution은 존재하지 않는다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?Bx%3D0"/>을 만족시키는 것은 <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>뿐이다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ctherefore%20N%28B%29%20%3D%20Z"/>
@@ -216,13 +194,73 @@
 
 + RREF 형태에서는 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>의 형태가 나온다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?Rx%3D0"/>의 형태를 만들어 놓으면 special solution을 찾는 것이 훨씬 쉬워진다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?R"/>의 각 칼럼에 <img src="http://api.gmath.guru/cgi-bin/gmath?x_1%2C%20x_2%2C%20x_3%2C%20x_4"/>를 곱하고 각 행의 합이 0이 나오도록 만든다.
 + <img src="http://api.gmath.guru/cgi-bin/gmath?x_1%20+%202x_3%20%3D%200%2C%20%5C%20x_2%20+%202x_4%20%3D0"/>
 + <img src="http://api.gmath.guru/cgi-bin/gmath?N%28R%29"/>를 구성하는 <img src="http://api.gmath.guru/cgi-bin/gmath?%20%5C%20s_1%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D-2%20%5C%5C%0D0%20%5C%5C%0D1%20%5C%5C%0D0%0D%5Cend%7Bbmatrix%7D%0D"/>과 <img src="http://api.gmath.guru/cgi-bin/gmath?%20%5C%20s_2%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D0%20%5C%5C%0D-2%20%5C%5C%0D0%20%5C%5C%0D1%0D%5Cend%7Bbmatrix%7D%0D"/>를 구할 수 있다.
 
 ### N(A) = Z의 아주 중요한 의미
 
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 모든 칼럼들이 independent하다는 것을 뜻한다.
-+ independent에 대한 파급력은 추후 논의한다.
++ independent에 대한 아이디어는 추후 논의한다.
+
+### Example :: Ax=0에 대한 Complete solution을 구하는 방법
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%202%20%26%203%20%5C%5C%0D2%20%26%202%20%26%208%20%26%2010%20%5C%5C%0D3%20%26%203%20%26%2010%20%26%2013%0D%5Cend%7Bbmatrix%7D"/>
+
++ 1번째 pivot은 1번째 칼럼의 <img src="http://api.gmath.guru/cgi-bin/gmath?a_%7B11%7D"/>이다.
++ pivot 아래에 있는 값들을 모두 0으로 소거해준다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%202%20%26%203%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%0D%5Cend%7Bbmatrix%7D"/>
+
++ 2번째 pivot은 3번째 칼럼의 <img src="http://api.gmath.guru/cgi-bin/gmath?a_%7B23%7D"/>이다.
++ pivot 아래에 있는 값을 0으로 소거해준다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%283%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%202%20%26%203%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D"/>
+
++ pivot 칼럼은 1번째와 3번째이다.
++ 칼럼은 4개인데 pivot 칼럼은 2개이므로 solution은 여러 개이다.
++ free 칼럼인 2번째와 4번째에 곱해질 free variable에 0과 1을 대입해서 special solution을 만들 수 있다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4"/>에 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C0%29"/>을 대입하면 <img src="http://api.gmath.guru/cgi-bin/gmath?x_3%3D0%2C%20x_1%3D-1"/>이 나온다. <img src="http://api.gmath.guru/cgi-bin/gmath?s_1%20%3D%20%28-1%2C1%2C0%2C0%29"/>
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4"/>에 <img src="http://api.gmath.guru/cgi-bin/gmath?%280%2C1%29"/>을 대입하면 <img src="http://api.gmath.guru/cgi-bin/gmath?x_3%3D-1%2C%20x_1%3D-1"/>이 나온다. <img src="http://api.gmath.guru/cgi-bin/gmath?s_2%20%3D%20%28-1%2C0%2C-1%2C1%29"/>
++ free 칼럼인 <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4"/>에는 어떤 값을 넣어도 상관 없으므로 다음과 같다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?%5Ctherefore%20x%20%3D%20x_2%20%5Cbegin%7Bbmatrix%7D%0D-1%20%5C%5C%0D1%20%5C%5C%0D0%20%5C%5C%0D0%0D%5Cend%7Bbmatrix%7D%20+%20x_4%20%5Cbegin%7Bbmatrix%7D%0D-1%20%5C%5C%0D0%20%5C%5C%0D-1%20%5C%5C%0D1%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-x_2-x_4%20%5C%5C%0Dx_2%20%5C%5C%0D-x_4%5C%5C%0Dx_4%0D%5Cend%7Bbmatrix%7D"/>
+
+### Reduced Row Echelon Matrix
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%202%20%26%203%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%20%5CRightarrow%20E%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%201%20%26%200%20%26%201%20%5C%5C%0D0%20%26%200%20%26%201%20%26%201%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?U"/>는 pviot 아래에만 0을 가지면 된다.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?E"/>는 **pivot 위에도 0을 가져야 한다**.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?E"/>의 pivot 칼럼(<img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C0%2C0%29%2C%20%5C%20%280%2C1%2C0%29"/>)을 붙여 놓으면 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>가 된다.
+
+### Example :: 널스페이스 묘사하기 :: R vs E
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%205%20%26%207%5C%5C%0D0%20%26%200%20%26%209%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ 2번째 칼럼이 free 칼럼이므로 <img src="http://api.gmath.guru/cgi-bin/gmath?x_2"/>가 free variable이다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x_2"/>에 1을 대입해본다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?s_1%20%3D%20%28-5%2C%201%2C%200%29"/>이 나온다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7B3%7D"/>의 line이 된다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%282%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%205%20%26%207%5C%5C%0D0%20%26%200%20%26%209%0D%5Cend%7Bbmatrix%7D%20%5CRightarrow%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%205%20%26%207%5C%5C%0D0%20%26%200%20%26%207%0D%5Cend%7Bbmatrix%7D%20%5CRightarrow%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%205%20%26%200%5C%5C%0D0%20%26%200%20%26%207%0D%5Cend%7Bbmatrix%7D%20%5CRightarrow%20R%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%205%20%26%200%5C%5C%0D0%20%26%200%20%26%201%0D%5Cend%7Bbmatrix%7D%20%3D%20rref%28U%29%0D"/>
+
++ 2번째 칼럼에서 pivot을 발견할 수 없으니 3번째 칼럼으로 간다.
++ 3번째 칼럼의 pivot 위치의 값 9를 1로 만든다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x_2"/>에 1을 대입해본다.
++ 더 쉽게 <img src="http://api.gmath.guru/cgi-bin/gmath?s_1%20%3D%20%28-5%2C%201%2C%200%29"/>이 나온다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7B3%7D"/>의 line이 된다.
+
+### Ax=0 (m<n)에 대한 통찰
+
++ 와이드 스크린처럼 가로가 세로보다 훨씬 긴 직사각형 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 상상해본다.
++ pivot의 개수는 행의 개수나 열의 개수를 초과할 수 없다. (대각선이므로)
++ pivot은 최대 <img src="http://api.gmath.guru/cgi-bin/gmath?m"/>개이고 free variable은 <img src="http://api.gmath.guru/cgi-bin/gmath?n-m"/>개이므로 special solution이 최소 1개 이상 존재한다.
++ 따라서 <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>이 아닌 해가 반드시 존재한다.
+
+### invertible matrix와 free variables
+
++ 역행렬이 존재한다면 <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>의 유일한 해는 <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>이다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>이면 <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29%3DZ"/>이므로 free variables가 없다는 뜻이다.
 
 **끝.**
 
@@ -411,7 +449,7 @@
 
 <p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%287%29%20%5C%20A%20%3D%20E_%7B21%7D%5E%7B-1%7DU%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%200%20%5C%5C%0D3%20%26%201%0D%5Cend%7Bbmatrix%7DU%0D"/></p>
 
-+ <img src="http://api.gmath.guru/cgi-bin/gmath?E_%7B21%7D"/>은 L(Lower TriangLUar)이다.
++ <img src="http://api.gmath.guru/cgi-bin/gmath?E_%7B21%7D"/>은 L(Lower triangular)이다.
 
 <p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%288%29%20%5C%20A%20%3D%20LU"/></p>
 
@@ -607,7 +645,7 @@ Ax = b => Ux = b' (b prime)
 
 <p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%202%20%26%205%20%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%5C%5C%202%20%5Cend%7Bbmatrix%7D"/></p>
 
-+ Gauss Elimination으로 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 <img src="http://api.gmath.guru/cgi-bin/gmath?U"/>(upper triangLUar)로 만들어준다.
++ Gauss Elimination으로 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 <img src="http://api.gmath.guru/cgi-bin/gmath?U"/>(upper triangular)로 만들어준다.
 
 <p align="center"><img src="http://api.gmath.guru/cgi-bin/gmath?%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%5C%5C%200%20%26%201%20%5Cend%7Bbmatrix%7D%20%20%5Cbegin%7Bbmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%205%20%5C%5C%202%20%5Cend%7Bbmatrix%7D"/></p>
 
