@@ -242,7 +242,186 @@ y_m
 
 ## 11 랭크와 Row Reduced Form
 
-+ not yet
+### 랭크에 대한 첫 번째 정의
+
++ $rank$ : 행렬 $A$의 pivot의 개수
++ $rank$ : $Ax=b$에서 중복되는 방정식을 제외한 필수적인 방정식의 수
++ 행렬 $A$에서 linear한 칼럼이나 로우만 추려낸 개수를 의미한다.
+
+### rank one 행렬
+
+$(1) \ A =
+\begin{bmatrix}
+1 & 3 & 10 \\
+2 & 6 & 20 \\
+3 & 9 & 30
+\end{bmatrix} \Rightarrow \ U =
+\begin{bmatrix}
+1 & 3 & 10 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+$
+
++ rank one 행렬 $A$의 $C(A)$는 1차원이다.
+
+$(2) \ A =
+\begin{bmatrix}
+1 & 3 & 10 \\
+2 & 6 & 20 \\
+3 & 9 & 30
+\end{bmatrix} = \begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix} \begin{bmatrix}
+1 & 3 & 10
+\end{bmatrix}
+$
+
++ 행렬 $A$를 칼럼 * 로우 형태로 나타낼 수 있다.
++ $A = uv^{T}$ (pivot 칼럼 * **pivot 로우**)
+
+$(3) \ Ax = 0 \Rightarrow u(v^{T}x) = 0 \Rightarrow v^{T}x = 0
+$
+
++ 두 벡터의 곱이 0이라는 것은 두 벡터가 직교한다는 것을 뜻한다.
++ 널스페이스에 존재하는 모든 벡터 $x$는 로우 스페이스에 존재하는 pivot 로우 벡터인 $v$와 반드시 직교한다.
++ 그래프로 나타낸다면 : 로우 스페이스 = line, nullspace = perpendicular plane이 된다.
+
+$(4) \ v^{T}x = \begin{bmatrix}
+1 & 3 & 10
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix} = 0
+$
+
++ special solution을 구할 수 있다.
++ free variable인 $x_2, x_3$에 각각 $(1,0), (0,1)$을 대입하면 된다.
++ $s_1 = \begin{bmatrix}
+-3 \\
+1 \\
+0
+\end{bmatrix} , \ s_2 = \begin{bmatrix}
+-10 \\
+0 \\
+1
+\end{bmatrix}
+$
+
+$(5)$ **널스페이스는 로우 스페이스와 직교한다.**
+
++ special solution의 linear combination으로 널스페이스를 구할 수 있다.
++ 널스페이스 $x + 3y + 10z = 0$ plane은 pivot 로우 벡터인 $(1,3,10)$과 직교한다.
+
+### 랭크에 대한 두 번째 정의
+
++ $rank$ : pivot column 또는 pivot row의 수 (벡터 관점)
+
+### 랭크에 대한 세 번째 정의
+
++ $rank$ : 칼럼 스페이스의 또는 로우 스페이스의 차원 (space 관점)
++ $rank(r)$를 알면 자연스럽게 널스페이스도 알게 된다. ($n-r$)
+
+
+### 행렬 R에서 널스페이스를 바로 구하는 방법
+
+$(1) \ R = \begin{bmatrix}
+1 & 3 & 0 & 2 & -1 \\
+0 & 0 & 1 & 4 & 3 \\
+0 & 0 & 0 & 0 & 0
+\end{bmatrix}
+$
+
++ 행렬 $A$를 $U$형태로 만든 후 pivot 위에 있는 값도 0으로 만들어서 $R$형태로 만들었다.
++ 패턴을 발견하기 위해 $R$ 형태에서 pivot 칼럼과 free 칼럼을 분리해서 보자.
+
+$(2) \ R' = \begin{bmatrix}
+1 & 0 & 3 & 2 & -1 \\
+0 & 1 & 0 & 4 & 3 \\
+0 & 0 & 0 & 0 & 0
+\end{bmatrix}
+$
+
++ pivot 칼럼은 단위행렬 $I$를 만든다.
++ 나머지 free 칼럼의 형태를 $F$라고 해보자.
++ 가장 마지막 로우의 값은 모두 0이다.
+
+$(3) \ R = \begin{bmatrix}
+I & F \\
+0 & 0
+\end{bmatrix}
+$
+
++ 행렬 $A$를 $R$ 형태로 만들면 모두 $I$와 $F$의 형태를 보인다.
++ 그리고 여기서 바로 $Rx=0$을 만드는 벡터 $x$의 널스페이스 즉, $N$ 값을 구할 수 있다.
+
+$(4) \ Rx = \begin{bmatrix}
+I & F \\
+0 & 0
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix} = 0
+$
+
++ 위 식을 만족시키려면 $x_1 = -F$, $x_2 = I$가 되어야 한다.
+
+$ (5) \therefore \ N = \begin{bmatrix}
+-F \\
+I
+\end{bmatrix}
+$
+
++ 따라서 $N$은 $-F$와 $I$로 구성된다.
++ 이제 실제 $R$에 대한 special solution을 구한 후 위에서 구한 $N$과 비교해보자.
+
+$(6) \ s_1 = \begin{bmatrix}
+-3 \\
+1 \\
+0 \\
+0 \\
+0
+\end{bmatrix} , \ s_2 = \begin{bmatrix}
+-2 \\
+0 \\
+-4 \\
+1 \\
+0
+\end{bmatrix} , \ s_3 = \begin{bmatrix}
+1 \\
+0 \\
+3 \\
+0 \\
+1
+\end{bmatrix} \Rightarrow \ N = \begin{bmatrix}
+-3 & -2 & 1 \\
+1 & 0 & 0 \\
+0 & -4 & 3 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+$
+
++ $N$은 special solution의 linear combination이므로 $Ax=0$을 만드는 $x$에 대한 complete solution($N$)은 위와 같다.
+
+$(7) \ N = \begin{bmatrix}
+-3 & -2 & 1 \\
+1 & 0 & 0 \\
+0 & -4 & 3 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+-F \\
+I
+\end{bmatrix}
+$
+
++ $R$의 형태에서 나타난 $-F, I$가 $N$을 구성하는 값임을 알 수 있다.
+
+@@@resume : example and problem
 
 ---
 
