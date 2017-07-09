@@ -101,7 +101,7 @@
 + <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29%20%5Csubseteq%20R%5E%7Bn%7D"/>: 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원이므로 널스페이스는 <img src="http://api.gmath.guru/cgi-bin/gmath?R%5E%7Bn%7D"/>의 subspace가 된다.
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>의 역행렬(invertible matrix)이 존재하면 <img src="http://api.gmath.guru/cgi-bin/gmath?Ax%3D0"/>의 유일한 해는 <img src="http://api.gmath.guru/cgi-bin/gmath?x%3D0"/>이므로 free variable은 존재하지 않고 <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29%3DZ"/>가 된다.
 
-### 10 Example :: 널스페이스와 Complete solution 구하는 방법
+### 10 Example :: 널스페이스 구하는 방법
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?%283%29%20%5C%20U%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%202%20%26%203%20%5C%5C%0D0%20%26%200%20%26%204%20%26%204%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D"/>
 
@@ -122,6 +122,47 @@
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?E"/>는 **pivot 위에도 0을 가져야 한다**.
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?E"/>의 pivot 칼럼(<img src="http://api.gmath.guru/cgi-bin/gmath?%281%2C0%2C0%29%2C%20%5C%20%280%2C1%2C0%29"/>)을 붙여 놓으면 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>가 된다.
 
+### 11 Ax=0을 푸는 방법 (1) Rx=0으로 푼다
+
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 Row Reduced Echelon Form으로 바꾸면 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?R"/>은 단위행렬과 영행렬 로우로 구성된다.
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?R"/>의 형태는  <img src="http://api.gmath.guru/cgi-bin/gmath?R%20%3D%20%5Cbegin%7Bbmatrix%7D%0DI%20%26%20F%20%5C%5C%0D0%20%26%200%0D%5Cend%7Bbmatrix%7D%0D"/>이다.
++ 그러면 널스페이스 <img src="http://api.gmath.guru/cgi-bin/gmath?N%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-F%20%5C%5C%0DI%0D%5Cend%7Bbmatrix%7D%0D"/>를 즉시 구할 수 있다.
+
+### 11 행렬 R은 단위행렬과 영행렬 로우로 구성된다
+
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?R"/> 형태로 바꾸고 나면
++ <img src="http://api.gmath.guru/cgi-bin/gmath?r%20%5C%20by%20%5C%20r"/> 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>가 존재하며
++ 가장 밑에는 <img src="http://api.gmath.guru/cgi-bin/gmath?m-r"/>개의 영행렬 로우가 존재한다.
+
+### 11 rank가 r이면 special solution은 n-r개이다
+
++ 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>가 <img src="http://api.gmath.guru/cgi-bin/gmath?m%20%5C%20by%20%5C%20n"/>이고 <img src="http://api.gmath.guru/cgi-bin/gmath?rank"/>가 <img src="http://api.gmath.guru/cgi-bin/gmath?r"/>일 때
++ 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원이고 pivot variable은 이미 <img src="http://api.gmath.guru/cgi-bin/gmath?r"/>개 이므로
++ 나머지 <img src="http://api.gmath.guru/cgi-bin/gmath?n-r"/>이 free variabel의 개수이자 special solution의 개수가 된다.
+
+### 11 Example :: 행렬 R에서 바로 N을 구하는 방법
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20R%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%203%20%26%200%20%26%202%20%26%20-1%20%5C%5C%0D0%20%26%200%20%26%201%20%26%204%20%26%203%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ pivot variable은 <img src="http://api.gmath.guru/cgi-bin/gmath?x_1%2C%20x_3"/>이고, free variable은 <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4%2C%20x_5"/>이다.
++ special solution의 개수는 3개이고 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 5차원이므로 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?N"/>은 5 by 3이다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%282%29%20%5C%20F%20%3D%20%5Cbegin%7Bbmatrix%7D%0D3%20%26%202%20%26%20-1%20%5C%5C%0D0%20%26%204%20%26%203%20%5C%5C%0D0%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ <img src="http://api.gmath.guru/cgi-bin/gmath?F"/>를 미리 구해둔다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%283%29%20%5C%20N%20%3D%20%5Cbegin%7Bbmatrix%7D%0D%281%29%20%26%20%5C%5C%0D%282%29%20%26%20%5C%5C%0D%283%29%20%26%20%5C%5C%0D%284%29%20%26%20%5C%5C%0D%285%29%20%26%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-F%20%5C%5C%0DI%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ special solution의 개수는 3개이고 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 5차원이므로 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?N"/>은 5 by 3이다.
++ special solution을 구하듯이 <img src="http://api.gmath.guru/cgi-bin/gmath?x_2%2C%20x_4%2C%20x_5"/>부터 (1, 0, 0), (0, 1, 0), (0, 0, 1)을 대입한다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%284%29%20%5C%20N%20%3D%20%5Cbegin%7Bbmatrix%7D%0D%281%29%20%26%20%5C%5C%0D%282%29%20%26%201%20%26%200%20%26%200%20%5C%5C%0D%283%29%20%26%20%5C%5C%0D%284%29%20%26%200%20%26%201%20%26%200%20%5C%5C%0D%285%29%20%26%200%20%26%200%20%26%201%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-F%20%5C%5C%0DI%0D%5Cend%7Bbmatrix%7D%0D"/>
+
++ 나머지 칸은 <img src="http://api.gmath.guru/cgi-bin/gmath?-F"/>로 채운다.
+
+<img src="http://api.gmath.guru/cgi-bin/gmath?%285%29%20%5Ctherefore%20%5C%20N%20%3D%20%5Cbegin%7Bbmatrix%7D%0D%281%29%20%26%20-3%20%26%20-2%20%26%201%20%5C%5C%0D%282%29%20%26%201%20%26%200%20%26%200%20%5C%5C%0D%283%29%20%26%200%20%26%20-4%20%26%20-3%20%5C%5C%0D%284%29%20%26%200%20%26%201%20%26%200%20%5C%5C%0D%285%29%20%26%200%20%26%200%20%26%201%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-F%20%5C%5C%0DI%0D%5Cend%7Bbmatrix%7D%0D"/>
+
+
 ---
 ---
 ---
@@ -140,6 +181,12 @@
   + 이러한 성질을 따질 때 <img src="http://api.gmath.guru/cgi-bin/gmath?C%28A%29"/>와 <img src="http://api.gmath.guru/cgi-bin/gmath?N%28A%29"/>를 사용하게 된다.
 
 **끝.**
+
+---
+
+## 12 Ax=b에 대한 complete solution (3.4)
+
+
 
 ---
 
@@ -209,7 +256,7 @@
 + 따라서 r(<img src="http://api.gmath.guru/cgi-bin/gmath?rank"/>)개의 pivot 칼럼을 모아두면 r by r의 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>를 발견할 수 있다.
 + 모든 값이 0으로 구성된 로우는 <img src="http://api.gmath.guru/cgi-bin/gmath?m-r"/>개이다.
 
-#### 중간 정리 :: m by n 행렬 A의 rank가 r일 때
+#### 중간 정리 :: 행렬 R은 단위행렬과 영행렬 로우로 구성된다
 
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>를 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?R"/> 형태로 바꾸고 나면
 + <img src="http://api.gmath.guru/cgi-bin/gmath?r%20%5C%20by%20%5C%20r"/> 단위행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>가 존재하며
@@ -237,13 +284,13 @@
 
 + 따라서 <img src="http://api.gmath.guru/cgi-bin/gmath?N"/>은 <img src="http://api.gmath.guru/cgi-bin/gmath?-F"/>와 <img src="http://api.gmath.guru/cgi-bin/gmath?I"/>로 구성된다.
 
-### rank와 special solution의 개수와의 관계
+### rank가 r이면 special solution은 n-r개이다
 
 + 행렬 <img src="http://api.gmath.guru/cgi-bin/gmath?A"/>가 <img src="http://api.gmath.guru/cgi-bin/gmath?m%20%5C%20by%20%5C%20n"/>이고 <img src="http://api.gmath.guru/cgi-bin/gmath?rank"/>가 <img src="http://api.gmath.guru/cgi-bin/gmath?r"/>일 때
 + 벡터 <img src="http://api.gmath.guru/cgi-bin/gmath?x"/>는 <img src="http://api.gmath.guru/cgi-bin/gmath?n"/>차원이고 pivot variable은 이미 <img src="http://api.gmath.guru/cgi-bin/gmath?r"/>개 이므로
 + 나머지 <img src="http://api.gmath.guru/cgi-bin/gmath?n-r"/>이 free variabel의 개수이자 special solution의 개수가 된다.
 
-### 행렬 R에서 바로 N을 구하는 방법
+### Example :: 행렬 R에서 바로 N을 구하는 방법
 
 <img src="http://api.gmath.guru/cgi-bin/gmath?%281%29%20%5C%20R%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%203%20%26%200%20%26%202%20%26%20-1%20%5C%5C%0D0%20%26%200%20%26%201%20%26%204%20%26%203%20%5C%5C%0D0%20%26%200%20%26%200%20%26%200%20%26%200%0D%5Cend%7Bbmatrix%7D%0D"/>
 

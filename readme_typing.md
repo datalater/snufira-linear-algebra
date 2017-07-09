@@ -147,7 +147,7 @@ $
 + $N(A) \subseteq R^{n}$: 벡터 $x$는 $n$차원이므로 널스페이스는 $R^{n}$의 subspace가 된다.
 + 행렬 $A$의 역행렬(invertible matrix)이 존재하면 $Ax=0$의 유일한 해는 $x=0$이므로 free variable은 존재하지 않고 $N(A)=Z$가 된다.
 
-### 10 Example :: 널스페이스와 Complete solution 구하는 방법
+### 10 Example :: 널스페이스 구하는 방법
 
 $(3) \ U =
 \begin{bmatrix}
@@ -198,6 +198,95 @@ $
 + 행렬 $E$는 **pivot 위에도 0을 가져야 한다**.
 + 행렬 $E$의 pivot 칼럼($(1,0,0), \ (0,1,0)$)을 붙여 놓으면 단위행렬 $I$가 된다.
 
+### 11 Ax=0을 푸는 방법 (1) Rx=0으로 푼다
+
++ 행렬 $A$를 Row Reduced Echelon Form으로 바꾸면 행렬 $R$은 단위행렬과 영행렬 로우로 구성된다.
++ 행렬 $R$의 형태는  $R = \begin{bmatrix}
+I & F \\
+0 & 0
+\end{bmatrix}
+$이다.
++ 그러면 널스페이스 $N = \begin{bmatrix}
+-F \\
+I
+\end{bmatrix}
+$를 즉시 구할 수 있다.
+
+### 11 행렬 R은 단위행렬과 영행렬 로우로 구성된다
+
++ 행렬 $A$를 행렬 $R$ 형태로 바꾸고 나면
++ $r \ by \ r$ 단위행렬 $I$가 존재하며
++ 가장 밑에는 $m-r$개의 영행렬 로우가 존재한다.
+
+### 11 rank가 r이면 special solution은 n-r개이다
+
++ 행렬 $A$가 $m \ by \ n$이고 $rank$가 $r$일 때
++ 벡터 $x$는 $n$차원이고 pivot variable은 이미 $r$개 이므로
++ 나머지 $n-r$이 free variabel의 개수이자 special solution의 개수가 된다.
+
+### 11 Example :: 행렬 R에서 바로 N을 구하는 방법
+
+$(1) \ R = \begin{bmatrix}
+1 & 3 & 0 & 2 & -1 \\
+0 & 0 & 1 & 4 & 3 \\
+0 & 0 & 0 & 0 & 0
+\end{bmatrix}
+$
+
++ pivot variable은 $x_1, x_3$이고, free variable은 $x_2, x_4, x_5$이다.
++ special solution의 개수는 3개이고 벡터 $x$는 5차원이므로 행렬 $N$은 5 by 3이다.
+
+$(2) \ F = \begin{bmatrix}
+3 & 2 & -1 \\
+0 & 4 & 3 \\
+0 & 0 & 0
+\end{bmatrix}
+$
+
++ $F$를 미리 구해둔다.
+
+$(3) \ N = \begin{bmatrix}
+(1) & \\
+(2) & \\
+(3) & \\
+(4) & \\
+(5) &
+\end{bmatrix} = \begin{bmatrix}
+-F \\
+I
+\end{bmatrix}
+$
+
++ special solution의 개수는 3개이고 벡터 $x$는 5차원이므로 행렬 $N$은 5 by 3이다.
++ special solution을 구하듯이 $x_2, x_4, x_5$부터 (1, 0, 0), (0, 1, 0), (0, 0, 1)을 대입한다.
+
+$(4) \ N = \begin{bmatrix}
+(1) & \\
+(2) & 1 & 0 & 0 \\
+(3) & \\
+(4) & 0 & 1 & 0 \\
+(5) & 0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+-F \\
+I
+\end{bmatrix}
+$
+
++ 나머지 칸은 $-F$로 채운다.
+
+$(5) \therefore \ N = \begin{bmatrix}
+(1) & -3 & -2 & 1 \\
+(2) & 1 & 0 & 0 \\
+(3) & 0 & -4 & -3 \\
+(4) & 0 & 1 & 0 \\
+(5) & 0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+-F \\
+I
+\end{bmatrix}
+$
+
+
 ---
 ---
 ---
@@ -237,6 +326,12 @@ y_m
   + 이러한 성질을 따질 때 $C(A)$와 $N(A)$를 사용하게 된다.
 
 **끝.**
+
+---
+
+## 12 Ax=b에 대한 complete solution (3.4)
+
+
 
 ---
 
@@ -351,7 +446,7 @@ $
 + 따라서 r($rank$)개의 pivot 칼럼을 모아두면 r by r의 단위행렬 $I$를 발견할 수 있다.
 + 모든 값이 0으로 구성된 로우는 $m-r$개이다.
 
-#### 중간 정리 :: m by n 행렬 A의 rank가 r일 때
+#### 중간 정리 :: 행렬 R은 단위행렬과 영행렬 로우로 구성된다
 
 + 행렬 $A$를 행렬 $R$ 형태로 바꾸고 나면
 + $r \ by \ r$ 단위행렬 $I$가 존재하며
@@ -399,13 +494,13 @@ $
 
 + 따라서 $N$은 $-F$와 $I$로 구성된다.
 
-### rank와 special solution의 개수와의 관계
+### rank가 r이면 special solution은 n-r개이다
 
 + 행렬 $A$가 $m \ by \ n$이고 $rank$가 $r$일 때
 + 벡터 $x$는 $n$차원이고 pivot variable은 이미 $r$개 이므로
 + 나머지 $n-r$이 free variabel의 개수이자 special solution의 개수가 된다.
 
-### 행렬 R에서 바로 N을 구하는 방법
+### Example :: 행렬 R에서 바로 N을 구하는 방법
 
 $(1) \ R = \begin{bmatrix}
 1 & 3 & 0 & 2 & -1 \\
