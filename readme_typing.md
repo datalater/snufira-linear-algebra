@@ -329,8 +329,203 @@ y_m
 
 ---
 
-## 12 Ax=b에 대한 complete solution (3.4)
+## 12 Ax=b에 대한 Complete Solution (3.4)
 
+### Ax=b를 Rx=d 형태로 바꾸기
+
+#### b = (b1, b2, b3)로 일반화하기
+
+$(1) \ \begin{bmatrix}
+1 & 3 & 0 & 2 & | & b_1 \\
+0 & 0 & 1 & 4 & | & b_2 \\
+1 & 3 & 1 & 6 & | & b_3
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+1 & 3 & 0 & 2 & | & b_1 \\
+0 & 0 & 1 & 4 & | & b_2 \\
+0 & 0 & 0 & 0 & | & b_3-b_1-b_2
+\end{bmatrix} = [R \ | \ d]
+$
+
++ $Ax=b$를 $[A \ | \ b]$와 같이 augmented matrix 형태로 바꿔준다.
++ 행렬 $A$를 Row Reduced Form인 $R$로 바꿔주고 $b$ 칼럼도 같이 연산해준다.
++ 마지막 영행렬 로우를 통해 $b_3-b_1-b_2=0$임을 알 수 있다.
+
+### Example :: Particular Solution 구하기
+
+$(1) \ Ax = b  \Rightarrow
+\begin{bmatrix}
+1 & 3 & 0 & 2 \\
+0 & 0 & 1 & 4 \\
+1 & 3 & 1 & 6
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{bmatrix} = \begin{bmatrix}
+1 \\
+6 \\
+7
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+1 & 3 & 0 & 2 & | & 1 \\
+0 & 0 & 1 & 4 & | & 6 \\
+1 & 3 & 1 & 6 & | & 7
+\end{bmatrix} = [A \ | \ b]
+$
+
++ $Ax=b$를 $[A \ | \ b]$와 같이 augmented matrix 형태로 바꿔준다.
+
+$(2) \ \begin{bmatrix}
+1 & 3 & 0 & 2 & | & 1 \\
+0 & 0 & 1 & 4 & | & 6 \\
+0 & 0 & 0 & 0 & | & 0
+\end{bmatrix} = [R \ | \ d]
+$
+
++ 행렬 $A$를 Row Reduced Form인 $R$로 바꿔주고 바뀐 $b$값을 $d$로 써준다.
++ pivot variable은 $x_1, x_3$이 되고 free variable은 $x_2, x_4$가 된다.
+
+$(3) \ \begin{bmatrix}
+1 & 3 & 0 & 2 \\
+0 & 0 & 1 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix} \begin{bmatrix}
+(x_1) & \\
+(x_2) & \\
+(x_3) & \\
+(x_4) &
+\end{bmatrix} = \begin{bmatrix}
+1 \\
+6 \\
+0
+\end{bmatrix}
+$
+
++ $Rx=d$ 형태로 복원시켜주고
++ **free variable $x_2, x_4$에 0을 대입한다**.
+
+$(4) \ \begin{bmatrix}
+1 & 3 & 0 & 2 \\
+0 & 0 & 1 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix} \begin{bmatrix}
+(x_1) & \\
+(x_2) & 0 \\
+(x_3) & \\
+(x_4) & 0
+\end{bmatrix} = \begin{bmatrix}
+1 \\
+6 \\
+0
+\end{bmatrix}
+$
+
++ **나머지 pivot 칼럼은 단위행렬 $I$이므로 $d$에 있는 값을 그대로 써주면 된다**.
++ $x_1 = 1, \ x_3=6$
+
+$(5) \ \begin{bmatrix}
+1 & 3 & 0 & 2 \\
+0 & 0 & 1 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix} \begin{bmatrix}
+(x_1) & 1 \\
+(x_2) & 0 \\
+(x_3) & 6 \\
+(x_4) & 0
+\end{bmatrix} = \begin{bmatrix}
+1 \\
+6 \\
+0
+\end{bmatrix}
+$
+
++ $Rx=d$를 만족시켜주는 $x$를 particular solution, 즉 $x_{particular}$라고 한다.
++ $x_{particular} = x_{p} = \begin{bmatrix}
+1 \\
+0 \\
+6 \\
+0
+\end{bmatrix}$
+
++ $Ax=b$를 만족시키는 particular solution을 구했으니, $Ax=0$을 만족시키는 special solution을 구한다.
+
+### Example :: Special Solution (Nullspace) 구하기
+
+$(6) \ R = \begin{bmatrix}
+1 & 3 & 0 & 2 \\
+0 & 0 & 1 & 4 \\
+0 & 0 & 0 & 0
+\end{bmatrix}, \ F = \begin{bmatrix}
+3 & 2\\
+0 & 4
+\end{bmatrix} \Rightarrow N \begin{bmatrix}
+(x_1) & \\
+(x_2) & 1 & 0 \\
+(x_3) & \\
+(x_4) & 0 & 1
+\end{bmatrix} \Rightarrow N \begin{bmatrix}
+(x_1) & -3 & -2 \\
+(x_2) & 1 & 0 \\
+(x_3) & 0 & -4 \\
+(x_4) & 0 & 1
+\end{bmatrix}
+$
+
++ $x_{nullspace} = x_{n} = x_2 \begin{bmatrix}
+-3 \\
+1 \\
+0 \\
+0
+\end{bmatrix} + x_4 \begin{bmatrix}
+-2 \\
+0 \\
+-4 \\
+1
+\end{bmatrix}
+$
+
+### Example :: Complete Solution 구하기
+
+$(7) \ x = x_p + x_n = \begin{bmatrix}
+1 \\
+0 \\
+6 \\
+0
+\end{bmatrix} + x_2 \begin{bmatrix}
+-3 \\
+1 \\
+0 \\
+0
+\end{bmatrix} + x_4 \begin{bmatrix}
+-2 \\
+0 \\
+-4 \\
+1
+\end{bmatrix}
+$
+
++ $x_p$와 $x_n$을 더하면 $Ax=b$에 대한 Complete Solution인 $x$를 구할 수 있다.
+
+### Full column rank (m>n) 행렬 R의 형태
+
++ Full column rank가 되려면 대각선보다 칼럼 벡터가 많아야 하므로 tall and thin하다.
++ $R = \begin{bmatrix} I \\ 0 \end{bmatrix} =
+\begin{bmatrix} (n \ by \ n) \ I \\ (m-n) \ rows \ of \ zeros \end{bmatrix}$
+
+### Full column rank (m>n) 행렬 R의 성질
+
++ 모든 칼럼이 pivot이므로 free variable이나 speical solution이 존재하지 않는다.
++ special solution이 존재하지 않으므로 $N(A)$는 $x=0$만을 포함한다.
++ $Ax=b$에서 $b$가 $C(A)$에
+  + 속한다면 하나의 해 $x_p$만 존재하게 되고
+  + 속하지 않는다면 해는 존재하지 않는다.
++ 보통 연립방정식의 해를 풀려면 equation의 수가 최소 unknown의 수만큼 있어야 한다.
++ $m > n$이라는 것은 equation의 수가 unknown보다 많은 것이므로 조건이 넘치는 '**overdetermined**'라고 표현한다.
+
+### Full row rank (m<n) 행렬 R의 형태
+
++ Full row rank가 되려면 대각선보다 로우 벡터가 많아야 하므로 short and wide하다.
++ 
 
 
 ---
