@@ -63,6 +63,7 @@
 + 2차원 칼럼벡터 2개가 independent하다.
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?I"/>의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28I%29%20%5Crightarrow%20R%5E%7B2%7D"/>
++ all combinations of (1, 0) and (0, 1)
 
 <img src="https://latex.codecogs.com/gif.latex?%282%29%20%5C%20A%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%5C%5C%0D2%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
 
@@ -70,6 +71,7 @@
 + 2차원 칼럼벡터 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28A%29%20%5Csubset%20R%5E%7B2%7D"/>
++ + all combinations of (1, 2)
 
 <img src="https://latex.codecogs.com/gif.latex?%283%29%20%5C%20B%20%3D%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%202%20%26%200%20%5C%5C%0D0%20%26%200%20%26%204%0D%5Cend%7Bbmatrix%7D%0D"/>
 
@@ -77,6 +79,7 @@
 + 2차원 칼럼벡터 3개 중 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
 + <img src="https://latex.codecogs.com/gif.latex?C%28B%29%20%5Crightarrow%20R%5E%7B2%7D"/>
++ all combinations of (1, 0) and (0, 4)
 
 ### 09 Problem :: C(A)를 고려하여 Ax=b를 만족시키는 적절한 b 만들기
 
@@ -113,6 +116,8 @@
 + <img src="https://latex.codecogs.com/gif.latex?N%28U%29"/>는 <img src="https://latex.codecogs.com/gif.latex?s_1"/>과 <img src="https://latex.codecogs.com/gif.latex?s_2"/>의 linear combination이다.
 + free 칼럼인 <img src="https://latex.codecogs.com/gif.latex?x_2%2C%20x_4"/>에는 어떤 값을 넣어도 상관 없으므로 다음과 같다.
 + <img src="https://latex.codecogs.com/gif.latex?%5Ctherefore%20x%20%3D%20x_2%20%5Cbegin%7Bbmatrix%7D%0D-1%20%5C%5C%0D1%20%5C%5C%0D0%20%5C%5C%0D0%0D%5Cend%7Bbmatrix%7D%20+%20x_4%20%5Cbegin%7Bbmatrix%7D%0D-1%20%5C%5C%0D0%20%5C%5C%0D-1%20%5C%5C%0D1%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D-x_2-x_4%20%5C%5C%0Dx_2%20%5C%5C%0D-x_4%5C%5C%0Dx_4%0D%5Cend%7Bbmatrix%7D"/>
+
++ all combinations of <img src="https://latex.codecogs.com/gif.latex?s_1%3D%28-1%2C%201%2C%200%2C%200%29"/> and <img src="https://latex.codecogs.com/gif.latex?s_2%3D%28-1%2C%200%2C%20-1%2C%201%29"/>
 
 ### 10 Reduced Row Echelon Matrix
 
@@ -184,6 +189,25 @@
 
 ---
 
+## 13 Independence, Basis, 그리고 Dimension
+
+### 언제 Linearly Independent 하는가
+
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3D0"/>의 유일한 해가 <img src="https://latex.codecogs.com/gif.latex?x%3D0"/>일 때 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>의 칼럼은 independent하다고 말한다.
++ <img src="https://latex.codecogs.com/gif.latex?x_1v_1%20+%20x_2v_2%20+%20%5Ccdot%20%5Ccdot%20%5Ccdot%20+%20x_nv_n%3D0"/>를 만족시키기 위해서 모든 <img src="https://latex.codecogs.com/gif.latex?x"/>가 0이어야 하는 경우, linearly independent하다고 말한다.
++ <img src="https://latex.codecogs.com/gif.latex?N%28A%29"/>가 <img src="https://latex.codecogs.com/gif.latex?x%3D0"/>인 경우 linearly independent하다고 말한다.
++ <img src="https://latex.codecogs.com/gif.latex?Ax%3D0"/>을 만족시키는 nonzero solution이 있으면 dependent 없으면 independent이다.
+
+### m차원 벡터 n개의 dependent 여부
+
++ <img src="https://latex.codecogs.com/gif.latex?n%3Em"/>: dependent
+  + 벡터는 <img src="https://latex.codecogs.com/gif.latex?m"/>차원인데 벡터의 개수가 <img src="https://latex.codecogs.com/gif.latex?m"/>보다 많은 <img src="https://latex.codecogs.com/gif.latex?n"/>개라면 free column이 있으므로 반드시 dependent 하다.
++ <img src="https://latex.codecogs.com/gif.latex?n%3C%3Dm"/>: dependent or independent
+  + Elimiation을 통해 rank를 알아내야 알 수 있다.
+
+
+---
+
 ## 12 Ax=b에 대한 Complete Solution (3.4)
 
 ### Ax=b를 Rx=d 형태로 바꾸기
@@ -196,7 +220,7 @@
 + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>를 Row Reduced Form인 <img src="https://latex.codecogs.com/gif.latex?R"/>로 바꿔주고 <img src="https://latex.codecogs.com/gif.latex?b"/> 칼럼도 같이 연산해준다.
 + 마지막 영행렬 로우를 통해 <img src="https://latex.codecogs.com/gif.latex?b_3-b_1-b_2%3D0"/>임을 알 수 있다.
 
-### Example :: Particular Solution 구하기
+### Example :: free variable=0을 대입해서 Particular Solution 구하기
 
 <img src="https://latex.codecogs.com/gif.latex?%281%29%20%5C%20Ax%20%3D%20b%20%20%5CRightarrow%0D%5Cbegin%7Bbmatrix%7D%0D1%20%26%203%20%26%200%20%26%202%20%5C%5C%0D0%20%26%200%20%26%201%20%26%204%20%5C%5C%0D1%20%26%203%20%26%201%20%26%206%0D%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%0Dx_1%20%5C%5C%0Dx_2%20%5C%5C%0Dx_3%20%5C%5C%0Dx_4%0D%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%0D1%20%5C%5C%0D6%20%5C%5C%0D7%0D%5Cend%7Bbmatrix%7D%20%5CRightarrow%20%5Cbegin%7Bbmatrix%7D%0D1%20%26%203%20%26%200%20%26%202%20%26%20%7C%20%26%201%20%5C%5C%0D0%20%26%200%20%26%201%20%26%204%20%26%20%7C%20%26%206%20%5C%5C%0D1%20%26%203%20%26%201%20%26%206%20%26%20%7C%20%26%207%0D%5Cend%7Bbmatrix%7D%20%3D%20%5BA%20%5C%20%7C%20%5C%20b%5D%0D"/>
 
@@ -236,12 +260,12 @@
 
 + <img src="https://latex.codecogs.com/gif.latex?x_p"/>와 <img src="https://latex.codecogs.com/gif.latex?x_n"/>을 더하면 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>에 대한 Complete Solution인 <img src="https://latex.codecogs.com/gif.latex?x"/>를 구할 수 있다.
 
-### Full column rank (m>n) 행렬 R의 형태
+### Full column rank (m>n, r=n) 행렬 R의 형태
 
-+ Full column rank가 되려면 대각선보다 칼럼 벡터가 많아야 하므로 tall and thin하다.
++ Full column rank가 되려면 대각선보다 칼럼 벡터가 길어야 하므로 tall and thin하다.
 + <img src="https://latex.codecogs.com/gif.latex?R%20%3D%20%5Cbegin%7Bbmatrix%7D%20I%20%5C%5C%200%20%5Cend%7Bbmatrix%7D%20%3D%0D%5Cbegin%7Bbmatrix%7D%20%28n%20%5C%20by%20%5C%20n%29%20%5C%20I%20%5C%5C%20%28m-n%29%20%5C%20rows%20%5C%20of%20%5C%20zeros%20%5Cend%7Bbmatrix%7D"/>
 
-### Full column rank (m>n) 행렬 R의 성질
+### Full column rank (m>n, r=n) 행렬 R의 성질
 
 + 모든 칼럼이 pivot이므로 free variable이나 speical solution이 존재하지 않는다.
 + special solution이 존재하지 않으므로 <img src="https://latex.codecogs.com/gif.latex?N%28A%29"/>는 <img src="https://latex.codecogs.com/gif.latex?x%3D0"/>만을 포함한다.
@@ -251,11 +275,37 @@
 + 보통 연립방정식의 해를 풀려면 equation의 수가 최소 unknown의 수만큼 있어야 한다.
 + <img src="https://latex.codecogs.com/gif.latex?m%20%3E%20n"/>이라는 것은 equation의 수가 unknown보다 많은 것이므로 조건이 넘치는 '**overdetermined**'라고 표현한다.
 
-### Full row rank (m<n) 행렬 R의 형태
+### Full row rank (m<n, r=m) 행렬 R의 형태
 
-+ Full row rank가 되려면 대각선보다 로우 벡터가 많아야 하므로 short and wide하다.
-+ 
++ Full row rank가 되려면 대각선보다 로우 벡터가 넓어야 하므로 short and wide하다.
 
+### Full row rank (m<n, r=m) 행렬 R의 성질
+
++ special solution이 최소 1개 이상 존재하므로 해가 무수히 많다.
++ 모든 로우 <img src="https://latex.codecogs.com/gif.latex?m"/>개가 pivot이므로 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>는 <img src="https://latex.codecogs.com/gif.latex?m"/>차원 칼럼벡터를 가득 채우게 된다(<img src="https://latex.codecogs.com/gif.latex?C%28A%29%20%3D%20R%5E%7Bm%7D"/>).
++ 따라서 <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>를 항상 만족시킬 수 있다.
++ special solution은 <img src="https://latex.codecogs.com/gif.latex?n-r%3Dn-m"/>개 존재한다.
+
+### rank의 개수에 따른 Ax=b의 해의 개수 rank solvability
+
++ **<img src="https://latex.codecogs.com/gif.latex?r%3Dm"/> and <img src="https://latex.codecogs.com/gif.latex?r%3Dn"/>**:
+  + <img src="https://latex.codecogs.com/gif.latex?R%20%3D%20%5Cbegin%7Bbmatrix%7D%20I%20%5Cend%7Bbmatrix%7D"/>
+  + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 Square and Invertible하기 때문에,
+  + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>는 유일한 하나의 해(<img src="https://latex.codecogs.com/gif.latex?x%3DA%5E%7B-1%7Db"/>)를 가진다.
++ **<img src="https://latex.codecogs.com/gif.latex?r%3Dm"/> and <img src="https://latex.codecogs.com/gif.latex?r%3Cn"/>**:
+  + <img src="https://latex.codecogs.com/gif.latex?R%20%3D%20%5Cbegin%7Bbmatrix%7D%20I%20%26%20F%20%5Cend%7Bbmatrix%7D"/>
+  + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 Full row rank이므로 short and wide하고 <img src="https://latex.codecogs.com/gif.latex?C%28A%29"/>가 가득 차고 special solution이 항상 존재하기 때문에,
+  + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>는 무수히 많은 해를 가진다.
++ **<img src="https://latex.codecogs.com/gif.latex?r%3Cm"/> and <img src="https://latex.codecogs.com/gif.latex?r%3Dn"/>**:
+  + <img src="https://latex.codecogs.com/gif.latex?R%20%3D%20%5Cbegin%7Bbmatrix%7D%20I%20%5C%5C%200%20%5Cend%7Bbmatrix%7D"/>
+  + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 Full column rank이므로 tall and think하고 모든 칼럼이 pivot이므로 free variable이 존재하지 않기 때문에,
+  + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>는 1개(<img src="https://latex.codecogs.com/gif.latex?x_p%3Dd"/>) 또는 0개의 해를 가진다.
++ **<img src="https://latex.codecogs.com/gif.latex?r%3Cm"/> and <img src="https://latex.codecogs.com/gif.latex?r%3Cn"/>**:
+  + <img src="https://latex.codecogs.com/gif.latex?R%20%3D%20%5Cbegin%7Bbmatrix%7D%20I%20%26%20F%20%5C%5C%200%20%26%200%20%5Cend%7Bbmatrix%7D"/>
+  + 행렬 <img src="https://latex.codecogs.com/gif.latex?A"/>는 Not full rank이기 때문에,
+  + <img src="https://latex.codecogs.com/gif.latex?Ax%3Db"/>는 0 또는 무수히 많은 해를 가진다.
+
+**끝.**
 
 ---
 

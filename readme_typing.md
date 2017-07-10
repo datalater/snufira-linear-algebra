@@ -68,6 +68,7 @@ $
 + 2차원 칼럼벡터 2개가 independent하다.
 + 행렬 $I$의 칼럼벡터로 모든 2차원 공간을 만들 수 있다.
 + $C(I) \rightarrow R^{2}$
++ all combinations of (1, 0) and (0, 1)
 
 $(2) \ A =
 \begin{bmatrix}
@@ -80,6 +81,7 @@ $
 + 2차원 칼럼벡터 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 1개는 line을 만들어낸다.
 + $C(A) \subset R^{2}$
++ + all combinations of (1, 2)
 
 $(3) \ B =
 \begin{bmatrix}
@@ -92,6 +94,7 @@ $
 + 2차원 칼럼벡터 3개 중 2개가 서로 dependent하다.
 + 2차원에서 칼럼벡터 2개는 모든 2차원 공간을 만든다.
 + $C(B) \rightarrow R^{2}$
++ all combinations of (1, 0) and (0, 4)
 
 ### 09 Problem :: C(A)를 고려하여 Ax=b를 만족시키는 적절한 b 만들기
 
@@ -179,6 +182,8 @@ x_2 \\
 -x_4\\
 x_4
 \end{bmatrix}$
+
++ all combinations of $s_1=(-1, 1, 0, 0)$ and $s_2=(-1, 0, -1, 1)$
 
 ### 10 Reduced Row Echelon Matrix
 
@@ -329,6 +334,25 @@ y_m
 
 ---
 
+## 13 Independence, Basis, 그리고 Dimension
+
+### 언제 Linearly Independent 하는가
+
++ $Ax=0$의 유일한 해가 $x=0$일 때 행렬 $A$의 칼럼은 independent하다고 말한다.
++ $x_1v_1 + x_2v_2 + \cdot \cdot \cdot + x_nv_n=0$를 만족시키기 위해서 모든 $x$가 0이어야 하는 경우, linearly independent하다고 말한다.
++ $N(A)$가 $x=0$인 경우 linearly independent하다고 말한다.
++ $Ax=0$을 만족시키는 nonzero solution이 있으면 dependent 없으면 independent이다.
+
+### m차원 벡터 n개의 dependent 여부
+
++ $n>m$: dependent
+  + 벡터는 $m$차원인데 벡터의 개수가 $m$보다 많은 $n$개라면 free column이 있으므로 반드시 dependent 하다.
++ $n<=m$: dependent or independent
+  + Elimiation을 통해 rank를 알아내야 알 수 있다.
+
+
+---
+
 ## 12 Ax=b에 대한 Complete Solution (3.4)
 
 ### Ax=b를 Rx=d 형태로 바꾸기
@@ -350,7 +374,7 @@ $
 + 행렬 $A$를 Row Reduced Form인 $R$로 바꿔주고 $b$ 칼럼도 같이 연산해준다.
 + 마지막 영행렬 로우를 통해 $b_3-b_1-b_2=0$임을 알 수 있다.
 
-### Example :: Particular Solution 구하기
+### Example :: free variable=0을 대입해서 Particular Solution 구하기
 
 $(1) \ Ax = b  \Rightarrow
 \begin{bmatrix}
@@ -506,13 +530,13 @@ $
 
 + $x_p$와 $x_n$을 더하면 $Ax=b$에 대한 Complete Solution인 $x$를 구할 수 있다.
 
-### Full column rank (m>n) 행렬 R의 형태
+### Full column rank (m>n, r=n) 행렬 R의 형태
 
-+ Full column rank가 되려면 대각선보다 칼럼 벡터가 많아야 하므로 tall and thin하다.
++ Full column rank가 되려면 대각선보다 칼럼 벡터가 길어야 하므로 tall and thin하다.
 + $R = \begin{bmatrix} I \\ 0 \end{bmatrix} =
 \begin{bmatrix} (n \ by \ n) \ I \\ (m-n) \ rows \ of \ zeros \end{bmatrix}$
 
-### Full column rank (m>n) 행렬 R의 성질
+### Full column rank (m>n, r=n) 행렬 R의 성질
 
 + 모든 칼럼이 pivot이므로 free variable이나 speical solution이 존재하지 않는다.
 + special solution이 존재하지 않으므로 $N(A)$는 $x=0$만을 포함한다.
@@ -522,11 +546,37 @@ $
 + 보통 연립방정식의 해를 풀려면 equation의 수가 최소 unknown의 수만큼 있어야 한다.
 + $m > n$이라는 것은 equation의 수가 unknown보다 많은 것이므로 조건이 넘치는 '**overdetermined**'라고 표현한다.
 
-### Full row rank (m<n) 행렬 R의 형태
+### Full row rank (m<n, r=m) 행렬 R의 형태
 
-+ Full row rank가 되려면 대각선보다 로우 벡터가 많아야 하므로 short and wide하다.
-+ 
++ Full row rank가 되려면 대각선보다 로우 벡터가 넓어야 하므로 short and wide하다.
 
+### Full row rank (m<n, r=m) 행렬 R의 성질
+
++ special solution이 최소 1개 이상 존재하므로 해가 무수히 많다.
++ 모든 로우 $m$개가 pivot이므로 $C(A)$는 $m$차원 칼럼벡터를 가득 채우게 된다($C(A) = R^{m}$).
++ 따라서 $Ax=b$를 항상 만족시킬 수 있다.
++ special solution은 $n-r=n-m$개 존재한다.
+
+### rank의 개수에 따른 Ax=b의 해의 개수 rank solvability
+
++ **$r=m$ and $r=n$**:
+  + $R = \begin{bmatrix} I \end{bmatrix}$
+  + 행렬 $A$는 Square and Invertible하기 때문에,
+  + $Ax=b$는 유일한 하나의 해($x=A^{-1}b$)를 가진다.
++ **$r=m$ and $r<n$**:
+  + $R = \begin{bmatrix} I & F \end{bmatrix}$
+  + 행렬 $A$는 Full row rank이므로 short and wide하고 $C(A)$가 가득 차고 special solution이 항상 존재하기 때문에,
+  + $Ax=b$는 무수히 많은 해를 가진다.
++ **$r<m$ and $r=n$**:
+  + $R = \begin{bmatrix} I \\ 0 \end{bmatrix}$
+  + 행렬 $A$는 Full column rank이므로 tall and think하고 모든 칼럼이 pivot이므로 free variable이 존재하지 않기 때문에,
+  + $Ax=b$는 1개($x_p=d$) 또는 0개의 해를 가진다.
++ **$r<m$ and $r<n$**:
+  + $R = \begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix}$
+  + 행렬 $A$는 Not full rank이기 때문에,
+  + $Ax=b$는 0 또는 무수히 많은 해를 가진다.
+
+**끝.**
 
 ---
 
